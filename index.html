@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hasibur Rahman Shanto - Senior Full-Stack Software Developer specializing in Laravel, MySQL query optimization, Redis queues, high-concurrency systems, and WebRTC.">
+    <meta name="keywords" content="Hasibur Rahman Shanto, Laravel Developer, Senior Full Stack Developer, PHP, Redis, MySQL, WebRTC, Multi-tenant SaaS, Docker">
+    <meta name="author" content="Hasibur Rahman Shanto">
+    <title>Hasibur Rahman Shanto | Senior Full-Stack Software Developer</title>
+    
+    <!-- Custom Stylesheets (100% Self-Contained - Zero CDN) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/terminal.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+    <!-- 3D Mathematical Canvas Background Layer -->
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="site-wrapper">
+        <!-- Header / Navigation Bar -->
+        <header class="header">
+            <div class="container navbar">
+                <a href="#hero" class="nav-brand">
+                    <span class="brand-bracket">&lt;</span>HASIBUR<span class="brand-bracket">/&gt;</span>
+                </a>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#terminal" class="nav-link">Terminal</a></li>
+                    <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="assets/docs/Hasibur_Rahman_Shanto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span>Hire Me (CV)</span>
+                        <svg class="icon-svg" viewBox="0 0 24 24">
+                            <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm-8 4h16v-2H4v2z"/>
+                        </svg>
+                    </a>
+                    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">
+                        <svg class="icon-svg" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-meta">
+                            <div class="pulse-indicator">
+                                <span class="pulse-dot"></span>
+                                <span>SYSTEM OPERATIONAL | Available for High-Impact Roles</span>
+                            </div>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Hello, I'm <span class="text-gradient">Hasibur Rahman Shanto</span>
+                        </h1>
+
+                        <div class="hero-role">
+                            <svg class="icon-svg" viewBox="0 0 24 24">
+                                <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                            <span>Full-Stack Software Developer & Systems Architect</span>
+                        </div>
+
+                        <p class="hero-desc">
+                            4+ years of professional engineering experience designing, building, and maintaining enterprise SaaS, ERP, and high-concurrency systems. Specialized in Laravel 10–13, MySQL query optimization, Redis queues, and Dockerized Linux VPS deployment pipelines.
+                        </p>
+
+                        <div class="hero-cta-group">
+                            <a href="#projects" class="btn btn-primary">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 10l-4 4m0-4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                                <span>Explore Flagship Projects</span>
+                            </a>
+                            <a href="assets/docs/Hasibur_Rahman_Shanto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm-8 4h16v-2H4v2z"/>
+                                </svg>
+                                <span>Open Official CV (PDF)</span>
+                            </a>
+                            <button class="btn btn-terminal" id="launch-terminal-btn">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M4 17l6-6-6-6m8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                                <span>Launch CLI</span>
+                            </button>
+                        </div>
+
+                        <div class="social-group">
+                            <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/hrsanto" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45 1.45 1.45 0 0 0-1.45 1.45c0 .8.65 1.45 1.45 1.45m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:Shantorhaman81@gmail.com" class="social-link" aria-label="Direct Email">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </a>
+                            <a href="tel:+8801581807070" class="social-link" aria-label="Direct Phone">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3D Visual Avatar Card -->
+                    <div class="hero-visual">
+                        <div class="avatar-card-3d tilt-card">
+                            <div class="avatar-img-container">
+                                <img src="assets/images/profile.jpg" alt="Hasibur Rahman Shanto" class="avatar-img">
+                                <div class="avatar-glow-overlay"></div>
+                            </div>
+
+                            <div class="floating-badge floating-badge-1">
+                                <div class="badge-icon-wrap">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M13 10V3L4 14h7v7l9-11h-7z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <span>-42% API Latency Cut</span>
+                            </div>
+
+                            <div class="floating-badge floating-badge-2">
+                                <div class="badge-icon-wrap">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <span>Multi-Tenant Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive CLI Terminal Section -->
+            <section class="section terminal-section" id="terminal">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag scramble-trigger">Interactive Terminal</span>
+                        <h2 class="section-title">Developer Console & AI Hub</h2>
+                        <p class="section-subtitle">Query my engineering background, architecture solutions, and projects in real-time.</p>
+                    </div>
+
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control-dot control-close"></span>
+                                <span class="control-dot control-minimize"></span>
+                                <span class="control-dot control-maximize"></span>
+                            </div>
+                            <div class="terminal-title">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M4 17l6-6-6-6m8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                                <span>hasibur@workstation: ~/portfolio (main)</span>
+                            </div>
+                            <div class="terminal-actions">
+                                <button class="terminal-btn-clear" id="terminal-clear-btn">clear</button>
+                            </div>
+                        </div>
+
+                        <div class="terminal-suggestions">
+                            <span class="suggestion-label">Suggested Commands:</span>
+                            <button class="cmd-pill" data-cmd="whoami">whoami</button>
+                            <button class="cmd-pill" data-cmd="skills">skills</button>
+                            <button class="cmd-pill" data-cmd="architecture">architecture</button>
+                            <button class="cmd-pill" data-cmd="projects">projects</button>
+                            <button class="cmd-pill" data-cmd="experience">experience</button>
+                            <button class="cmd-pill" data-cmd="resume">resume</button>
+                            <button class="cmd-pill" data-cmd="contact">contact</button>
+                        </div>
+
+                        <div class="terminal-body" id="terminal-body">
+                            <!-- Output injected dynamically via assets/js/terminal.js -->
+                        </div>
+
+                        <form class="terminal-suggestions" id="terminal-form">
+                            <div class="terminal-input-row">
+                                <span class="terminal-prompt">hasibur@workstation</span>:<span class="terminal-path">~/portfolio</span>$&nbsp;
+                                <input type="text" id="terminal-input" class="terminal-input-field" placeholder="type 'help' or click commands above..." autocomplete="off" spellcheck="false">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Impact Metrics (Kinetic Counters) -->
+            <section class="metrics-section" id="metrics">
+                <div class="container">
+                    <div class="metrics-grid">
+                        <div class="metric-card reveal-init">
+                            <div class="metric-value-wrap">
+                                <span class="metric-number counter-val" data-target="4">0</span>
+                                <span class="metric-symbol">+</span>
+                            </div>
+                            <div class="metric-title">Years Experience</div>
+                            <div class="metric-desc">Enterprise SaaS, ERP & Cloud</div>
+                        </div>
+
+                        <div class="metric-card reveal-init">
+                            <div class="metric-value-wrap">
+                                <span class="metric-number counter-val" data-target="42">0</span>
+                                <span class="metric-symbol">%</span>
+                            </div>
+                            <div class="metric-title">Latency Reduction</div>
+                            <div class="metric-desc">Redis Queues & Query Tuning</div>
+                        </div>
+
+                        <div class="metric-card reveal-init">
+                            <div class="metric-value-wrap">
+                                <span class="metric-number counter-val" data-target="7">0</span>
+                                <span class="metric-symbol">+</span>
+                            </div>
+                            <div class="metric-title">Flagship Enterprise Apps</div>
+                            <div class="metric-desc">Production SaaS, POS & Calling</div>
+                        </div>
+
+                        <div class="metric-card reveal-init">
+                            <div class="metric-value-wrap">
+                                <span class="metric-number counter-val" data-target="99.9" data-float="true">0</span>
+                                <span class="metric-symbol">%</span>
+                            </div>
+                            <div class="metric-title">High Availability</div>
+                            <div class="metric-desc">Docker, Nginx & CI/CD Pipelines</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture & Problems I Solve Section -->
+            <section class="section" id="architecture">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag scramble-trigger">Senior Engineering</span>
+                        <h2 class="section-title">Critical Architectural Problems I Solve</h2>
+                        <p class="section-subtitle">Real-world production engineering challenges tackled across high-volume platforms.</p>
+                    </div>
+
+                    <div class="problems-grid">
+                        <!-- Problem 1 -->
+                        <div class="problem-card tilt-card reveal-init">
+                            <div class="problem-card-icon tilt-pop-lg">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="problem-card-title tilt-pop-md">Slow Databases & Deadlocks</h3>
+                            <p class="problem-card-desc">
+                                Profiling heavy queries using EXPLAIN, designing composite indexes, eliminating N+1 eager loading bottlenecks, and resolving concurrency deadlock issues on busy MySQL tables.
+                            </p>
+                            <span class="problem-tech-tag">MySQL EXPLAIN • Composite Indexing</span>
+                        </div>
+
+                        <!-- Problem 2 -->
+                        <div class="problem-card tilt-card reveal-init">
+                            <div class="problem-card-icon tilt-pop-lg">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <h3 class="problem-card-title tilt-pop-md">Heavy Reports & API Latency</h3>
+                            <p class="problem-card-desc">
+                                Offloading computational jobs, large Excel/PDF exports, and transactional notifications to asynchronous Laravel Queues and Redis Horizon workers, cutting API response times by 42%.
+                            </p>
+                            <span class="problem-tech-tag">Redis Horizon • Queue Routing</span>
+                        </div>
+
+                        <!-- Problem 3 -->
+                        <div class="problem-card tilt-card reveal-init">
+                            <div class="problem-card-icon tilt-pop-lg">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="problem-card-title tilt-pop-md">Resilient & Safe Payments</h3>
+                            <p class="problem-card-desc">
+                                Implementing multi-gateway payment flows (Stripe, bKash, SSLCommerz) with cryptographic webhook signature verification, fraud prevention, and idempotency keys to eliminate double-charges.
+                            </p>
+                            <span class="problem-tech-tag">Idempotency Keys • Webhooks</span>
+                        </div>
+
+                        <!-- Problem 4 -->
+                        <div class="problem-card tilt-card reveal-init">
+                            <div class="problem-card-icon tilt-pop-lg">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="problem-card-title tilt-pop-md">Low-Latency Real-Time Media</h3>
+                            <p class="problem-card-desc">
+                                1-on-1 WebRTC audio/video calling with custom signaling, ICE candidate negotiation, screen sharing, and real-time chat with presence tracking using Redis Pub/Sub and WebSockets.
+                            </p>
+                            <span class="problem-tech-tag">WebRTC • WebSockets • Redis Pub/Sub</span>
+                        </div>
+
+                        <!-- Problem 5 -->
+                        <div class="problem-card tilt-card reveal-init">
+                            <div class="problem-card-icon tilt-pop-lg">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="problem-card-title tilt-pop-md">Multi-Tenant SaaS Isolation</h3>
+                            <p class="problem-card-desc">
+                                Architectural separation of tenant data through dedicated databases per company, dynamic subdomain routing, granular RBAC, and subscription tier-based feature flag controls.
+                            </p>
+                            <span class="problem-tech-tag">Database Isolation • Custom Subdomains</span>
+                        </div>
+
+                        <!-- Problem 6 -->
+                        <div class="problem-card tilt-card reveal-init">
+                            <div class="problem-card-icon tilt-pop-lg">
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="problem-card-title tilt-pop-md">Omnichannel Inventory Sync</h3>
+                            <p class="problem-card-desc">
+                                Matching and synchronizing inventory levels and orders in real-time across physical POS retail counters, multi-branch warehouses, and online stores to prevent overselling.
+                            </p>
+                            <span class="problem-tech-tag">Two-Way Sync • Real-Time Webhooks</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills Matrix -->
+            <section class="section" id="skills">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag scramble-trigger">Tech Stack</span>
+                        <h2 class="section-title">Core Competencies & Tools</h2>
+                        <p class="section-subtitle">Battle-tested tools and frameworks used across enterprise production environments.</p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <!-- Backend -->
+                        <div class="skill-category-card tilt-card reveal-init">
+                            <div class="skill-cat-head">
+                                <div class="skill-cat-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h3 class="skill-cat-title tilt-pop-md">Backend & Architecture</h3>
+                            </div>
+                            <div class="skills-pill-wrap">
+                                <span class="skill-pill">PHP 8.2 / 8.3 / 8.4</span>
+                                <span class="skill-pill">Laravel 10 / 11 / 12 / 13</span>
+                                <span class="skill-pill">Horizon & Queues</span>
+                                <span class="skill-pill">Events & Listeners</span>
+                                <span class="skill-pill">Pennant & Context</span>
+                                <span class="skill-pill">PHP Attributes</span>
+                                <span class="skill-pill">Clean Architecture / SOLID</span>
+                                <span class="skill-pill">Repository & Service Patterns</span>
+                            </div>
+                        </div>
+
+                        <!-- Database & Caching -->
+                        <div class="skill-category-card tilt-card reveal-init">
+                            <div class="skill-cat-head">
+                                <div class="skill-cat-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h3 class="skill-cat-title tilt-pop-md">Database & Caching</h3>
+                            </div>
+                            <div class="skills-pill-wrap">
+                                <span class="skill-pill">MySQL Concurrency</span>
+                                <span class="skill-pill">EXPLAIN Query Profiling</span>
+                                <span class="skill-pill">Composite Indexing</span>
+                                <span class="skill-pill">Deadlock Resolution</span>
+                                <span class="skill-pill">Redis Cache</span>
+                                <span class="skill-pill">Redis Pub/Sub</span>
+                                <span class="skill-pill">Multi-Tenant Isolation</span>
+                                <span class="skill-pill">Automated DB Backups</span>
+                            </div>
+                        </div>
+
+                        <!-- Frontend & UI -->
+                        <div class="skill-category-card tilt-card reveal-init">
+                            <div class="skill-cat-head">
+                                <div class="skill-cat-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h3 class="skill-cat-title tilt-pop-md">Frontend & UI Engineering</h3>
+                            </div>
+                            <div class="skills-pill-wrap">
+                                <span class="skill-pill">Vue.js 3</span>
+                                <span class="skill-pill">Inertia.js</span>
+                                <span class="skill-pill">Alpine.js</span>
+                                <span class="skill-pill">JavaScript (ES6+)</span>
+                                <span class="skill-pill">Tailwind CSS</span>
+                                <span class="skill-pill">Bootstrap 5</span>
+                                <span class="skill-pill">DataTables & Dashboards</span>
+                                <span class="skill-pill">Responsive Canvas / 3D Math</span>
+                            </div>
+                        </div>
+
+                        <!-- DevOps & Infrastructure -->
+                        <div class="skill-category-card tilt-card reveal-init">
+                            <div class="skill-cat-head">
+                                <div class="skill-cat-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h3 class="skill-cat-title tilt-pop-md">DevOps & Deployment</h3>
+                            </div>
+                            <div class="skills-pill-wrap">
+                                <span class="skill-pill">Docker & Docker Compose</span>
+                                <span class="skill-pill">Ubuntu Linux VPS</span>
+                                <span class="skill-pill">Nginx Reverse Proxy</span>
+                                <span class="skill-pill">GitHub Actions CI/CD</span>
+                                <span class="skill-pill">Supervisor Processes</span>
+                                <span class="skill-pill">Let's Encrypt SSL</span>
+                                <span class="skill-pill">Zero-Downtime Deployments</span>
+                                <span class="skill-pill">Bash Automation</span>
+                            </div>
+                        </div>
+
+                        <!-- Integrations & APIs -->
+                        <div class="skill-category-card tilt-card reveal-init">
+                            <div class="skill-cat-head">
+                                <div class="skill-cat-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h3 class="skill-cat-title tilt-pop-md">Integrations & Third-Party APIs</h3>
+                            </div>
+                            <div class="skills-pill-wrap">
+                                <span class="skill-pill">Stripe Billing</span>
+                                <span class="skill-pill">bKash Merchant API</span>
+                                <span class="skill-pill">SSLCommerz</span>
+                                <span class="skill-pill">WebRTC & WebSockets</span>
+                                <span class="skill-pill">SMS Gateways</span>
+                                <span class="skill-pill">Courier Logistics APIs</span>
+                                <span class="skill-pill">OpenAI & Gemini APIs</span>
+                                <span class="skill-pill">Laravel AI SDK</span>
+                            </div>
+                        </div>
+
+                        <!-- Professional Practices -->
+                        <div class="skill-category-card tilt-card reveal-init">
+                            <div class="skill-cat-head">
+                                <div class="skill-cat-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <h3 class="skill-cat-title tilt-pop-md">Engineering Standards</h3>
+                            </div>
+                            <div class="skills-pill-wrap">
+                                <span class="skill-pill">Automated PHPUnit Testing</span>
+                                <span class="skill-pill">Code Reviews & Mentoring</span>
+                                <span class="skill-pill">Agile / Scrum Sprints</span>
+                                <span class="skill-pill">Git Branching Workflows</span>
+                                <span class="skill-pill">RESTful API Versioning</span>
+                                <span class="skill-pill">Sanctum & JWT Security</span>
+                                <span class="skill-pill">End-to-End SDLC Ownership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flagship Projects Section -->
+            <section class="section" id="projects">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag scramble-trigger">Flagship Systems</span>
+                        <h2 class="section-title">Featured Enterprise Projects</h2>
+                        <p class="section-subtitle">Scalable production platforms delivering real measurable business impact.</p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- Project 1: BNSMSoft -->
+                        <div class="project-card tilt-card reveal-init">
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Multi-Tenant SaaS</span>
+                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">BNSMSoft – SaaS ERP & Business Suite</h3>
+                                <p class="project-desc">
+                                    Enterprise-grade multi-tenant platform featuring dedicated company database isolation, custom subdomains, and tier-based feature access.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Automated inventory tracking, accounts payable/receivable, and BI analytics</li>
+                                    <li>Background report generation offloaded to Redis queues & Laravel Horizon</li>
+                                    <li>Configured automated Docker Compose CI/CD deployment pipelines</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel 11</span>
+                                    <span class="project-tech-item">Vue.js</span>
+                                    <span class="project-tech-item">MySQL</span>
+                                    <span class="project-tech-item">Redis</span>
+                                    <span class="project-tech-item">Docker</span>
+                                    <span class="project-tech-item">Multi-Tenant</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: Real-Time WebRTC Calling & Live Chat -->
+                        <div class="project-card tilt-card reveal-init">
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Real-Time Media</span>
+                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Real-Time WebRTC Video & Live Chat</h3>
+                                <p class="project-desc">
+                                    Ultra low-latency audio/video calling and messaging platform with full custom signaling and presence synchronization.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>1-on-1 WebRTC calling, custom signaling, ICE candidate exchange & screen sharing</li>
+                                    <li>Real-time chat with active typing indicators, presence, and delivery receipts</li>
+                                    <li>Auto-reconnection logic and JWT-authenticated WebSocket security</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel</span>
+                                    <span class="project-tech-item">WebRTC</span>
+                                    <span class="project-tech-item">WebSockets</span>
+                                    <span class="project-tech-item">Socket.io</span>
+                                    <span class="project-tech-item">Redis Pub/Sub</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: EduTab Result Engine -->
+                        <div class="project-card tilt-card reveal-init">
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">High-Concurrency Engine</span>
+                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">EduTab – High-Concurrency Result Engine</h3>
+                                <p class="project-desc">
+                                    Comprehensive school management system with an architectural marksheet generation engine built for peak traffic.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Generates thousands of complex transcript marksheets simultaneously</li>
+                                    <li>Redis caching layers and chunked queue processing cut DB load by &gt;60%</li>
+                                    <li>Student admissions, fee collections, and automated notification triggers</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel</span>
+                                    <span class="project-tech-item">MySQL</span>
+                                    <span class="project-tech-item">Redis</span>
+                                    <span class="project-tech-item">Queue Workers</span>
+                                    <span class="project-tech-item">GitHub Actions</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: Manufacturing Workflow ERP -->
+                        <div class="project-card tilt-card reveal-init">
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Industrial ERP</span>
+                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Manufacturing & Factory Workflow ERP</h3>
+                                <p class="project-desc">
+                                    End-to-end production tracking software managing raw material buying, multi-stage requisitions, and inventory deductions.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Workflow engine tracking production stages, vendor accounts & material purchases</li>
+                                    <li>Automated inter-warehouse transfers, machinery maintenance & low-stock alerts</li>
+                                    <li>Executive financial dashboards analyzing production cost variance with bulk PDF/Excel</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel</span>
+                                    <span class="project-tech-item">PHP 8</span>
+                                    <span class="project-tech-item">MySQL</span>
+                                    <span class="project-tech-item">Vue.js</span>
+                                    <span class="project-tech-item">Redis</span>
+                                    <span class="project-tech-item">DataTables</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5: Construction Operations ERP -->
+                        <div class="project-card tilt-card reveal-init">
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Logistics & Site Operations</span>
+                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Construction Operations & Site Logistics</h3>
+                                <p class="project-desc">
+                                    Central operations hub managing field subcontractors, machinery leasing, warehouse transfers, and daily biometric attendance.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Built on modern Laravel 13 & PHP 8.3+ with optimized transaction boundaries</li>
+                                    <li>REST APIs delivering site safety alerts and budget variances to mobile apps</li>
+                                    <li>Multi-level approval chains between field supervisors and central management</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel 13</span>
+                                    <span class="project-tech-item">PHP 8.3+</span>
+                                    <span class="project-tech-item">MySQL</span>
+                                    <span class="project-tech-item">REST APIs</span>
+                                    <span class="project-tech-item">Cloud VPS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Omnichannel E-Commerce & Retail POS Sync -->
+                        <div class="project-card tilt-card reveal-init">
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Retail & FinTech</span>
+                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Omnichannel Retail POS & Web Sync</h3>
+                                <p class="project-desc">
+                                    Two-way real-time inventory and order synchronization between physical retail POS registers and online storefronts.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Real-time stock balance matching prevents overselling during high-volume sales</li>
+                                    <li>Multi-gateway checkout featuring Stripe, bKash & SSLCommerz with quick refunds</li>
+                                    <li>Automated courier consignment booking, barcode labels, and COD reconciliation</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel</span>
+                                    <span class="project-tech-item">MySQL</span>
+                                    <span class="project-tech-item">Stripe / bKash</span>
+                                    <span class="project-tech-item">REST API</span>
+                                    <span class="project-tech-item">Webhooks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience Timeline -->
+            <section class="section" id="experience">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag scramble-trigger">Career Journey</span>
+                        <h2 class="section-title">Work Experience</h2>
+                        <p class="section-subtitle">Consistent delivery of enterprise software across leading tech companies.</p>
+                    </div>
+
+                    <div class="timeline-wrap">
+                        <!-- Role 1 -->
+                        <div class="timeline-item reveal-init">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content tilt-card">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-role">Senior Software Developer</h3>
+                                    <span class="timeline-period">2025 – Present</span>
+                                </div>
+                                <div class="timeline-company">WanIT BD LTD • Dhaka, Bangladesh</div>
+                                <ul class="timeline-bullets">
+                                    <li>Lead backend development for high-scale enterprise ERP, inventory, and accounting systems; designed high-concurrency MySQL schemas with optimized transaction isolation.</li>
+                                    <li>Offloaded heavy report generation and data exports to Redis queue workers, reducing API response times by 42%.</li>
+                                    <li>Implemented secure payment gateways with webhook signature verification, fraud prevention, and idempotency controls.</li>
+                                    <li>Configured Dockerized production environments, managed Nginx on Linux VPS, and architected zero-downtime CI/CD deployment pipelines using GitHub Actions.</li>
+                                    <li>Championed coding standards, conducted peer code reviews, and mentored junior team members in writing clean, performant Laravel code.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Role 2 -->
+                        <div class="timeline-item reveal-init">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content tilt-card">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-role">Software Developer</h3>
+                                    <span class="timeline-period">2023 – 2025</span>
+                                </div>
+                                <div class="timeline-company">Deelko LTD • Dhaka, Bangladesh</div>
+                                <ul class="timeline-bullets">
+                                    <li>Engineered retail POS software featuring barcode integration, multi-branch stock tracking, low-stock reorder triggers, and receipt printing.</li>
+                                    <li>Built ERP modules to automate workflows, improve operational efficiency, and streamline inventory auditing across branches.</li>
+                                    <li>Developed an alumni directory system with real-time filtering and infinite scrolling using Laravel, Alpine.js, and Tailwind CSS.</li>
+                                    <li>Optimized legacy MySQL database queries through strategic indexing and eager loading techniques.</li>
+                                    <li>Maintained containerized staging and production Linux VPS servers, executing routine performance monitoring.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Role 3 -->
+                        <div class="timeline-item reveal-init">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content tilt-card">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-role">Laravel Developer</h3>
+                                    <span class="timeline-period">2022 – 2023</span>
+                                </div>
+                                <div class="timeline-company">Softvence Agency • Dhaka, Bangladesh</div>
+                                <ul class="timeline-bullets">
+                                    <li>Built web applications for international clients, including booking portals, job marketplaces, and e-commerce platforms with RBAC support.</li>
+                                    <li>Designed versioned REST APIs secured with Laravel Sanctum and JWT for web and mobile frontends.</li>
+                                    <li>Collaborated in international Agile teams with sprint planning, Git branching strategies, and automated PHPUnit testing.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag scramble-trigger">Academic Background</span>
+                        <h2 class="section-title">Education & Credentials</h2>
+                    </div>
+
+                    <div class="timeline-wrap">
+                        <div class="timeline-content tilt-card reveal-init">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Diploma in Electrical Engineering</h3>
+                                <span class="timeline-period">Graduated 2021</span>
+                            </div>
+                            <div class="timeline-company">Patuakhali Polytechnic Institute • Barisal, Bangladesh</div>
+                            <p class="timeline-bullets">
+                                Strong foundation in circuit logic, electrical systems, and computing fundamentals that transitioned into high-performance software engineering and systems architecture.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section" id="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag scramble-trigger">Direct Communications</span>
+                        <h2 class="section-title">Let's Discuss Your Next Architecture</h2>
+                        <p class="section-subtitle">Available for full-time senior roles, high-concurrency systems design, and consulting.</p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <!-- Direct Email Card -->
+                        <div class="contact-method-card tilt-card reveal-init">
+                            <div class="contact-method-head">
+                                <div class="contact-method-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-method-label">Direct Email</div>
+                                    <div class="contact-method-value tilt-pop-md">Shantorhaman81@gmail.com</div>
+                                </div>
+                            </div>
+                            <a href="mailto:Shantorhaman81@gmail.com" class="contact-action-btn">
+                                <span>Send Direct Email</span>
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Phone / WhatsApp Card -->
+                        <div class="contact-method-card tilt-card reveal-init">
+                            <div class="contact-method-head">
+                                <div class="contact-method-icon contact-icon-green tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-method-label">Phone & WhatsApp</div>
+                                    <div class="contact-method-value tilt-pop-md">+88015-8180-7070</div>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/8801581807070" target="_blank" rel="noopener noreferrer" class="contact-action-btn">
+                                <span>Chat on WhatsApp</span>
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Official CV Featured Card -->
+                        <div class="contact-method-card cv-highlight-card tilt-card reveal-init">
+                            <div class="contact-method-head">
+                                <div class="contact-method-icon contact-icon-cyan tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M12 18l-4-4h2.5v-3h3v3H16z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-method-label">Official Documentation</div>
+                                    <div class="contact-method-value tilt-pop-md">Complete Resume & CV (PDF)</div>
+                                </div>
+                            </div>
+                            <a href="assets/docs/Hasibur_Rahman_Shanto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="contact-action-btn cv-highlight-btn">
+                                <span>Open Full CV in New Tab</span>
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- LinkedIn Profile Card -->
+                        <div class="contact-method-card tilt-card reveal-init">
+                            <div class="contact-method-head">
+                                <div class="contact-method-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45 1.45 1.45 0 0 0-1.45 1.45c0 .8.65 1.45 1.45 1.45m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-method-label">Professional Network</div>
+                                    <div class="contact-method-value tilt-pop-md">linkedin.com/in/hrsanto</div>
+                                </div>
+                            </div>
+                            <a href="https://linkedin.com/in/hrsanto" target="_blank" rel="noopener noreferrer" class="contact-action-btn">
+                                <span>Connect on LinkedIn</span>
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- GitHub Profile Card -->
+                        <div class="contact-method-card tilt-card reveal-init">
+                            <div class="contact-method-head">
+                                <div class="contact-method-icon contact-icon-gold tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-method-label">Source Code Hub</div>
+                                    <div class="contact-method-value tilt-pop-md">github.com/hrshanto807</div>
+                                </div>
+                            </div>
+                            <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="contact-action-btn">
+                                <span>Browse Repositories</span>
+                                <svg class="icon-svg" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Location Card -->
+                        <div class="contact-method-card tilt-card reveal-init">
+                            <div class="contact-method-head">
+                                <div class="contact-method-icon tilt-pop-lg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-method-label">Current Base</div>
+                                    <div class="contact-method-value tilt-pop-md">Dhaka, Bangladesh</div>
+                                </div>
+                            </div>
+                            <div class="contact-action-btn">
+                                <span>Open for Relocation / Remote</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-inner">
+                <div>
+                    &copy; <span id="current-year"></span> Hasibur Rahman Shanto. Engineered with Pure Web Standards.
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                    <a href="https://linkedin.com/in/hrsanto" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                    <a href="#hero" class="footer-link">Back to Top ↑</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript Modules (100% Self-Contained - Zero CDN) -->
+    <script src="assets/js/canvas-3d.js"></script>
+    <script src="assets/js/terminal.js"></script>
+    <script src="assets/js/tilt.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/scramble.js"></script>
+    <script src="assets/js/counters.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
