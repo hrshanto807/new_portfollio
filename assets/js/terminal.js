@@ -107,7 +107,7 @@ Philosophy : "I prioritize clean architecture, query optimization with EXPLAIN,
         contact: `
 <span class="terminal-success">[DIRECT COMMUNICATIONS]</span>
 Email    : <a href="mailto:Shantorhaman81@gmail.com" class="terminal-highlight">Shantorhaman81@gmail.com</a>
-Phone    : <a href="tel:+8801581807070" class="terminal-highlight">+88015-8180-7070</a>
+Phone    : <a href="tel:+8801738450807" class="terminal-highlight">+880 1738-450807</a>
 Location : Dhaka, Bangladesh
 GitHub   : <a href="https://github.com/hrshanto807" target="_blank" class="terminal-highlight">github.com/hrshanto807</a>
 LinkedIn : <a href="https://linkedin.com/in/hrsanto" target="_blank" class="terminal-highlight">linkedin.com/in/hrsanto</a>

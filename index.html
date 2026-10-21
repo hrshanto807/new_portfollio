@@ -37,6 +37,16 @@
                 </ul>
 
                 <div class="nav-actions">
+                    <div class="hud-eq-wrap">
+                        <span class="hud-eq-label">LIVE STREAM</span>
+                        <div class="hud-eq">
+                            <span class="eq-bar"></span>
+                            <span class="eq-bar"></span>
+                            <span class="eq-bar"></span>
+                            <span class="eq-bar"></span>
+                            <span class="eq-bar"></span>
+                        </div>
+                    </div>
                     <a href="assets/docs/Hasibur_Rahman_Shanto_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                         <span>Hire Me (CV)</span>
                         <svg class="icon-svg" viewBox="0 0 24 24">
@@ -116,7 +126,7 @@
                                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                 </svg>
                             </a>
-                            <a href="tel:+8801581807070" class="social-link" aria-label="Direct Phone">
+                            <a href="tel:+8801738450807" class="social-link" aria-label="Direct Phone">
                                 <svg class="icon-svg" viewBox="0 0 24 24">
                                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                                 </svg>
@@ -124,30 +134,48 @@
                         </div>
                     </div>
 
-                    <!-- 3D Visual Avatar Card -->
+                    <!-- 3D Visual Avatar Chamber with Gyroscope & 3D Rotating Cube -->
                     <div class="hero-visual">
-                        <div class="avatar-card-3d tilt-card">
-                            <div class="avatar-img-container">
-                                <img src="assets/images/profile.jpg" alt="Hasibur Rahman Shanto" class="avatar-img">
-                                <div class="avatar-glow-overlay"></div>
+                        <div class="gyro-chamber">
+                            <div class="gyro-ring gyro-ring-1"></div>
+                            <div class="gyro-ring gyro-ring-2"></div>
+                            <div class="gyro-ring gyro-ring-3"></div>
+
+                            <div class="avatar-card-3d tilt-card">
+                                <div class="avatar-img-container">
+                                    <img src="assets/images/profile.jpg" alt="Hasibur Rahman Shanto" class="avatar-img">
+                                    <div class="avatar-glow-overlay"></div>
+                                </div>
+
+                                <div class="floating-badge floating-badge-1">
+                                    <div class="badge-icon-wrap">
+                                        <svg class="icon-svg" viewBox="0 0 24 24">
+                                            <path d="M13 10V3L4 14h7v7l9-11h-7z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <span>-42% API Latency Cut</span>
+                                </div>
+
+                                <div class="floating-badge floating-badge-2">
+                                    <div class="badge-icon-wrap">
+                                        <svg class="icon-svg" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                        </svg>
+                                    </div>
+                                    <span>Multi-Tenant Architecture</span>
+                                </div>
                             </div>
 
-                            <div class="floating-badge floating-badge-1">
-                                <div class="badge-icon-wrap">
-                                    <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M13 10V3L4 14h7v7l9-11h-7z" fill="currentColor"/>
-                                    </svg>
+                            <!-- True 6-Sided 3D Rotating Cyber Cube -->
+                            <div class="scene-3d-cube">
+                                <div class="cube-3d">
+                                    <div class="cube-face cube-face-front">Laravel 13</div>
+                                    <div class="cube-face cube-face-back">Redis</div>
+                                    <div class="cube-face cube-face-right">Docker</div>
+                                    <div class="cube-face cube-face-left">MySQL</div>
+                                    <div class="cube-face cube-face-top">WebRTC</div>
+                                    <div class="cube-face cube-face-bottom">Vue.js</div>
                                 </div>
-                                <span>-42% API Latency Cut</span>
-                            </div>
-
-                            <div class="floating-badge floating-badge-2">
-                                <div class="badge-icon-wrap">
-                                    <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    </svg>
-                                </div>
-                                <span>Multi-Tenant Architecture</span>
                             </div>
                         </div>
                     </div>
@@ -256,6 +284,11 @@
                         <span class="section-tag scramble-trigger">Senior Engineering</span>
                         <h2 class="section-title">Critical Architectural Problems I Solve</h2>
                         <p class="section-subtitle">Real-world production engineering challenges tackled across high-volume platforms.</p>
+                    </div>
+
+                    <!-- 3D Interactive Architecture Pipeline Canvas -->
+                    <div class="arch-canvas-container tilt-card reveal-init">
+                        <canvas id="arch-3d-canvas"></canvas>
                     </div>
 
                     <div class="problems-grid">
@@ -502,6 +535,14 @@
                     <div class="projects-grid">
                         <!-- Project 1: BNSMSoft -->
                         <div class="project-card tilt-card reveal-init">
+                            <div class="project-screen-box">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>LIVE 4K • MULTI-TENANT SIMULATION</span>
+                                </div>
+                                <div class="project-screen-hud-right">HORIZON QUEUES</div>
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
                             <div class="project-card-header">
                                 <span class="project-badge-type tilt-pop-lg">Multi-Tenant SaaS</span>
                                 <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
@@ -533,6 +574,14 @@
 
                         <!-- Project 2: Real-Time WebRTC Calling & Live Chat -->
                         <div class="project-card tilt-card reveal-init">
+                            <div class="project-screen-box">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>LIVE STREAM • WEBRTC ICE WAVE</span>
+                                </div>
+                                <div class="project-screen-hud-right">0.8ms LATENCY</div>
+                                <canvas class="project-sim-canvas" data-type="webrtc"></canvas>
+                            </div>
                             <div class="project-card-header">
                                 <span class="project-badge-type tilt-pop-lg">Real-Time Media</span>
                                 <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
@@ -563,6 +612,14 @@
 
                         <!-- Project 3: EduTab Result Engine -->
                         <div class="project-card tilt-card reveal-init">
+                            <div class="project-screen-box">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>BATCH ENGINE • 10K TRANSMISSION</span>
+                                </div>
+                                <div class="project-screen-hud-right">CHUNK QUEUES</div>
+                                <canvas class="project-sim-canvas" data-type="edutab"></canvas>
+                            </div>
                             <div class="project-card-header">
                                 <span class="project-badge-type tilt-pop-lg">High-Concurrency Engine</span>
                                 <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
@@ -593,6 +650,14 @@
 
                         <!-- Project 4: Manufacturing Workflow ERP -->
                         <div class="project-card tilt-card reveal-init">
+                            <div class="project-screen-box">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>LIVE PRODUCTION STREAM</span>
+                                </div>
+                                <div class="project-screen-hud-right">INVENTORY SYNC</div>
+                                <canvas class="project-sim-canvas" data-type="sync"></canvas>
+                            </div>
                             <div class="project-card-header">
                                 <span class="project-badge-type tilt-pop-lg">Industrial ERP</span>
                                 <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
@@ -624,6 +689,14 @@
 
                         <!-- Project 5: Construction Operations ERP -->
                         <div class="project-card tilt-card reveal-init">
+                            <div class="project-screen-box">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>TELEMETRY STREAM</span>
+                                </div>
+                                <div class="project-screen-hud-right">BIOMETRIC I/O</div>
+                                <canvas class="project-sim-canvas" data-type="sync"></canvas>
+                            </div>
                             <div class="project-card-header">
                                 <span class="project-badge-type tilt-pop-lg">Logistics & Site Operations</span>
                                 <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
@@ -654,6 +727,14 @@
 
                         <!-- Project 6: Omnichannel E-Commerce & Retail POS Sync -->
                         <div class="project-card tilt-card reveal-init">
+                            <div class="project-screen-box">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>TRANSACTION STREAM</span>
+                                </div>
+                                <div class="project-screen-hud-right">TWO-WAY SYNC</div>
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
                             <div class="project-card-header">
                                 <span class="project-badge-type tilt-pop-lg">Retail & FinTech</span>
                                 <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
@@ -817,10 +898,10 @@
                                 </div>
                                 <div>
                                     <div class="contact-method-label">Phone & WhatsApp</div>
-                                    <div class="contact-method-value tilt-pop-md">+88015-8180-7070</div>
+                                    <div class="contact-method-value tilt-pop-md">+880 1738-450807</div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/8801581807070" target="_blank" rel="noopener noreferrer" class="contact-action-btn">
+                            <a href="https://wa.me/8801738450807" target="_blank" rel="noopener noreferrer" class="contact-action-btn">
                                 <span>Chat on WhatsApp</span>
                                 <svg class="icon-svg" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
@@ -930,6 +1011,8 @@
 
     <!-- Custom JavaScript Modules (100% Self-Contained - Zero CDN) -->
     <script src="assets/js/canvas-3d.js"></script>
+    <script src="assets/js/architecture-3d.js"></script>
+    <script src="assets/js/cinematic.js"></script>
     <script src="assets/js/terminal.js"></script>
     <script src="assets/js/tilt.js"></script>
     <script src="assets/js/cursor.js"></script>

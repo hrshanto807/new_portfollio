@@ -6,7 +6,7 @@
 - **Experience:** 4+ Years of Professional Hands-On Engineering
 - **Location:** Dhaka, Bangladesh
 - **Email:** Shantorhaman81@gmail.com
-- **Phone:** +88015-8180-7070
+- **Phone / WhatsApp:** +880 1738-450807 (01738450807)
 - **GitHub:** https://github.com/hrshanto807
 - **LinkedIn:** https://linkedin.com/in/hrsanto
 - **Key Metric Highlights:**
