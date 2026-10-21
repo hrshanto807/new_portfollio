@@ -10,7 +10,6 @@
     
     <!-- Custom Stylesheets (100% Self-Contained - Zero CDN) -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/terminal.css">
     <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
@@ -28,7 +27,6 @@
 
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#terminal" class="nav-link">Terminal</a></li>
                     <li><a href="#architecture" class="nav-link">Architecture</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -86,7 +84,7 @@
                         </div>
 
                         <p class="hero-desc">
-                            4+ years of professional engineering experience designing, building, and maintaining enterprise SaaS, ERP, and high-concurrency systems. Specialized in Laravel 10–13, MySQL query optimization, Redis queues, and Dockerized Linux VPS deployment pipelines.
+                            4+ years of professional engineering experience designing, building, and maintaining enterprise SaaS, ERP, and high-concurrency systems. Specialized in Laravel, MySQL query optimization, Redis queues, and Dockerized Linux VPS deployment pipelines.
                         </p>
 
                         <div class="hero-cta-group">
@@ -102,12 +100,6 @@
                                 </svg>
                                 <span>Open Official CV (PDF)</span>
                             </a>
-                            <button class="btn btn-terminal" id="launch-terminal-btn">
-                                <svg class="icon-svg" viewBox="0 0 24 24">
-                                    <path d="M4 17l6-6-6-6m8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                </svg>
-                                <span>Launch CLI</span>
-                            </button>
                         </div>
 
                         <div class="social-group">
@@ -169,7 +161,7 @@
                             <!-- True 6-Sided 3D Rotating Cyber Cube -->
                             <div class="scene-3d-cube">
                                 <div class="cube-3d">
-                                    <div class="cube-face cube-face-front">Laravel 13</div>
+                                    <div class="cube-face cube-face-front">Laravel</div>
                                     <div class="cube-face cube-face-back">Redis</div>
                                     <div class="cube-face cube-face-right">Docker</div>
                                     <div class="cube-face cube-face-left">MySQL</div>
@@ -178,58 +170,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Interactive CLI Terminal Section -->
-            <section class="section terminal-section" id="terminal">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-tag scramble-trigger">Interactive Terminal</span>
-                        <h2 class="section-title">Developer Console & AI Hub</h2>
-                        <p class="section-subtitle">Query my engineering background, architecture solutions, and projects in real-time.</p>
-                    </div>
-
-                    <div class="terminal-wrapper">
-                        <div class="terminal-header">
-                            <div class="terminal-controls">
-                                <span class="control-dot control-close"></span>
-                                <span class="control-dot control-minimize"></span>
-                                <span class="control-dot control-maximize"></span>
-                            </div>
-                            <div class="terminal-title">
-                                <svg class="icon-svg" viewBox="0 0 24 24">
-                                    <path d="M4 17l6-6-6-6m8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                </svg>
-                                <span>hasibur@workstation: ~/portfolio (main)</span>
-                            </div>
-                            <div class="terminal-actions">
-                                <button class="terminal-btn-clear" id="terminal-clear-btn">clear</button>
-                            </div>
-                        </div>
-
-                        <div class="terminal-suggestions">
-                            <span class="suggestion-label">Suggested Commands:</span>
-                            <button class="cmd-pill" data-cmd="whoami">whoami</button>
-                            <button class="cmd-pill" data-cmd="skills">skills</button>
-                            <button class="cmd-pill" data-cmd="architecture">architecture</button>
-                            <button class="cmd-pill" data-cmd="projects">projects</button>
-                            <button class="cmd-pill" data-cmd="experience">experience</button>
-                            <button class="cmd-pill" data-cmd="resume">resume</button>
-                            <button class="cmd-pill" data-cmd="contact">contact</button>
-                        </div>
-
-                        <div class="terminal-body" id="terminal-body">
-                            <!-- Output injected dynamically via assets/js/terminal.js -->
-                        </div>
-
-                        <form class="terminal-suggestions" id="terminal-form">
-                            <div class="terminal-input-row">
-                                <span class="terminal-prompt">hasibur@workstation</span>:<span class="terminal-path">~/portfolio</span>$&nbsp;
-                                <input type="text" id="terminal-input" class="terminal-input-field" placeholder="type 'help' or click commands above..." autocomplete="off" spellcheck="false">
-                            </div>
-                        </form>
                     </div>
                 </div>
             </section>
@@ -400,14 +340,14 @@
                                 <h3 class="skill-cat-title tilt-pop-md">Backend & Architecture</h3>
                             </div>
                             <div class="skills-pill-wrap">
-                                <span class="skill-pill">PHP 8.2 / 8.3 / 8.4</span>
-                                <span class="skill-pill">Laravel 10 / 11 / 12 / 13</span>
+                                <span class="skill-pill">PHP (Core & OOP)</span>
+                                <span class="skill-pill">Laravel (Service Container / Eloquent)</span>
                                 <span class="skill-pill">Horizon & Queues</span>
                                 <span class="skill-pill">Events & Listeners</span>
-                                <span class="skill-pill">Pennant & Context</span>
-                                <span class="skill-pill">PHP Attributes</span>
-                                <span class="skill-pill">Clean Architecture / SOLID</span>
+                                <span class="skill-pill">SOLID & Design Patterns</span>
                                 <span class="skill-pill">Repository & Service Patterns</span>
+                                <span class="skill-pill">Pennant Feature Flags</span>
+                                <span class="skill-pill">Legacy PHP Refactoring</span>
                             </div>
                         </div>
 
@@ -422,14 +362,14 @@
                                 <h3 class="skill-cat-title tilt-pop-md">Database & Caching</h3>
                             </div>
                             <div class="skills-pill-wrap">
-                                <span class="skill-pill">MySQL Concurrency</span>
+                                <span class="skill-pill">MySQL & PostgreSQL</span>
                                 <span class="skill-pill">EXPLAIN Query Profiling</span>
                                 <span class="skill-pill">Composite Indexing</span>
-                                <span class="skill-pill">Deadlock Resolution</span>
-                                <span class="skill-pill">Redis Cache</span>
+                                <span class="skill-pill">Deadlock & Concurrency</span>
+                                <span class="skill-pill">Safe Production Migrations</span>
+                                <span class="skill-pill">Redis Cache & Horizon</span>
                                 <span class="skill-pill">Redis Pub/Sub</span>
                                 <span class="skill-pill">Multi-Tenant Isolation</span>
-                                <span class="skill-pill">Automated DB Backups</span>
                             </div>
                         </div>
 
@@ -441,17 +381,17 @@
                                         <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
                                 </div>
-                                <h3 class="skill-cat-title tilt-pop-md">Frontend & UI Engineering</h3>
+                                <h3 class="skill-cat-title tilt-pop-md">Frontend & API Integration</h3>
                             </div>
                             <div class="skills-pill-wrap">
-                                <span class="skill-pill">Vue.js 3</span>
-                                <span class="skill-pill">Inertia.js</span>
+                                <span class="skill-pill">React & Next.js Integration</span>
+                                <span class="skill-pill">API Contracts & CORS</span>
+                                <span class="skill-pill">Vue.js 3 & Inertia.js</span>
+                                <span class="skill-pill">Blade Templating</span>
                                 <span class="skill-pill">Alpine.js</span>
                                 <span class="skill-pill">JavaScript (ES6+)</span>
                                 <span class="skill-pill">Tailwind CSS</span>
-                                <span class="skill-pill">Bootstrap 5</span>
-                                <span class="skill-pill">DataTables & Dashboards</span>
-                                <span class="skill-pill">Responsive Canvas / 3D Math</span>
+                                <span class="skill-pill">Responsive WebGL / Canvas</span>
                             </div>
                         </div>
 
@@ -473,7 +413,7 @@
                                 <span class="skill-pill">Supervisor Processes</span>
                                 <span class="skill-pill">Let's Encrypt SSL</span>
                                 <span class="skill-pill">Zero-Downtime Deployments</span>
-                                <span class="skill-pill">Bash Automation</span>
+                                <span class="skill-pill">Multi-Region Branching</span>
                             </div>
                         </div>
 
@@ -485,17 +425,17 @@
                                         <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
                                 </div>
-                                <h3 class="skill-cat-title tilt-pop-md">Integrations & Third-Party APIs</h3>
+                                <h3 class="skill-cat-title tilt-pop-md">Integrations & Microservices</h3>
                             </div>
                             <div class="skills-pill-wrap">
-                                <span class="skill-pill">Stripe Billing</span>
-                                <span class="skill-pill">bKash Merchant API</span>
+                                <span class="skill-pill">Node.js (NestJS / Express)</span>
+                                <span class="skill-pill">Stripe & bKash APIs</span>
                                 <span class="skill-pill">SSLCommerz</span>
-                                <span class="skill-pill">WebRTC & WebSockets</span>
+                                <span class="skill-pill">WebSockets & WebRTC</span>
                                 <span class="skill-pill">SMS Gateways</span>
                                 <span class="skill-pill">Courier Logistics APIs</span>
                                 <span class="skill-pill">OpenAI & Gemini APIs</span>
-                                <span class="skill-pill">Laravel AI SDK</span>
+                                <span class="skill-pill">RESTful API Versioning</span>
                             </div>
                         </div>
 
@@ -507,16 +447,17 @@
                                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
                                 </div>
-                                <h3 class="skill-cat-title tilt-pop-md">Engineering Standards</h3>
+                                <h3 class="skill-cat-title tilt-pop-md">Engineering & Leadership</h3>
                             </div>
                             <div class="skills-pill-wrap">
+                                <span class="skill-pill">AI & Agentic Coding (Cursor/Claude)</span>
+                                <span class="skill-pill">Team Leadership & Mentoring</span>
+                                <span class="skill-pill">Peer Code Reviews</span>
+                                <span class="skill-pill">OWASP Top 10 Security & RBAC</span>
                                 <span class="skill-pill">Automated PHPUnit Testing</span>
-                                <span class="skill-pill">Code Reviews & Mentoring</span>
-                                <span class="skill-pill">Agile / Scrum Sprints</span>
-                                <span class="skill-pill">Git Branching Workflows</span>
-                                <span class="skill-pill">RESTful API Versioning</span>
-                                <span class="skill-pill">Sanctum & JWT Security</span>
-                                <span class="skill-pill">End-to-End SDLC Ownership</span>
+                                <span class="skill-pill">Sanctum, Passport & JWT</span>
+                                <span class="skill-pill">Git Rebase / Cherry-Pick</span>
+                                <span class="skill-pill">End-to-End Production Ownership</span>
                             </div>
                         </div>
                     </div>
@@ -562,7 +503,7 @@
                                     <li>Configured automated Docker Compose CI/CD deployment pipelines</li>
                                 </ul>
                                 <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel 11</span>
+                                    <span class="project-tech-item">Laravel</span>
                                     <span class="project-tech-item">Vue.js</span>
                                     <span class="project-tech-item">MySQL</span>
                                     <span class="project-tech-item">Redis</span>
@@ -678,7 +619,7 @@
                                 </ul>
                                 <div class="project-tech-stack">
                                     <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">PHP 8</span>
+                                    <span class="project-tech-item">PHP</span>
                                     <span class="project-tech-item">MySQL</span>
                                     <span class="project-tech-item">Vue.js</span>
                                     <span class="project-tech-item">Redis</span>
@@ -711,13 +652,13 @@
                                     Central operations hub managing field subcontractors, machinery leasing, warehouse transfers, and daily biometric attendance.
                                 </p>
                                 <ul class="project-highlights">
-                                    <li>Built on modern Laravel 13 & PHP 8.3+ with optimized transaction boundaries</li>
+                                    <li>Built with modern Laravel architecture and optimized transaction boundaries</li>
                                     <li>REST APIs delivering site safety alerts and budget variances to mobile apps</li>
                                     <li>Multi-level approval chains between field supervisors and central management</li>
                                 </ul>
                                 <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel 13</span>
-                                    <span class="project-tech-item">PHP 8.3+</span>
+                                    <span class="project-tech-item">Laravel</span>
+                                    <span class="project-tech-item">PHP</span>
                                     <span class="project-tech-item">MySQL</span>
                                     <span class="project-tech-item">REST APIs</span>
                                     <span class="project-tech-item">Cloud VPS</span>
@@ -759,6 +700,46 @@
                                     <span class="project-tech-item">Stripe / bKash</span>
                                     <span class="project-tech-item">REST API</span>
                                     <span class="project-tech-item">Webhooks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: Automated Courier & Logistics Dispatch Engine -->
+                        <div class="project-card tilt-card reveal-init">
+                            <div class="project-screen-box">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>LIVE STREAM • COURIER DISPATCH TELEMETRY</span>
+                                </div>
+                                <div class="project-screen-hud-right">REAL-TIME WEBHOOKS</div>
+                                <canvas class="project-sim-canvas" data-type="sync"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Logistics & Automation</span>
+                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Automated Courier & Logistics Dispatch Engine</h3>
+                                <p class="project-desc">
+                                    High-performance dispatch engine integrating third-party courier APIs with instant consignment booking, label printing, and automated tracking.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Automated consignment booking, shipping label generation, and barcode printing</li>
+                                    <li>Asynchronous webhook listeners and Redis background queues for real-time parcel updates</li>
+                                    <li>Automated Cash-on-Delivery (COD) ledger reconciliation with warehouse inventory systems</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel</span>
+                                    <span class="project-tech-item">MySQL</span>
+                                    <span class="project-tech-item">Redis</span>
+                                    <span class="project-tech-item">REST APIs</span>
+                                    <span class="project-tech-item">Webhooks</span>
+                                    <span class="project-tech-item">Vue.js</span>
+                                    <span class="project-tech-item">Linux VPS</span>
                                 </div>
                             </div>
                         </div>
@@ -1013,7 +994,6 @@
     <script src="assets/js/canvas-3d.js"></script>
     <script src="assets/js/architecture-3d.js"></script>
     <script src="assets/js/cinematic.js"></script>
-    <script src="assets/js/terminal.js"></script>
     <script src="assets/js/tilt.js"></script>
     <script src="assets/js/cursor.js"></script>
     <script src="assets/js/scramble.js"></script>

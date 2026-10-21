@@ -13,8 +13,6 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     const currentYearEl = document.getElementById('current-year');
-    const terminalLauncher = document.getElementById('launch-terminal-btn');
-    const terminalInput = document.getElementById('terminal-input');
 
     // Dynamic Copyright Year
     if (currentYearEl) {
@@ -57,19 +55,5 @@
     }
 
     window.addEventListener('scroll', updateActiveNav, { passive: true });
-
-    // Quick Launch Terminal CTA
-    if (terminalLauncher && terminalInput) {
-        terminalLauncher.addEventListener('click', (e) => {
-            e.preventDefault();
-            const terminalSection = document.getElementById('terminal');
-            if (terminalSection) {
-                terminalSection.scrollIntoView({ behavior: 'smooth' });
-                setTimeout(() => {
-                    terminalInput.focus();
-                }, 500);
-            }
-        });
-    }
 })();
 

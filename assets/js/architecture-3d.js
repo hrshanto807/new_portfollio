@@ -1,6 +1,6 @@
 /**
  * Interactive 3D Isometric System Architecture Visualizer
- * Real-time 3D Pipeline: Nginx -> Laravel 13 -> Redis Queues -> MySQL DB Cluster
+ * Real-time 3D Pipeline: Nginx -> Laravel -> Redis Queues -> MySQL DB Cluster
  * 100% Custom Canvas Mathematics - Zero CDN Dependencies
  * Hasibur Rahman Shanto - Senior Full-Stack Portfolio
  */
@@ -26,7 +26,7 @@
     const nodes = [
         { id: 'clients', label: 'Client / WebRTC Traffic', x: -280, y: 0, z: 0, color: '#38bdf8', metric: 'Real-time WebSocket & ICE' },
         { id: 'nginx', label: 'Nginx Reverse Proxy', x: -140, y: -20, z: 20, color: '#06b6d4', metric: '10k+ Concurrency / SSL Termination' },
-        { id: 'laravel', label: 'Laravel 13 Core & APIs', x: 0, y: 0, z: 0, color: '#6366f1', metric: 'Clean Architecture & Idempotency' },
+        { id: 'laravel', label: 'Laravel Core & APIs', x: 0, y: 0, z: 0, color: '#6366f1', metric: 'Clean Architecture & Idempotency' },
         { id: 'redis', label: 'Redis Queues & Horizon', x: 150, y: -70, z: -30, color: '#ef4444', metric: '-42% API Latency Cut / PubSub' },
         { id: 'mysql', label: 'MySQL Enterprise DB', x: 160, y: 70, z: 30, color: '#10b981', metric: 'EXPLAIN Optimized / Zero Deadlocks' }
     ];
