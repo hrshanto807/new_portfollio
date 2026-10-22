@@ -53,12 +53,42 @@
         },
         'school': {
             title: 'EduTab – School Management & Result Engine',
-            caption: 'Automated GPA grading calculations, student progress analytics, report card generation, and secure cloud storage.',
+            caption: 'High-concurrency academic result engine, automated GPA calculations, report card generator, and fee ledger management.',
             slides: [
                 {
-                    src: 'assets/images/projects/school/result.png',
-                    device: 'Production Academic Dashboard',
-                    desc: 'Institutional grading overview with subject breakdowns, pass/fail ratios, and grade sheet generation.'
+                    src: 'assets/images/projects/school/dashboard.png',
+                    device: 'Academic ERP Dashboard (1440×900)',
+                    desc: 'Executive institutional dashboard with active student headcount, class distribution, attendance telemetry, and quick admin shortcuts.'
+                },
+                {
+                    src: 'assets/images/projects/school/marksheet.png',
+                    device: 'Official Student Marksheet & GPA Engine',
+                    desc: 'Automated transcript generation calculating GPA, letter grade, total marks, subject-wise breakdowns, and official school seal.'
+                },
+                {
+                    src: 'assets/images/projects/school/merit_list.png',
+                    device: 'Automated Merit List & Ranking',
+                    desc: 'Batch result calculation sorting thousands of students by total marks and GPA with instant rank determination.'
+                },
+                {
+                    src: 'assets/images/projects/school/broadsheet.png',
+                    device: 'Institutional Broadsheet Matrix',
+                    desc: 'Comprehensive multi-subject tabulation sheet displaying class-wide academic performance across exam sessions.'
+                },
+                {
+                    src: 'assets/images/projects/school/marks_entry.png',
+                    device: 'High-Speed Marks Entry Ledger',
+                    desc: 'Teacher grading interface featuring keyboard navigation, validation rules, and automatic calculation of continuous assessments.'
+                },
+                {
+                    src: 'assets/images/projects/school/fees_collection.png',
+                    device: 'Fees Collection & Receipt Generator',
+                    desc: 'Accounts module tracking student tuition payments, automated receipt printing, and outstanding balance ledgers.'
+                },
+                {
+                    src: 'assets/images/projects/school/public_portal.png',
+                    device: 'Public Result Portal',
+                    desc: 'High-concurrency public student portal for instantaneous roll/registration based exam result lookup.'
                 }
             ]
         },
