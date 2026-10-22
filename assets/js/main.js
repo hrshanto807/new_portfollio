@@ -23,13 +23,17 @@
     if (hamburgerBtn && navMenu) {
         hamburgerBtn.addEventListener('click', () => {
             const isOpen = navMenu.classList.toggle('open');
+            hamburgerBtn.classList.toggle('active', isOpen);
             hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
         navLinks.forEach((link) => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
+                hamburgerBtn.classList.remove('active');
                 hamburgerBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             });
         });
 
@@ -37,7 +41,9 @@
         document.addEventListener('click', (e) => {
             if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 navMenu.classList.remove('open');
+                hamburgerBtn.classList.remove('active');
                 hamburgerBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             }
         });
     }
