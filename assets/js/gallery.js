@@ -40,6 +40,17 @@
                 }
             ]
         },
+        'webrtc': {
+            title: 'Real-Time WebRTC Video & Live Chat Platform',
+            caption: 'Ultra-low latency (0.8ms) peer-to-peer audio/video streaming, WebSocket signaling, screen sharing, and end-to-end encrypted messaging.',
+            slides: [
+                {
+                    src: 'assets/images/projects/webrtc/desktop.png',
+                    device: 'Conference Room (1080p 60FPS)',
+                    desc: 'Active 1-on-1 and multi-party video call with real-time Opus audio telemetry, floating media controls, and instant chat sidebar.'
+                }
+            ]
+        },
         'school': {
             title: 'EduTab – School Management & Result Engine',
             caption: 'Automated GPA grading calculations, student progress analytics, report card generation, and secure cloud storage.',
@@ -48,6 +59,37 @@
                     src: 'assets/images/projects/school/result.png',
                     device: 'Production Academic Dashboard',
                     desc: 'Institutional grading overview with subject breakdowns, pass/fail ratios, and grade sheet generation.'
+                }
+            ]
+        },
+        'construction': {
+            title: 'Kadamati ERP – Construction Operations & Logistics',
+            caption: 'Heavy machinery fleet tracking, BNBC compliance inspections, daily site labor payroll, and ৳25.5 Cr contractor billing.',
+            slides: [
+                {
+                    src: 'assets/images/projects/construction/equipment.jpeg',
+                    device: 'Equipment Fleet & Machinery',
+                    desc: 'Heavy machinery tracking (Tower Cranes, Excavators, Concrete Mixers) with maintenance alerts, utilization ratios, and site deployments.'
+                },
+                {
+                    src: 'assets/images/projects/construction/quality-control.jpeg',
+                    device: 'Quality Control & BNBC Audits',
+                    desc: 'Field inspection schedules, BNBC structural compliance audits, defect photo documentation, and Non-Conformance Reports (NCR).'
+                },
+                {
+                    src: 'assets/images/projects/construction/labour.jpeg',
+                    device: 'Site Labour & Wage Engine',
+                    desc: 'Biometric attendance tracking across 12 active sites, trade categorization, daily wage calculations, and monthly payroll disbursement.'
+                },
+                {
+                    src: 'assets/images/projects/construction/billing.jpeg',
+                    device: 'Billing, Running Bills & Cashflow',
+                    desc: 'Contractor milestone disbursements, ৳25.5 Cr contract portfolio tracking, running bill approvals, and net monthly cashflow.'
+                },
+                {
+                    src: 'assets/images/projects/construction/client-portal.jpeg',
+                    device: 'Client Progress Portal',
+                    desc: 'Owner-facing milestone dashboard (Green Valley Residence), architectural drawing vault, and photographic site progress updates.'
                 }
             ]
         },
@@ -76,6 +118,39 @@
                     desc: 'Camera-based barcode scanning and stock taking for warehouse auditing.'
                 }
             ]
+        },
+        'courier': {
+            title: 'Automated Courier & Logistics Dispatch Engine',
+            caption: 'High-throughput order dispatching, dynamic vehicle routing, GPS vehicle telemetry, and real-time delivery status updates.',
+            slides: [
+                {
+                    src: 'assets/images/projects/courier/desktop.png',
+                    device: 'Dispatcher Control Room (1920×1080)',
+                    desc: 'Interactive GIS delivery map with GPS courier telemetry, fleet SLA metrics (99.4%), and automated parcel dispatch queue.'
+                }
+            ]
+        },
+        'multivendor': {
+            title: 'Enterprise Multi-Vendor E-Commerce Platform',
+            caption: 'Scalable marketplace architecture featuring vendor store management, catalog moderation, automated commission splits, and multi-currency payout ledger.',
+            slides: [
+                {
+                    src: 'assets/images/projects/multivendor/desktop.png',
+                    device: 'Marketplace Operations Center (1920×1080)',
+                    desc: 'Real-time GMV analytics ($1.82M), vendor sales leaderboard, live customer order stream, and Stripe Connect / bKash payout ledger.'
+                }
+            ]
+        },
+        'invoice': {
+            title: 'Enterprise Order Management & Automated Invoice Engine',
+            caption: 'High-concurrency order fulfillment pipeline with parallel Redis queues, automated tax/VAT calculations, and sub-100ms PDF invoice generation.',
+            slides: [
+                {
+                    src: 'assets/images/projects/invoice/desktop.png',
+                    device: 'Order Queue & Tax Invoice Preview (1920×1080)',
+                    desc: 'Dual-pane workspace: real-time order processing stream (18,450 orders/day) and live rendered tax invoice preview with QR code verification.'
+                }
+            ]
         }
     };
 
@@ -83,21 +158,81 @@
     const modal = document.getElementById('project-gallery-modal');
     if (!modal) return;
 
+    const container = document.getElementById('gallery-container') || modal.querySelector('.gallery-container');
     const backdrop = document.getElementById('gallery-backdrop');
     const closeBtn = document.getElementById('gallery-close-btn');
     const prevBtn = document.getElementById('gallery-prev-btn');
     const nextBtn = document.getElementById('gallery-next-btn');
+    const viewmodeBtn = document.getElementById('gallery-viewmode-btn');
+    const viewmodeLabel = document.getElementById('gallery-viewmode-label');
+    const fullscreenBtn = document.getElementById('gallery-fullscreen-btn');
+    const openRawBtn = document.getElementById('gallery-open-raw');
     const titleEl = document.getElementById('gallery-title');
     const deviceBadgeEl = document.getElementById('gallery-device-badge');
     const counterEl = document.getElementById('gallery-counter');
     const mainImg = document.getElementById('gallery-main-img');
+    const slideWrap = document.getElementById('gallery-slide-wrap');
+    const scrollHintEl = document.getElementById('gallery-scroll-hint');
     const captionEl = document.getElementById('gallery-caption');
     const thumbnailsWrap = document.getElementById('gallery-thumbnails');
 
     let currentProjectKey = 'bnsmsoft';
     let currentSlideIdx = 0;
+    let isFitMode = false;
     let touchStartX = 0;
     let touchEndX = 0;
+
+    // Auto-detect image aspect ratio for full-width responsive view
+    function updateImageAspect() {
+        if (!mainImg || !mainImg.naturalWidth) return;
+        const isTall = mainImg.naturalHeight > mainImg.naturalWidth * 1.15;
+        if (isTall) {
+            mainImg.classList.add('is-tall-capture');
+            mainImg.classList.remove('is-landscape');
+            if (viewmodeBtn) viewmodeBtn.style.display = 'inline-flex';
+            if (isFitMode) {
+                mainImg.classList.add('is-fit-mode');
+                if (scrollHintEl) scrollHintEl.style.display = 'none';
+                if (viewmodeLabel) viewmodeLabel.textContent = 'Full Width';
+            } else {
+                mainImg.classList.remove('is-fit-mode');
+                if (scrollHintEl) scrollHintEl.style.display = 'inline-flex';
+                if (viewmodeLabel) viewmodeLabel.textContent = 'Fit Height';
+            }
+        } else {
+            mainImg.classList.remove('is-tall-capture', 'is-fit-mode');
+            mainImg.classList.add('is-landscape');
+            if (scrollHintEl) scrollHintEl.style.display = 'none';
+            if (viewmodeBtn) viewmodeBtn.style.display = 'none';
+        }
+        if (slideWrap) slideWrap.scrollTop = 0;
+    }
+
+    if (mainImg) {
+        mainImg.onload = updateImageAspect;
+    }
+
+    // Toggle View Mode (Full Width Scrollable vs Fit Screen)
+    function toggleViewMode() {
+        isFitMode = !isFitMode;
+        updateImageAspect();
+    }
+
+    // Toggle Fullscreen
+    function toggleFullscreen() {
+        if (container) {
+            container.classList.toggle('is-fullscreen');
+        }
+        if (!document.fullscreenElement) {
+            if (modal.requestFullscreen) {
+                modal.requestFullscreen().catch(() => {});
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen().catch(() => {});
+            }
+        }
+    }
 
     // Open Gallery
     function openGallery(projectKey) {
@@ -106,6 +241,7 @@
         }
         currentProjectKey = projectKey;
         currentSlideIdx = 0;
+        isFitMode = false; // Reset to full width for sharpest view
 
         renderGalleryUI();
         modal.classList.add('active');
@@ -117,6 +253,10 @@
     function closeGallery() {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
+        if (container) container.classList.remove('is-fullscreen');
+        if (document.fullscreenElement && document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        }
         document.body.style.overflow = '';
     }
 
@@ -130,6 +270,7 @@
         deviceBadgeEl.textContent = currentSlide.device;
         counterEl.textContent = `0${currentSlideIdx + 1} / 0${slides.length}`;
         captionEl.textContent = currentSlide.desc;
+        if (openRawBtn) openRawBtn.href = currentSlide.src;
 
         // Image Transition
         mainImg.classList.add('fade-out');
@@ -137,6 +278,9 @@
             mainImg.src = currentSlide.src;
             mainImg.alt = `${project.title} - ${currentSlide.device}`;
             mainImg.classList.remove('fade-out');
+            if (mainImg.complete) {
+                updateImageAspect();
+            }
         }, 120);
 
         // Render Thumbnails
@@ -184,6 +328,8 @@
     if (backdrop) backdrop.addEventListener('click', closeGallery);
     if (nextBtn) nextBtn.addEventListener('click', nextSlide);
     if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (viewmodeBtn) viewmodeBtn.addEventListener('click', toggleViewMode);
+    if (fullscreenBtn) fullscreenBtn.addEventListener('click', toggleFullscreen);
 
     // Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
@@ -191,6 +337,8 @@
         if (e.key === 'Escape') closeGallery();
         if (e.key === 'ArrowRight') nextSlide();
         if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+        if (e.key === 'v' || e.key === 'V') toggleViewMode();
     });
 
     // Touch Swipe Gestures

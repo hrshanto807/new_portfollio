@@ -1914,23 +1914,35 @@ h1, h2, h3, h4, h5 {
 .gallery-container {
     position: relative;
     z-index: 10;
-    width: 94%;
-    max-width: 1100px;
-    max-height: 92vh;
+    width: 98vw;
+    max-width: 1560px;
+    height: 96vh;
+    max-height: 98vh;
     display: flex;
     flex-direction: column;
-    background: rgba(13, 19, 34, 0.95);
-    border: 1px solid rgba(6, 182, 212, 0.4);
+    background: rgba(8, 12, 24, 0.98);
+    border: 1px solid rgba(6, 182, 212, 0.45);
     border-radius: var(--radius-lg);
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 45px rgba(6, 182, 212, 0.15);
+    box-shadow: 0 25px 90px rgba(0, 0, 0, 0.95), 0 0 60px rgba(6, 182, 212, 0.18);
     overflow: hidden;
     animation: galleryModalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.25s ease;
+}
+
+/* Fullscreen expanded state */
+.gallery-container.is-fullscreen {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
 }
 
 @keyframes galleryModalIn {
     0% {
         opacity: 0;
-        transform: scale(0.95) translateY(15px);
+        transform: scale(0.96) translateY(15px);
     }
     100% {
         opacity: 1;
@@ -1942,9 +1954,11 @@ h1, h2, h3, h4, h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.1rem 1.6rem;
+    padding: 0.85rem 1.6rem;
     border-bottom: 1px solid var(--border-subtle);
     background: rgba(255, 255, 255, 0.02);
+    flex-shrink: 0;
+    gap: 1rem;
 }
 
 .gallery-tag {
@@ -1963,6 +1977,14 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 0.25rem;
 }
 
+.gallery-badges-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
 .gallery-device-badge {
     display: inline-flex;
     font-family: var(--font-mono);
@@ -1974,10 +1996,84 @@ h1, h2, h3, h4, h5 {
     border-radius: var(--radius-full);
 }
 
+.gallery-scroll-hint {
+    display: none;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--secondary);
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px dashed rgba(6, 182, 212, 0.4);
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--radius-full);
+    animation: hintPulse 2s infinite ease-in-out;
+}
+
+@keyframes hintPulse {
+    0%, 100% { opacity: 0.75; }
+    50% { opacity: 1; }
+}
+
 .gallery-actions {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 0.85rem;
+    flex-shrink: 0;
+}
+
+.gallery-control-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--secondary);
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.gallery-control-btn .icon-svg {
+    width: 14px;
+    height: 14px;
+}
+
+.gallery-control-btn:hover {
+    background: var(--secondary);
+    color: #04070f;
+    box-shadow: 0 0 12px var(--secondary-glow);
+}
+
+.gallery-icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.gallery-icon-btn .icon-svg {
+    width: 16px;
+    height: 16px;
+}
+
+.gallery-icon-btn:hover {
+    background: rgba(6, 182, 212, 0.15);
+    border-color: var(--secondary);
+    color: var(--secondary);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.3);
 }
 
 .gallery-counter {
@@ -2001,6 +2097,11 @@ h1, h2, h3, h4, h5 {
     transition: var(--transition-fast);
 }
 
+.gallery-close-btn .icon-svg {
+    width: 18px;
+    height: 18px;
+}
+
 .gallery-close-btn:hover {
     background: rgba(239, 68, 68, 0.15);
     border-color: #ef4444;
@@ -2010,14 +2111,15 @@ h1, h2, h3, h4, h5 {
 
 .gallery-stage {
     position: relative;
+    flex: 1 1 0%;
+    min-height: 0;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
-    min-height: 380px;
-    max-height: 60vh;
+    padding: 0.5rem 3.5rem;
     overflow: hidden;
-    background: #050811;
+    background: #03060d;
 }
 
 .gallery-nav-arrow {
@@ -2052,19 +2154,67 @@ h1, h2, h3, h4, h5 {
 .gallery-slide-wrap {
     width: 100%;
     height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(6, 182, 212, 0.45) rgba(255, 255, 255, 0.03);
+}
+
+.gallery-slide-wrap::-webkit-scrollbar {
+    width: 7px;
+}
+.gallery-slide-wrap::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+.gallery-slide-wrap::-webkit-scrollbar-thumb {
+    background: rgba(6, 182, 212, 0.45);
+    border-radius: 4px;
+}
+.gallery-slide-wrap::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
 }
 
 .gallery-main-img {
-    max-width: 100%;
-    max-height: 52vh;
-    object-fit: contain;
-    border-radius: var(--radius-sm);
+    border-radius: 6px;
     border: 1px solid var(--border-subtle);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-    transition: opacity 0.18s ease, transform 0.18s ease;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9);
+    transition: opacity 0.18s ease;
+    display: block;
+}
+
+/* Full-width responsive view for full-page tall captures */
+.gallery-main-img.is-tall-capture {
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    object-fit: initial;
+    align-self: flex-start;
+}
+
+/* Tall capture in "fit" mode: scale down to fit whole page in stage */
+.gallery-main-img.is-tall-capture.is-fit-mode {
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: center;
+}
+
+/* Landscape view for standard 16:9 images */
+.gallery-main-img.is-landscape {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
 }
 
 .gallery-main-img.fade-out {
@@ -2073,12 +2223,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .gallery-bottom-bar {
-    padding: 1rem 1.6rem 1.25rem 1.6rem;
+    padding: 0.85rem 1.6rem 1rem 1.6rem;
     border-top: 1px solid var(--border-subtle);
     background: rgba(255, 255, 255, 0.015);
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .gallery-thumbnails {
@@ -2134,37 +2285,48 @@ h1, h2, h3, h4, h5 {
 
 .gallery-caption {
     text-align: center;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
 }
 
 /* Mobile Gallery Lightbox Adaptations */
 @media (max-width: 768px) {
     .gallery-container {
-        width: 96%;
-        max-height: 94vh;
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        border: none;
     }
     .gallery-topbar {
-        padding: 0.85rem 1rem;
+        padding: 0.65rem 0.85rem;
     }
     .gallery-title {
-        font-size: 1.05rem;
+        font-size: 0.98rem;
+    }
+    .gallery-control-btn span {
+        display: none;
+    }
+    .gallery-control-btn {
+        padding: 0.35rem 0.5rem;
     }
     .gallery-stage {
-        padding: 1rem 0.5rem;
+        padding: 0.5rem 1.75rem;
         min-height: 240px;
     }
-    .gallery-prev { left: 6px; width: 36px; height: 36px; }
-    .gallery-next { right: 6px; width: 36px; height: 36px; }
-    .gallery-main-img {
-        max-height: 44vh;
+    .gallery-prev { left: 4px; width: 34px; height: 34px; }
+    .gallery-next { right: 4px; width: 34px; height: 34px; }
+    .gallery-main-img.is-tall-capture {
+        width: 100%;
+        max-width: 100%;
     }
     .gallery-bottom-bar {
-        padding: 0.75rem 1rem;
+        padding: 0.65rem 0.85rem;
     }
     .gallery-thumb-btn img {
-        width: 50px;
-        height: 32px;
+        width: 48px;
+        height: 30px;
     }
     .gallery-caption {
         font-size: 0.78rem;
