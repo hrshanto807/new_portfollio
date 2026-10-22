@@ -15,94 +15,244 @@
     // Gallery Database
     const galleryData = {
         'inventory-pos': {
-            title: 'BNSMSoft – Inventory & POS Management System',
-            caption: 'Enterprise SaaS architecture featuring real-time stock ledger, barcode POS terminal, multi-branch inventory, and automated billing.',
+            title: 'Inventory POS – Multi-Tenant Enterprise SaaS Platform [23 Production Views]',
+            caption: 'Enterprise-grade multi-tenant architecture with company database isolation, custom subdomains, touch barcode POS terminal, double-entry financial ledger, and SuperAdmin subscription monetization engine.',
             slides: [
                 {
-                    src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
-                    device: 'Executive Analytics Dashboard (1440×3452)',
-                    desc: 'Real-time gross margin, cashflow metrics, capital summary, low-stock alerts, and user plan limits.'
+                    src: 'assets/images/inventory-pos/01_website_landing.png',
+                    device: '01. Public SaaS Marketing Portal & Landing Page (2160×11709)',
+                    desc: 'High-converting multi-tenant marketing website featuring dynamic subscription tier tables, interactive feature tour, customer testimonials, and instant company onboarding funnel.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/dashboard_laptop.png',
-                    device: 'Laptop Resolution Dashboard (1280×3562)',
-                    desc: 'Compact laptop view featuring responsive data tables, stock ledger, and quick shortcuts.'
+                    src: 'assets/images/inventory-pos/02_website_about.png',
+                    device: '02. Platform Architecture & Company Overview (2160×5403)',
+                    desc: 'Architectural overview outlining multi-branch inventory synchronization, offline-ready POS failover, cloud infrastructure SLA, and enterprise compliance.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/dashboard_tablet.png',
-                    device: 'Tablet Touch View (768×6018)',
-                    desc: 'Touch-optimized drawer navigation with collapsible cards and fast date range filtering.'
+                    src: 'assets/images/inventory-pos/03_auth_login.png',
+                    device: '03. Multi-Tenant Authentication & Subdomain Gatekeeper (2160×1350)',
+                    desc: 'Secure authentication portal automatically detecting tenant subdomains, enforcing brute-force mitigation, session rate-limiting, and remember-me tokens.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
-                    device: 'Mobile Phone PWA Dashboard (390×7405)',
-                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
+                    src: 'assets/images/inventory-pos/04_saas_dashboard.png',
+                    device: '04. Executive Tenant ERP & Sales Analytics Dashboard (2160×3338)',
+                    desc: 'Real-time mission control displaying daily gross revenue, net profit margin, live order count, low-stock threshold alerts, and cash-in-drawer telemetry.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
-                    device: 'Desktop POS Terminal (1440×1722)',
-                    desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, discount calculation, and split payments.'
+                    src: 'assets/images/inventory-pos/05_products_table.png',
+                    device: '05. Product Inventory & Barcode Catalog (2160×1677)',
+                    desc: 'Centralized product database with live stock status indicators, instant barcode search, category hierarchies, purchase vs selling margins, and bulk export.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/pos_laptop.png',
-                    device: 'Laptop POS View (1280×1650)',
-                    desc: 'Cashier interface featuring keyboard shortcuts, discount coupons, and instant thermal receipt printing.'
+                    src: 'assets/images/inventory-pos/06_product_create_form.png',
+                    device: '06. Advanced Product Creation & Variant Configuration (2160×1350)',
+                    desc: 'Granular inventory item creation modal supporting barcode auto-generation, multi-tax tiers, unit conversions (Pcs/Box/Kg), and minimum safety stock alerts.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
-                    device: 'Tablet Portable POS (768×2676)',
-                    desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup and touch checkout.'
+                    src: 'assets/images/inventory-pos/07_pos_terminal.png',
+                    device: '07. High-Throughput Touch POS Billing Terminal (2160×1542)',
+                    desc: 'Ultra-fast cashier checkout interface with rapid barcode lookup, active cart calculations, multi-discount rules, customer linking, and one-click thermal receipt printing.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
-                    device: 'Mobile Pocket Scanner (390×3009)',
-                    desc: 'Camera-based barcode scanning, cart management, and mobile cashier checkout.'
+                    src: 'assets/images/inventory-pos/08_modal_cash_register.png',
+                    device: '08. Cash Register Drawer & Shift Balancing Modal (2160×1350)',
+                    desc: 'Comprehensive shift cashier management tracking opening drawer float, midday cash deposits/withdrawals, closing totals, and cash reconciliation audits.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/09_modal_held_bills.png',
+                    device: '09. Suspended Orders & Multi-Cart Held Bills Manager (2160×1350)',
+                    desc: 'Multi-cart suspension modal allowing cashiers to put incomplete orders on hold, serve waiting retail customers, and restore draft carts instantly with zero data loss.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/10_modal_quick_create_customer.png',
+                    device: '10. Rapid Customer CRM Onboarding Modal (2160×1350)',
+                    desc: 'Inline checkout modal allowing store staff to register new customers in under 5 seconds with phone lookup, credit limit assignment, and loyalty tagging.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/11_sales_table.png',
+                    device: '11. Sales Orders & Real-Time Transaction Ledger (2160×1551)',
+                    desc: 'Master sales records logging invoice numbers, customer profiles, payment statuses (Paid/Partial/Due), cashier IDs, and one-click PDF reprint triggers.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/12_sales_invoice_document.png',
+                    device: '12. Thermal & Printable Sales Invoice Document (2160×1826)',
+                    desc: 'Standardized printable invoice and POS thermal slip complete with company logo, tax registration number, itemized breakdown, discounts, and barcode validation.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/13_purchases_table.png',
+                    device: '13. Purchase Orders & Vendor Stock Inwarding (2160×1646)',
+                    desc: 'Supply chain procurement table managing vendor purchase orders, inward stock verification, payment due dates, and automated weighted-average cost updating.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/14_customers_crm_table.png',
+                    device: '14. Customer Directory & Credit Balance Ledger (2160×1551)',
+                    desc: 'Full-featured CRM database tracking customer lifetime spend, outstanding credit receivables, phone directories, and transaction histories.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/15_suppliers_table.png',
+                    device: '15. Supplier Directory & Accounts Payable Ledger (2160×1551)',
+                    desc: 'Comprehensive vendor management portal tracking trade balances, total purchased value, outstanding accounts payable, and supplier contact details.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/16_accounts_ledger_table.png',
+                    device: '16. Double-Entry Financial Accounts & Cashflow Ledger (2160×1541)',
+                    desc: 'Enterprise accounting ledger recording cash, bank accounts, expenses, journal vouchers, debits, credits, and live trial balance reconciliations.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/17_reports_analytics.png',
+                    device: '17. Business Intelligence & Profit/Loss Financial Reports (2160×1719)',
+                    desc: 'Deep operational analytics generating daily/monthly sales velocity, gross vs net profit margin, tax liability summaries, and fast-moving inventory turnover rates.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/18_admin_companies_tenants.png',
+                    device: '18. SuperAdmin Multi-Tenant Companies Directory (2160×1350)',
+                    desc: 'Central SaaS control plane managing tenant company accounts, dedicated MySQL database provisioning, custom subdomain routing, and plan subscription status.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/19_admin_saas_plans.png',
+                    device: '19. SuperAdmin SaaS Subscription Plans Engine (2160×1350)',
+                    desc: 'Flexible SaaS monetization engine configuring tiered subscription plans (Starter/Pro/Enterprise), monthly/annual pricing, store limits, and feature flags.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/20_admin_platform_finance.png',
+                    device: '20. SuperAdmin Platform Revenue & MRR Finance (2160×2006)',
+                    desc: 'Global platform financial telemetry tracking Monthly Recurring Revenue (MRR), Annual Recurring Revenue (ARR), subscription renewals, and gateway payouts.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/21_admin_security_dashboard.png',
+                    device: '21. SuperAdmin Security & System Audit Log Monitor (2160×1350)',
+                    desc: 'Real-time platform security operations center monitoring brute-force attempts, IP blocking, failed logins, sensitive action audit logs, and session management.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/22_admin_roles_permissions.png',
+                    device: '22. Granular RBAC Role & Permission Matrix (2160×1350)',
+                    desc: 'Enterprise permission matrix assigning fine-grained capabilities across SuperAdmin, Tenant Admin, Branch Manager, Cashier, and Accountant roles.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/23_settings_form.png',
+                    device: '23. Tenant Workspace Configuration & Tax Engine (2160×1368)',
+                    desc: 'Multi-branch business workspace setup managing tax rules (VAT/GST), currency symbols, thermal receipt layouts, email SMTP, and automated backup schedules.'
                 }
             ]
         },
         'bnsmsoft': {
-            title: 'BNSMSoft – Inventory & POS Management System',
-            caption: 'Enterprise SaaS architecture featuring real-time stock ledger, barcode POS terminal, multi-branch inventory, and automated billing.',
+            title: 'Inventory POS – Multi-Tenant Enterprise SaaS Platform [23 Production Views]',
+            caption: 'Enterprise-grade multi-tenant architecture with company database isolation, custom subdomains, touch barcode POS terminal, double-entry financial ledger, and SuperAdmin subscription monetization engine.',
             slides: [
                 {
-                    src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
-                    device: 'Executive Analytics Dashboard (1440×3452)',
-                    desc: 'Real-time gross margin, cashflow metrics, capital summary, low-stock alerts, and user plan limits.'
+                    src: 'assets/images/inventory-pos/01_website_landing.png',
+                    device: '01. Public SaaS Marketing Portal & Landing Page (2160×11709)',
+                    desc: 'High-converting multi-tenant marketing website featuring dynamic subscription tier tables, interactive feature tour, customer testimonials, and instant company onboarding funnel.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/dashboard_laptop.png',
-                    device: 'Laptop Resolution Dashboard (1280×3562)',
-                    desc: 'Compact laptop view featuring responsive data tables, stock ledger, and quick shortcuts.'
+                    src: 'assets/images/inventory-pos/02_website_about.png',
+                    device: '02. Platform Architecture & Company Overview (2160×5403)',
+                    desc: 'Architectural overview outlining multi-branch inventory synchronization, offline-ready POS failover, cloud infrastructure SLA, and enterprise compliance.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/dashboard_tablet.png',
-                    device: 'Tablet Touch View (768×6018)',
-                    desc: 'Touch-optimized drawer navigation with collapsible cards and fast date range filtering.'
+                    src: 'assets/images/inventory-pos/03_auth_login.png',
+                    device: '03. Multi-Tenant Authentication & Subdomain Gatekeeper (2160×1350)',
+                    desc: 'Secure authentication portal automatically detecting tenant subdomains, enforcing brute-force mitigation, session rate-limiting, and remember-me tokens.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
-                    device: 'Mobile Phone PWA Dashboard (390×7405)',
-                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
+                    src: 'assets/images/inventory-pos/04_saas_dashboard.png',
+                    device: '04. Executive Tenant ERP & Sales Analytics Dashboard (2160×3338)',
+                    desc: 'Real-time mission control displaying daily gross revenue, net profit margin, live order count, low-stock threshold alerts, and cash-in-drawer telemetry.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
-                    device: 'Desktop POS Terminal (1440×1722)',
-                    desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, discount calculation, and split payments.'
+                    src: 'assets/images/inventory-pos/05_products_table.png',
+                    device: '05. Product Inventory & Barcode Catalog (2160×1677)',
+                    desc: 'Centralized product database with live stock status indicators, instant barcode search, category hierarchies, purchase vs selling margins, and bulk export.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/pos_laptop.png',
-                    device: 'Laptop POS View (1280×1650)',
-                    desc: 'Cashier interface featuring keyboard shortcuts, discount coupons, and instant thermal receipt printing.'
+                    src: 'assets/images/inventory-pos/06_product_create_form.png',
+                    device: '06. Advanced Product Creation & Variant Configuration (2160×1350)',
+                    desc: 'Granular inventory item creation modal supporting barcode auto-generation, multi-tax tiers, unit conversions (Pcs/Box/Kg), and minimum safety stock alerts.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
-                    device: 'Tablet Portable POS (768×2676)',
-                    desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup and touch checkout.'
+                    src: 'assets/images/inventory-pos/07_pos_terminal.png',
+                    device: '07. High-Throughput Touch POS Billing Terminal (2160×1542)',
+                    desc: 'Ultra-fast cashier checkout interface with rapid barcode lookup, active cart calculations, multi-discount rules, customer linking, and one-click thermal receipt printing.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
-                    device: 'Mobile Pocket Scanner (390×3009)',
-                    desc: 'Camera-based barcode scanning, cart management, and mobile cashier checkout.'
+                    src: 'assets/images/inventory-pos/08_modal_cash_register.png',
+                    device: '08. Cash Register Drawer & Shift Balancing Modal (2160×1350)',
+                    desc: 'Comprehensive shift cashier management tracking opening drawer float, midday cash deposits/withdrawals, closing totals, and cash reconciliation audits.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/09_modal_held_bills.png',
+                    device: '09. Suspended Orders & Multi-Cart Held Bills Manager (2160×1350)',
+                    desc: 'Multi-cart suspension modal allowing cashiers to put incomplete orders on hold, serve waiting retail customers, and restore draft carts instantly with zero data loss.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/10_modal_quick_create_customer.png',
+                    device: '10. Rapid Customer CRM Onboarding Modal (2160×1350)',
+                    desc: 'Inline checkout modal allowing store staff to register new customers in under 5 seconds with phone lookup, credit limit assignment, and loyalty tagging.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/11_sales_table.png',
+                    device: '11. Sales Orders & Real-Time Transaction Ledger (2160×1551)',
+                    desc: 'Master sales records logging invoice numbers, customer profiles, payment statuses (Paid/Partial/Due), cashier IDs, and one-click PDF reprint triggers.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/12_sales_invoice_document.png',
+                    device: '12. Thermal & Printable Sales Invoice Document (2160×1826)',
+                    desc: 'Standardized printable invoice and POS thermal slip complete with company logo, tax registration number, itemized breakdown, discounts, and barcode validation.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/13_purchases_table.png',
+                    device: '13. Purchase Orders & Vendor Stock Inwarding (2160×1646)',
+                    desc: 'Supply chain procurement table managing vendor purchase orders, inward stock verification, payment due dates, and automated weighted-average cost updating.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/14_customers_crm_table.png',
+                    device: '14. Customer Directory & Credit Balance Ledger (2160×1551)',
+                    desc: 'Full-featured CRM database tracking customer lifetime spend, outstanding credit receivables, phone directories, and transaction histories.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/15_suppliers_table.png',
+                    device: '15. Supplier Directory & Accounts Payable Ledger (2160×1551)',
+                    desc: 'Comprehensive vendor management portal tracking trade balances, total purchased value, outstanding accounts payable, and supplier contact details.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/16_accounts_ledger_table.png',
+                    device: '16. Double-Entry Financial Accounts & Cashflow Ledger (2160×1541)',
+                    desc: 'Enterprise accounting ledger recording cash, bank accounts, expenses, journal vouchers, debits, credits, and live trial balance reconciliations.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/17_reports_analytics.png',
+                    device: '17. Business Intelligence & Profit/Loss Financial Reports (2160×1719)',
+                    desc: 'Deep operational analytics generating daily/monthly sales velocity, gross vs net profit margin, tax liability summaries, and fast-moving inventory turnover rates.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/18_admin_companies_tenants.png',
+                    device: '18. SuperAdmin Multi-Tenant Companies Directory (2160×1350)',
+                    desc: 'Central SaaS control plane managing tenant company accounts, dedicated MySQL database provisioning, custom subdomain routing, and plan subscription status.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/19_admin_saas_plans.png',
+                    device: '19. SuperAdmin SaaS Subscription Plans Engine (2160×1350)',
+                    desc: 'Flexible SaaS monetization engine configuring tiered subscription plans (Starter/Pro/Enterprise), monthly/annual pricing, store limits, and feature flags.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/20_admin_platform_finance.png',
+                    device: '20. SuperAdmin Platform Revenue & MRR Finance (2160×2006)',
+                    desc: 'Global platform financial telemetry tracking Monthly Recurring Revenue (MRR), Annual Recurring Revenue (ARR), subscription renewals, and gateway payouts.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/21_admin_security_dashboard.png',
+                    device: '21. SuperAdmin Security & System Audit Log Monitor (2160×1350)',
+                    desc: 'Real-time platform security operations center monitoring brute-force attempts, IP blocking, failed logins, sensitive action audit logs, and session management.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/22_admin_roles_permissions.png',
+                    device: '22. Granular RBAC Role & Permission Matrix (2160×1350)',
+                    desc: 'Enterprise permission matrix assigning fine-grained capabilities across SuperAdmin, Tenant Admin, Branch Manager, Cashier, and Accountant roles.'
+                },
+                {
+                    src: 'assets/images/inventory-pos/23_settings_form.png',
+                    device: '23. Tenant Workspace Configuration & Tax Engine (2160×1368)',
+                    desc: 'Multi-branch business workspace setup managing tax rules (VAT/GST), currency symbols, thermal receipt layouts, email SMTP, and automated backup schedules.'
                 }
             ]
         },
@@ -919,12 +1069,14 @@
     }
 
     // Open Gallery
-    function openGallery(projectKey) {
+    function openGallery(projectKey, initialSlideIdx = 0) {
         if (!galleryData[projectKey]) {
-            projectKey = 'bnsmsoft';
+            projectKey = 'inventory-pos';
         }
         currentProjectKey = projectKey;
-        currentSlideIdx = 0;
+        const totalSlides = (galleryData[projectKey].slides || []).length;
+        const targetIdx = parseInt(initialSlideIdx, 10);
+        currentSlideIdx = (!isNaN(targetIdx) && targetIdx >= 0 && targetIdx < totalSlides) ? targetIdx : 0;
         isFitMode = true; // Always fit by default to preserve original aspect ratio and prevent clipping
 
         renderGalleryUI();
@@ -1072,8 +1224,9 @@
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                const key = btn.getAttribute('data-gallery-trigger') || 'bnsmsoft';
-                openGallery(key);
+                const key = btn.getAttribute('data-gallery-trigger') || 'inventory-pos';
+                const slideIdx = parseInt(btn.getAttribute('data-slide-index') || '0', 10);
+                openGallery(key, isNaN(slideIdx) ? 0 : slideIdx);
             });
         });
     });

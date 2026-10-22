@@ -154,11 +154,17 @@ h1, h2, h3, h4, h5 {
     padding: 0.35rem 0.9rem;
     border-radius: var(--radius-full);
     margin-bottom: 0.9rem;
+    animation: badgePulseAura 4s infinite ease-in-out;
 }
 
 .section-title {
     font-size: 2.4rem;
     margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, #ffffff 0%, #38bdf8 30%, #818cf8 60%, #e879f9 85%, #ffffff 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textFlowGradient 7s ease-in-out infinite alternate;
 }
 
 .section-subtitle {
@@ -1158,7 +1164,7 @@ h1, h2, h3, h4, h5 {
     gap: 0.65rem;
 }
 
-/* Living Synapse Skill Pills */
+/* Living Synapse Skill Pills & Category Themes */
 .skill-pill {
     display: inline-flex;
     align-items: center;
@@ -1171,8 +1177,27 @@ h1, h2, h3, h4, h5 {
     font-weight: 500;
     color: #e2e8f0;
     position: relative;
+    overflow: hidden;
+    cursor: default;
     transform-style: preserve-3d;
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+/* Diagonal Gleam Across Skill Pill */
+.skill-pill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: skewX(-25deg);
+    pointer-events: none;
+}
+
+.skill-pill:hover::after {
+    animation: pillShimmer 0.75s ease-out;
 }
 
 /* Glowing Synapse Indicator Dot */
@@ -1187,22 +1212,100 @@ h1, h2, h3, h4, h5 {
     animation: synapsePulse 3s infinite ease-in-out;
 }
 
-.skill-pill:hover {
-    background: rgba(6, 182, 212, 0.12);
-    border-color: #22d3ee;
-    color: #ffffff;
-    transform: translateY(-4px) translateZ(16px) scale(1.05);
-    box-shadow: 0 6px 18px rgba(6, 182, 212, 0.35), 0 0 12px rgba(99, 102, 241, 0.25);
+/* Category Theming for Core Competencies */
+.skill-card-backend { --cat-accent: #06b6d4; --cat-glow: rgba(6, 182, 212, 0.4); }
+.skill-card-database { --cat-accent: #10b981; --cat-glow: rgba(16, 185, 129, 0.4); }
+.skill-card-frontend { --cat-accent: #a855f7; --cat-glow: rgba(168, 85, 247, 0.4); }
+.skill-card-devops { --cat-accent: #f59e0b; --cat-glow: rgba(245, 158, 11, 0.4); }
+.skill-card-integrations { --cat-accent: #ec4899; --cat-glow: rgba(236, 72, 153, 0.4); }
+.skill-card-leadership { --cat-accent: #38bdf8; --cat-glow: rgba(56, 189, 248, 0.4); }
+
+.skill-category-card .skill-pill::before {
+    background: var(--cat-accent, #06b6d4);
+    box-shadow: 0 0 6px var(--cat-accent, #06b6d4);
 }
 
-.skill-pill:hover::before {
+.skill-category-card .skill-pill:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--cat-accent, #06b6d4);
+    color: #ffffff;
+    transform: translateY(-4px) translateZ(16px) scale(1.05);
+    box-shadow: 0 6px 18px var(--cat-glow, rgba(6, 182, 212, 0.35));
+}
+
+.skill-category-card .skill-pill:hover::before {
     background: #ffffff;
-    box-shadow: 0 0 10px #ffffff, 0 0 16px #22d3ee;
+    box-shadow: 0 0 10px #ffffff, 0 0 16px var(--cat-accent, #06b6d4);
 }
 
 /* ===================================================
    Flagship Projects Grid & Cinematic Video-Reel
 =================================================== */
+.saas-filter-wrap {
+    margin-bottom: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.saas-filter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.9rem;
+    background: rgba(10, 15, 29, 0.75);
+    border: 1px solid rgba(6, 182, 212, 0.22);
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.saas-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.15rem;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    user-select: none;
+}
+
+.saas-filter-btn:hover {
+    color: var(--accent-cyan);
+    background: rgba(6, 182, 212, 0.1);
+    border-color: rgba(6, 182, 212, 0.35);
+}
+
+.saas-filter-btn.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.28), rgba(99, 102, 241, 0.28));
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.45);
+}
+
+.saas-filter-count {
+    display: inline-block;
+    padding: 0.15rem 0.45rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    font-size: 0.72rem;
+    color: var(--accent-cyan);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.project-card.is-hidden {
+    display: none !important;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

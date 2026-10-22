@@ -403,7 +403,7 @@
 
                     <div class="skills-grid">
                         <!-- Backend -->
-                        <div class="skill-category-card tilt-card reveal-init">
+                        <div class="skill-category-card skill-card-backend tilt-card reveal-init">
                             <div class="skill-cat-head">
                                 <div class="skill-cat-icon tilt-pop-lg">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -425,7 +425,7 @@
                         </div>
 
                         <!-- Database & Caching -->
-                        <div class="skill-category-card tilt-card reveal-init">
+                        <div class="skill-category-card skill-card-database tilt-card reveal-init">
                             <div class="skill-cat-head">
                                 <div class="skill-cat-icon tilt-pop-lg">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -447,7 +447,7 @@
                         </div>
 
                         <!-- Frontend & UI -->
-                        <div class="skill-category-card tilt-card reveal-init">
+                        <div class="skill-category-card skill-card-frontend tilt-card reveal-init">
                             <div class="skill-cat-head">
                                 <div class="skill-cat-icon tilt-pop-lg">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -469,7 +469,7 @@
                         </div>
 
                         <!-- DevOps & Infrastructure -->
-                        <div class="skill-category-card tilt-card reveal-init">
+                        <div class="skill-category-card skill-card-devops tilt-card reveal-init">
                             <div class="skill-cat-head">
                                 <div class="skill-cat-icon tilt-pop-lg">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -491,7 +491,7 @@
                         </div>
 
                         <!-- Integrations & APIs -->
-                        <div class="skill-category-card tilt-card reveal-init">
+                        <div class="skill-category-card skill-card-integrations tilt-card reveal-init">
                             <div class="skill-cat-head">
                                 <div class="skill-cat-icon tilt-pop-lg">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -513,7 +513,7 @@
                         </div>
 
                         <!-- Professional Practices -->
-                        <div class="skill-category-card tilt-card reveal-init">
+                        <div class="skill-category-card skill-card-leadership tilt-card reveal-init">
                             <div class="skill-cat-head">
                                 <div class="skill-cat-icon tilt-pop-lg">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -537,372 +537,881 @@
                 </div>
             </section>
 
-            <!-- Flagship Projects Section -->
+            <!-- Flagship Projects Section: Inventory POS SaaS Platform -->
             <section class="section" id="projects">
                 <div class="container">
                     <div class="section-header">
-                        <span class="section-tag scramble-trigger">Flagship Systems</span>
-                        <h2 class="section-title">Featured Enterprise Projects</h2>
-                        <p class="section-subtitle">Scalable production platforms delivering real measurable business impact.</p>
+                        <span class="section-tag scramble-trigger">Flagship Enterprise Architecture</span>
+                        <h2 class="section-title">Inventory POS – Multi-Tenant SaaS Platform</h2>
+                        <p class="section-subtitle">Enterprise multi-tenant cloud ERP & barcode POS engineered with dedicated tenant database isolation, double-entry financial ledger, thermal receipt printing, and SuperAdmin subscription monetization engine.</p>
+                    </div>
+
+                    <!-- SaaS Module Filter Navigation -->
+                    <div class="saas-filter-wrap">
+                        <nav class="saas-filter-nav" aria-label="SaaS Modules Filter">
+                            <button class="saas-filter-btn active" data-filter="all">All Modules <span class="saas-filter-count">23</span></button>
+                            <button class="saas-filter-btn" data-filter="pos">Point of Sale & Register <span class="saas-filter-count">3</span></button>
+                            <button class="saas-filter-btn" data-filter="inventory">Inventory & Catalog <span class="saas-filter-count">2</span></button>
+                            <button class="saas-filter-btn" data-filter="sales">Sales & Billing <span class="saas-filter-count">2</span></button>
+                            <button class="saas-filter-btn" data-filter="finance">Finance & Accounts <span class="saas-filter-count">1</span></button>
+                            <button class="saas-filter-btn" data-filter="crm">CRM & Customers <span class="saas-filter-count">2</span></button>
+                            <button class="saas-filter-btn" data-filter="procurement">Supply Chain <span class="saas-filter-count">2</span></button>
+                            <button class="saas-filter-btn" data-filter="superadmin">SuperAdmin Platform <span class="saas-filter-count">6</span></button>
+                            <button class="saas-filter-btn" data-filter="analytics">Executive & BI <span class="saas-filter-count">2</span></button>
+                            <button class="saas-filter-btn" data-filter="public">Public SaaS & Auth <span class="saas-filter-count">3</span></button>
+                        </nav>
                     </div>
 
                     <div class="projects-grid">
-                        <!-- Project 1: BNSMSoft -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="bnsmsoft">
+                        <!-- SaaS View 1: Public SaaS Marketing Portal & Conversion Funnel -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="public">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="0">
                                 <div class="project-screen-badge">
                                     <span class="rec-dot"></span>
-                                    <span>PRODUCTION • SAAS ERP & POS [8 VIEWS]</span>
+                                    <span>PUBLIC GATEWAY • 2160×11709</span>
                                 </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/inventory-pos/01_dashboard_desktop.png" alt="BNSMSoft Multi-Tenant SaaS ERP Dashboard" class="project-screen-img" loading="lazy">
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/01_website_landing.png" alt="Public SaaS Marketing Portal & Conversion Funnel" class="project-screen-img" loading="lazy">
                                 <canvas class="project-sim-canvas" data-type="saas"></canvas>
                             </div>
                             <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">Multi-Tenant SaaS</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="bnsmsoft" aria-label="Open BNSMSoft Gallery">
+                                <span class="project-badge-type tilt-pop-lg">Public SaaS Portal</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="0" aria-label="Open Fullscreen View">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
                                         <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
                                 </button>
                             </div>
                             <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">BNSMSoft – SaaS ERP & Business Suite</h3>
+                                <h3 class="project-title tilt-pop-md">Public SaaS Marketing Portal & Conversion Funnel</h3>
                                 <p class="project-desc">
-                                    Enterprise-grade multi-tenant platform featuring dedicated company database isolation, custom subdomains, and tier-based feature access.
+                                    High-converting multi-tenant marketing website featuring dynamic subscription tier tables, interactive feature tour, customer testimonials, and instant company onboarding funnel.
                                 </p>
                                 <ul class="project-highlights">
-                                    <li>Automated inventory tracking, accounts payable/receivable, and BI analytics</li>
-                                    <li>Background report generation offloaded to Redis queues & Laravel Horizon</li>
-                                    <li>Configured automated Docker Compose CI/CD deployment pipelines</li>
+                                    <li>Automated company domain check & instant tenant provisioning</li>
+                                    <li>Dynamic pricing calculator with multi-currency conversions</li>
+                                    <li>SEO-optimized responsive layout with interactive feature tour</li>
                                 </ul>
                                 <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">Vue.js</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Redis</span>
-                                    <span class="project-tech-item">Docker</span>
-                                    <span class="project-tech-item">Multi-Tenant</span>
+                                    <span class="project-tech-item">Blade</span>
+                                    <span class="project-tech-item">Vanilla JS</span>
+                                    <span class="project-tech-item">Tailwind</span>
+                                    <span class="project-tech-item">Stripe Billing</span>
+                                    <span class="project-tech-item">Onboarding Funnel</span>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Project 2: Real-Time WebRTC Calling & Live Chat -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="webrtc">
+                        <!-- SaaS View 2: Platform Architecture & Enterprise Overview -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="public">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="1">
                                 <div class="project-screen-badge">
                                     <span class="rec-dot"></span>
-                                    <span>LIVE STREAM • WEBRTC ICE [1080P 60FPS]</span>
+                                    <span>PLATFORM ARCHITECTURE • 2160×5403</span>
                                 </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/webrtc/desktop.png" alt="Real-Time WebRTC Video Calling and Chat Platform" class="project-screen-img" loading="lazy">
-                                <canvas class="project-sim-canvas" data-type="webrtc"></canvas>
-                            </div>
-                            <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">Real-Time Media</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="webrtc" aria-label="Open WebRTC Gallery">
-                                    <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Real-Time WebRTC Video & Live Chat</h3>
-                                <p class="project-desc">
-                                    Ultra low-latency audio/video calling and messaging platform with full custom signaling and presence synchronization.
-                                </p>
-                                <ul class="project-highlights">
-                                    <li>1-on-1 WebRTC calling, custom signaling, ICE candidate exchange & screen sharing</li>
-                                    <li>Real-time chat with active typing indicators, presence, and delivery receipts</li>
-                                    <li>Auto-reconnection logic and JWT-authenticated WebSocket security</li>
-                                </ul>
-                                <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">WebRTC</span>
-                                    <span class="project-tech-item">WebSockets</span>
-                                    <span class="project-tech-item">Socket.io</span>
-                                    <span class="project-tech-item">Redis Pub/Sub</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 3: EduTab Result Engine -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="school">
-                                <div class="project-screen-badge">
-                                    <span class="rec-dot"></span>
-                                    <span>PRODUCTION • ACADEMIC RESULT ENGINE [7 VIEWS]</span>
-                                </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/school/dashboard.png" alt="EduTab Academic ERP and Result Engine" class="project-screen-img" loading="lazy">
-                                <canvas class="project-sim-canvas" data-type="edutab"></canvas>
-                            </div>
-                            <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">School & Result Engine</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="school" aria-label="Open School Management Gallery">
-                                    <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">EduTab – High-Concurrency Result Engine</h3>
-                                <p class="project-desc">
-                                    Comprehensive school management system with an architectural marksheet generation engine built for peak traffic.
-                                </p>
-                                <ul class="project-highlights">
-                                    <li>Generates thousands of complex transcript marksheets simultaneously</li>
-                                    <li>Redis caching layers and chunked queue processing cut DB load by &gt;60%</li>
-                                    <li>Student admissions, fee collections, and automated notification triggers</li>
-                                </ul>
-                                <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Redis</span>
-                                    <span class="project-tech-item">Queue Workers</span>
-                                    <span class="project-tech-item">GitHub Actions</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 4: Manufacturing Workflow ERP -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="manufacturing">
-                                <div class="project-screen-badge">
-                                    <span class="rec-dot"></span>
-                                    <span>PRODUCTION • FACTORY ERP [100 VIEWS]</span>
-                                </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/manufacturing/01_Authentication_and_Dashboard/02_Executive_Dashboard.png" alt="Apparel & Accessories Manufacturing ERP Executive Dashboard" class="project-screen-img" loading="lazy">
-                                <canvas class="project-sim-canvas" data-type="sync"></canvas>
-                            </div>
-                            <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">Industrial ERP</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="manufacturing" aria-label="Open Manufacturing ERP Gallery">
-                                    <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Apparel & Accessories Manufacturing ERP</h3>
-                                <p class="project-desc">
-                                    End-to-end industrial production software managing customer orders, multi-stage factory workflows (dyeing to sewing), inventory, and automated delivery challans.
-                                </p>
-                                <ul class="project-highlights">
-                                    <li>Interactive executive dashboard tracking real-time order volume, production stages & gross revenue</li>
-                                    <li>Multi-stage factory pipeline from raw material requisition to dyeing, sewing, and inventory reconciliation</li>
-                                    <li>Automated delivery challan generation, printable invoices, employee attendance register & trial balance</li>
-                                </ul>
-                                <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Redis</span>
-                                    <span class="project-tech-item">Vue.js</span>
-                                    <span class="project-tech-item">Queue Workers</span>
-                                    <span class="project-tech-item">PDF Invoice Engine</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 5: Construction Operations ERP -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="construction">
-                                <div class="project-screen-badge">
-                                    <span class="rec-dot"></span>
-                                    <span>PRODUCTION • KADAMATI ERP [5 MODULES]</span>
-                                </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/construction/equipment.jpeg" alt="Kadamati Construction Management ERP" class="project-screen-img" loading="lazy">
-                                <canvas class="project-sim-canvas" data-type="sync"></canvas>
-                            </div>
-                            <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">Logistics & Site Operations</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="construction" aria-label="Open Construction Operations Gallery">
-                                    <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Kadamati ERP – Construction Operations & Logistics</h3>
-                                <p class="project-desc">
-                                    Comprehensive enterprise system managing heavy equipment telemetry, BNBC structural safety audits, multi-site biometric labor payroll, and contractor running bills.
-                                </p>
-                                <ul class="project-highlights">
-                                    <li>Heavy machinery tracking (Tower Cranes, Excavators) with maintenance alerts & telemetry</li>
-                                    <li>BNBC compliance checklists, concrete defect photo logs & Non-Conformance Reports (NCR)</li>
-                                    <li>Daily biometric labor attendance across 12 sites and ৳25.5 Cr contractor bill reconciliations</li>
-                                </ul>
-                                <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Redis</span>
-                                    <span class="project-tech-item">REST APIs</span>
-                                    <span class="project-tech-item">Docker</span>
-                                    <span class="project-tech-item">Fleet GPS</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 6: Omnichannel E-Commerce & Retail POS Sync -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="pos">
-                                <div class="project-screen-badge">
-                                    <span class="rec-dot"></span>
-                                    <span>PRODUCTION • JEWELLERY RETAIL POS [11 VIEWS]</span>
-                                </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/pos/04_pos_cart_active.png" alt="Asian Jewellery House Retail POS and Inventory Interface" class="project-screen-img" loading="lazy">
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/02_website_about.png" alt="Platform Architecture & Enterprise Overview" class="project-screen-img" loading="lazy">
                                 <canvas class="project-sim-canvas" data-type="saas"></canvas>
                             </div>
                             <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">Retail & FinTech</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="pos" aria-label="Open POS Gallery">
+                                <span class="project-badge-type tilt-pop-lg">Public SaaS Portal</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="1" aria-label="Open Fullscreen View">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
                                         <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
                                 </button>
                             </div>
                             <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Asian Jewellery House – Retail POS & Inventory ERP</h3>
+                                <h3 class="project-title tilt-pop-md">Platform Architecture & Enterprise Overview</h3>
                                 <p class="project-desc">
-                                    Specialized high-value retail POS terminal with live dynamic gold/silver rates, barcode inventory tracking, split payments, and instant sales memo generation.
+                                    Architectural overview outlining multi-branch inventory synchronization, offline-ready POS failover, cloud infrastructure SLA, and enterprise compliance.
                                 </p>
                                 <ul class="project-highlights">
-                                    <li>Real-time dynamic gold karat rate configurator (24K, 22K, 21K, 18K) updating product pricing storewide</li>
-                                    <li>High-throughput barcode scanning with making-charges auto-calculation, stone deduction, and VAT</li>
-                                    <li>Split payments (Cash, Card, bKash) and thermal barcode jewelry tag printing integration</li>
+                                    <li>Distributed systems diagram & high-availability topology</li>
+                                    <li>Multi-branch inventory sync protocols & failover architecture</li>
+                                    <li>Enterprise SLA performance indicators & security guarantees</li>
                                 </ul>
                                 <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Tailwind CSS</span>
+                                    <span class="project-tech-item">Modern CSS</span>
+                                    <span class="project-tech-item">Responsive Viewports</span>
+                                    <span class="project-tech-item">SVG Graphics</span>
+                                    <span class="project-tech-item">SEO Optimized</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 3: Multi-Tenant Authentication & Subdomain Gatekeeper -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="public">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="2">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>TENANT AUTH GATEWAY • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/03_auth_login.png" alt="Multi-Tenant Authentication & Subdomain Gatekeeper" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Security & Auth</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="2" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Multi-Tenant Authentication & Subdomain Gatekeeper</h3>
+                                <p class="project-desc">
+                                    Secure authentication portal automatically detecting tenant subdomains, enforcing brute-force mitigation, session rate-limiting, and remember-me tokens.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Automated subdomain tenant resolver & database routing</li>
+                                    <li>Laravel Sanctum token authentication & session security</li>
+                                    <li>Rate limiting protection against credential-stuffing attacks</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel Sanctum</span>
+                                    <span class="project-tech-item">Multi-Tenancy</span>
+                                    <span class="project-tech-item">Session Guard</span>
+                                    <span class="project-tech-item">CSRF Protection</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 4: Executive Tenant ERP & Sales Analytics Dashboard -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="analytics">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="3">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>EXECUTIVE BI • 2160×3338</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/04_saas_dashboard.png" alt="Executive Tenant ERP & Sales Analytics Dashboard" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Executive Analytics</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="3" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Executive Tenant ERP & Sales Analytics Dashboard</h3>
+                                <p class="project-desc">
+                                    Real-time mission control displaying daily gross revenue, net profit margin, live order count, low-stock threshold alerts, and cash-in-drawer telemetry.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Live gross margin, cashflow metrics, capital summary & low-stock alerts</li>
+                                    <li>Offloaded background aggregations using Redis cache layers</li>
+                                    <li>Branch filter switcher with real-time multi-currency support</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Laravel 11</span>
+                                    <span class="project-tech-item">ApexCharts</span>
+                                    <span class="project-tech-item">Redis Cache</span>
+                                    <span class="project-tech-item">MySQL Aggregations</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 5: Product Inventory & Barcode Catalog -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="inventory">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="4">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>INVENTORY ENGINE • 2160×1677</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/05_products_table.png" alt="Product Inventory & Barcode Catalog" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Inventory & Catalog</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="4" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Product Inventory & Barcode Catalog</h3>
+                                <p class="project-desc">
+                                    Centralized product database with live stock status indicators, instant barcode search, category hierarchies, purchase vs selling margins, and bulk export.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Dynamic SKU search with sub-millisecond composite indexing</li>
+                                    <li>Automated low-stock safety threshold badges and warnings</li>
+                                    <li>One-click bulk export to formatted Excel spreadsheets & PDF lists</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Eloquent ORM</span>
+                                    <span class="project-tech-item">Indexed Search</span>
+                                    <span class="project-tech-item">Barcode Engine</span>
+                                    <span class="project-tech-item">Excel/PDF Export</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 6: Advanced Product Creation & Variant Configuration -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="inventory">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="5">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>CATALOG OPS • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/06_product_create_form.png" alt="Advanced Product Creation & Variant Configuration" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Inventory & Catalog</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="5" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Advanced Product Creation & Variant Configuration</h3>
+                                <p class="project-desc">
+                                    Granular inventory item creation modal supporting barcode auto-generation, multi-tax tiers, unit conversions (Pcs/Box/Kg), and minimum safety stock alerts.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Automatic EAN-13 & Code-128 barcode number generator</li>
+                                    <li>Configurable VAT/tax deduction and markup pricing rules</li>
+                                    <li>Variant attributes matrix with separate purchase/selling prices</li>
+                                </ul>
+                                <div class="project-tech-stack">
                                     <span class="project-tech-item">Alpine.js</span>
-                                    <span class="project-tech-item">Thermal Print</span>
-                                    <span class="project-tech-item">Barcode POS</span>
+                                    <span class="project-tech-item">Form Requests</span>
+                                    <span class="project-tech-item">Barcode EAN-13</span>
+                                    <span class="project-tech-item">Storage Drivers</span>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Project 7: Automated Courier & Logistics Dispatch Engine -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="courier">
+                        <!-- SaaS View 7: High-Throughput Touch POS Billing Terminal -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="pos">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="6">
                                 <div class="project-screen-badge">
                                     <span class="rec-dot"></span>
-                                    <span>LIVE STREAM • COURIER DISPATCH [4,290 PARCELS]</span>
+                                    <span>CORE TERMINAL • 2160×1542</span>
                                 </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/courier/desktop.png" alt="Automated Courier and Logistics Dispatch Engine" class="project-screen-img" loading="lazy">
-                                <canvas class="project-sim-canvas" data-type="sync"></canvas>
-                            </div>
-                            <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">Logistics & Automation</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="courier" aria-label="Open Courier Dispatch Gallery">
-                                    <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Automated Courier & Logistics Dispatch Engine</h3>
-                                <p class="project-desc">
-                                    High-performance dispatch engine integrating third-party courier APIs with instant consignment booking, label printing, and automated tracking.
-                                </p>
-                                <ul class="project-highlights">
-                                    <li>Automated consignment booking, shipping label generation, and barcode printing</li>
-                                    <li>Asynchronous webhook listeners and Redis background queues for real-time parcel updates</li>
-                                    <li>Automated Cash-on-Delivery (COD) ledger reconciliation with warehouse inventory systems</li>
-                                </ul>
-                                <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Redis</span>
-                                    <span class="project-tech-item">REST APIs</span>
-                                    <span class="project-tech-item">Webhooks</span>
-                                    <span class="project-tech-item">Vue.js</span>
-                                    <span class="project-tech-item">Linux VPS</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 8: Multi-Vendor E-Commerce Platform -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="multivendor">
-                                <div class="project-screen-badge">
-                                    <span class="rec-dot"></span>
-                                    <span>PRODUCTION • MULTI-VENDOR MARKETPLACE [412 STORES]</span>
-                                </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/multivendor/desktop.png" alt="Multi-Vendor E-Commerce Platform" class="project-screen-img" loading="lazy">
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/07_pos_terminal.png" alt="High-Throughput Touch POS Billing Terminal" class="project-screen-img" loading="lazy">
                                 <canvas class="project-sim-canvas" data-type="saas"></canvas>
                             </div>
                             <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">Marketplace & FinTech</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="multivendor" aria-label="Open Multi-Vendor Marketplace Gallery">
+                                <span class="project-badge-type tilt-pop-lg">Point of Sale</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="6" aria-label="Open Fullscreen View">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
                                         <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
                                 </button>
                             </div>
                             <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Multi-Vendor E-Commerce Platform & Marketplace</h3>
+                                <h3 class="project-title tilt-pop-md">High-Throughput Touch POS Billing Terminal</h3>
                                 <p class="project-desc">
-                                    Scalable multi-tenant marketplace platform with vendor store management, catalog moderation, automated commission splits, and automated payment gateway payouts.
+                                    Ultra-fast cashier checkout interface with rapid barcode lookup, active cart calculations, multi-discount rules, customer linking, and one-click thermal receipt printing.
                                 </p>
                                 <ul class="project-highlights">
-                                    <li>Independent vendor portal with store customization, inventory catalogs & order fulfillment</li>
-                                    <li>Automated commission split calculation (8.5%) and instant merchant payout ledger via Stripe Connect & bKash</li>
-                                    <li>Global unified shopping cart supporting multi-vendor split consignments in one checkout</li>
+                                    <li>Sub-100ms item addition via physical USB/Bluetooth barcode scanners</li>
+                                    <li>Split tender payments supporting Cash, Cards, and Mobile Banking</li>
+                                    <li>Instant ESC/POS thermal receipt printing integration with cash drawer pulse</li>
                                 </ul>
                                 <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Redis</span>
-                                    <span class="project-tech-item">Stripe Connect</span>
-                                    <span class="project-tech-item">bKash</span>
-                                    <span class="project-tech-item">Vue.js</span>
-                                    <span class="project-tech-item">Multi-Tenant</span>
+                                    <span class="project-tech-item">Vue.js / Vanilla JS</span>
+                                    <span class="project-tech-item">ESC/POS Hook</span>
+                                    <span class="project-tech-item">Cart State Engine</span>
+                                    <span class="project-tech-item">Hardware Scanner</span>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Project 9: Order Management & Automated Invoice Engine -->
-                        <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="invoice">
+                        <!-- SaaS View 8: Cash Register Drawer & Shift Balancing Modal -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="pos">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="7">
                                 <div class="project-screen-badge">
                                     <span class="rec-dot"></span>
-                                    <span>PRODUCTION • INVOICE ENGINE & BILLING [10 VIEWS]</span>
+                                    <span>DRAWER OPS • 2160×1350</span>
                                 </div>
-                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
-                                <img src="assets/images/projects/invoice/04_dashboard_overview.png" alt="Order Management and Automated Tax Invoice Engine" class="project-screen-img" loading="lazy">
-                                <canvas class="project-sim-canvas" data-type="sync"></canvas>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/08_modal_cash_register.png" alt="Cash Register Drawer & Shift Balancing Modal" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
                             </div>
                             <div class="project-card-header">
-                                <span class="project-badge-type tilt-pop-lg">High-Concurrency ERP</span>
-                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="invoice" aria-label="Open Invoice Engine Gallery">
+                                <span class="project-badge-type tilt-pop-lg">Point of Sale</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="7" aria-label="Open Fullscreen View">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
                                         <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
                                 </button>
                             </div>
                             <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Order Management & Automated Tax Invoice Engine</h3>
+                                <h3 class="project-title tilt-pop-md">Cash Register Drawer & Shift Balancing Modal</h3>
                                 <p class="project-desc">
-                                    Enterprise-grade order processing and high-speed invoice generation engine built to handle high peak sales and regulatory compliance.
+                                    Comprehensive shift cashier management tracking opening drawer float, midday cash deposits/withdrawals, closing totals, and cash reconciliation audits.
                                 </p>
                                 <ul class="project-highlights">
-                                    <li>Asynchronous Redis queue workers generating thousands of VAT/GST invoices per minute (85ms avg render)</li>
-                                    <li>Dynamic thermal receipt & A4 formats with cryptographic QR code verification and tax compliance</li>
-                                    <li>Real-time order state machine with inventory reservation, payment webhooks, and automatic dispatch</li>
+                                    <li>Opening float recording with timestamp and cashier authentication</li>
+                                    <li>Cash In/Out reason tagging with mandatory supervisor approval</li>
+                                    <li>Discrepancy calculation highlighting cash shortage or overage</li>
                                 </ul>
                                 <div class="project-tech-stack">
-                                    <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Redis Queues</span>
-                                    <span class="project-tech-item">Node.js (Puppeteer)</span>
-                                    <span class="project-tech-item">Docker</span>
-                                    <span class="project-tech-item">REST APIs</span>
+                                    <span class="project-tech-item">Audit Trail</span>
+                                    <span class="project-tech-item">Modal Engine</span>
+                                    <span class="project-tech-item">Double-Entry</span>
+                                    <span class="project-tech-item">Session Tracking</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 9: Suspended Orders & Multi-Cart Held Bills Manager -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="pos">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="8">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>CART STATE MACHINE • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/09_modal_held_bills.png" alt="Suspended Orders & Multi-Cart Held Bills Manager" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Point of Sale</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="8" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Suspended Orders & Multi-Cart Held Bills Manager</h3>
+                                <p class="project-desc">
+                                    Multi-cart suspension modal allowing cashiers to put incomplete orders on hold, serve waiting retail customers, and restore draft carts instantly with zero data loss.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Supports simultaneous active carts across multiple counter cashiers</li>
+                                    <li>Customer name & table number assignment for easy draft recall</li>
+                                    <li>Zero loss recovery preventing queue bottlenecks during busy rush hours</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Local Storage Cache</span>
+                                    <span class="project-tech-item">State Machine</span>
+                                    <span class="project-tech-item">Atomic Snapshots</span>
+                                    <span class="project-tech-item">Fast Recall</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 10: Rapid Customer CRM Onboarding Modal -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="crm">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="9">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>CRM ONBOARDING • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/10_modal_quick_create_customer.png" alt="Rapid Customer CRM Onboarding Modal" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">CRM & Customers</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="9" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Rapid Customer CRM Onboarding Modal</h3>
+                                <p class="project-desc">
+                                    Inline checkout modal allowing store staff to register new customers in under 5 seconds with phone lookup, credit limit assignment, and loyalty tagging.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Real-time phone number duplication validation via AJAX API</li>
+                                    <li>Configurable credit balance limit to prevent unauthorized due sales</li>
+                                    <li>Auto-links new customer to current active cart without page reload</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">AJAX Fetch API</span>
+                                    <span class="project-tech-item">Async Validation</span>
+                                    <span class="project-tech-item">Ledger Linkage</span>
+                                    <span class="project-tech-item">CRM Core</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 11: Sales Orders & Real-Time Transaction Ledger -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="sales">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="10">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>SALES LEDGER • 2160×1551</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/11_sales_table.png" alt="Sales Orders & Real-Time Transaction Ledger" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Sales & Billing</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="10" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Sales Orders & Real-Time Transaction Ledger</h3>
+                                <p class="project-desc">
+                                    Master sales records logging invoice numbers, customer profiles, payment statuses (Paid/Partial/Due), cashier IDs, and one-click PDF reprint triggers.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Server-side pagination capable of filtering millions of invoices</li>
+                                    <li>Payment status badges: Fully Paid, Partial Payment, and Overdue</li>
+                                    <li>One-click thermal slip reprint, A4 PDF download, and refund trigger</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Server-Side DataTables</span>
+                                    <span class="project-tech-item">Composite Indexes</span>
+                                    <span class="project-tech-item">PDF Invoice Engine</span>
+                                    <span class="project-tech-item">Refund Flow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 12: Thermal & Printable Sales Invoice Document -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="sales">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="11">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>TAX INVOICING • 2160×1826</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/12_sales_invoice_document.png" alt="Thermal & Printable Sales Invoice Document" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Sales & Billing</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="11" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Thermal & Printable Sales Invoice Document</h3>
+                                <p class="project-desc">
+                                    Standardized printable invoice and POS thermal slip complete with company logo, tax registration number, itemized breakdown, discounts, and barcode validation.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Dual layout support: 80mm thermal receipt & formal A4/Letter invoice</li>
+                                    <li>Itemized tax VAT breakdown compliant with national fiscal rules</li>
+                                    <li>Cryptographic QR code verification for electronic audit compliance</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">CSS Print Styles</span>
+                                    <span class="project-tech-item">Thermal ESC/POS</span>
+                                    <span class="project-tech-item">Dynamic PDF</span>
+                                    <span class="project-tech-item">QR Verification</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 13: Purchase Orders & Vendor Stock Inwarding -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="procurement">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="12">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>SUPPLY CHAIN • 2160×1646</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/13_purchases_table.png" alt="Purchase Orders & Vendor Stock Inwarding" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Supply Chain</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="12" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Purchase Orders & Vendor Stock Inwarding</h3>
+                                <p class="project-desc">
+                                    Supply chain procurement table managing vendor purchase orders, inward stock verification, payment due dates, and automated weighted-average cost updating.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>PO status lifecycle: Ordered, Partially Received, Received, Cancelled</li>
+                                    <li>Automated inventory inwarding updating branch quantity & valuation</li>
+                                    <li>Vendor liability ledger linked directly to double-entry payables</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Procurement Ledger</span>
+                                    <span class="project-tech-item">Weighted Avg Cost</span>
+                                    <span class="project-tech-item">Warehouse Sync</span>
+                                    <span class="project-tech-item">PO Lifecycle</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 14: Customer Directory & Credit Balance Ledger -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="crm">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="13">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>ACCOUNTS RECEIVABLE • 2160×1551</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/14_customers_crm_table.png" alt="Customer Directory & Credit Balance Ledger" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">CRM & Customers</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="13" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Customer Directory & Credit Balance Ledger</h3>
+                                <p class="project-desc">
+                                    Full-featured CRM database tracking customer lifetime spend, outstanding credit receivables, phone directories, and transaction histories.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Real-time Accounts Receivable ledger with customer credit aging</li>
+                                    <li>Quick payment collection recording cash/bank settlements</li>
+                                    <li>Purchase frequency and Customer Lifetime Value (CLV) insights</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">CRM Database</span>
+                                    <span class="project-tech-item">Receivables Engine</span>
+                                    <span class="project-tech-item">Credit Limit Guard</span>
+                                    <span class="project-tech-item">Payment Collection</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 15: Supplier Directory & Accounts Payable Ledger -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="procurement">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="14">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>ACCOUNTS PAYABLE • 2160×1551</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/15_suppliers_table.png" alt="Supplier Directory & Accounts Payable Ledger" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Supply Chain</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="14" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Supplier Directory & Accounts Payable Ledger</h3>
+                                <p class="project-desc">
+                                    Comprehensive vendor management portal tracking trade balances, total purchased value, outstanding accounts payable, and supplier contact details.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Accounts Payable liability tracking with invoice payment schedules</li>
+                                    <li>Vendor payment disbursement logging cheque/bank reference codes</li>
+                                    <li>Complete purchase history audits with invoice verification links</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Payables Accounting</span>
+                                    <span class="project-tech-item">Vendor Relations</span>
+                                    <span class="project-tech-item">Disbursement Vouchers</span>
+                                    <span class="project-tech-item">Audit Trail</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 16: Double-Entry Financial Accounts & Cashflow Ledger -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="finance">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="15">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>DOUBLE-ENTRY LEDGER • 2160×1541</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/16_accounts_ledger_table.png" alt="Double-Entry Financial Accounts & Cashflow Ledger" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Finance & Accounts</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="15" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Double-Entry Financial Accounts & Cashflow Ledger</h3>
+                                <p class="project-desc">
+                                    Enterprise accounting ledger recording cash, bank accounts, expenses, journal vouchers, debits, credits, and live trial balance reconciliations.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Strict double-entry journal vouchers ensuring total Debits equal Credits</li>
+                                    <li>Real-time cash in hand vs multiple bank account balances</li>
+                                    <li>ACID-compliant transactions safeguarding ledger against race conditions</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Double-Entry Core</span>
+                                    <span class="project-tech-item">ACID Transactions</span>
+                                    <span class="project-tech-item">Trial Balance</span>
+                                    <span class="project-tech-item">Cashflow Vouchers</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 17: Business Intelligence & Profit/Loss Financial Reports -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="analytics">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="16">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>PROFIT & LOSS BI • 2160×1719</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/17_reports_analytics.png" alt="Business Intelligence & Profit/Loss Financial Reports" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">Executive Analytics</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="16" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Business Intelligence & Profit/Loss Financial Reports</h3>
+                                <p class="project-desc">
+                                    Deep operational analytics generating daily/monthly sales velocity, gross vs net profit margin, tax liability summaries, and fast-moving inventory turnover rates.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Automated Profit & Loss statements with cost-of-goods-sold (COGS)</li>
+                                    <li>Product turnover analysis highlighting top 10 bestsellers & dead stock</li>
+                                    <li>Exportable audit-ready tax summaries for corporate compliance</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">SQL Aggregations</span>
+                                    <span class="project-tech-item">Time-Series Analytics</span>
+                                    <span class="project-tech-item">COGS Engine</span>
+                                    <span class="project-tech-item">Data Visualization</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 18: SuperAdmin Multi-Tenant Companies Management -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="superadmin">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="17">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>MULTI-TENANCY CORE • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/18_admin_companies_tenants.png" alt="SuperAdmin Multi-Tenant Companies Management" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">SuperAdmin Platform</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="17" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">SuperAdmin Multi-Tenant Companies Management</h3>
+                                <p class="project-desc">
+                                    Central SaaS control plane managing tenant company accounts, dedicated MySQL database provisioning, custom subdomain routing, and plan subscription status.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Automated dynamic database provisioning and schema migration per tenant</li>
+                                    <li>Subdomain routing (company.domain.com) with wildcard Nginx reverse proxy</li>
+                                    <li>Tenant suspension, plan upgrades, and resource consumption telemetry</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Multi-Tenant Core</span>
+                                    <span class="project-tech-item">DB Provisioning</span>
+                                    <span class="project-tech-item">Subdomain Resolver</span>
+                                    <span class="project-tech-item">Nginx Vhosts</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 19: SuperAdmin SaaS Subscription Plans Engine -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="superadmin">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="18">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>SUBSCRIPTION ENGINE • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/19_admin_saas_plans.png" alt="SuperAdmin SaaS Subscription Plans Engine" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">SuperAdmin Platform</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="18" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">SuperAdmin SaaS Subscription Plans Engine</h3>
+                                <p class="project-desc">
+                                    Flexible SaaS monetization engine configuring tiered subscription plans (Starter/Pro/Enterprise), monthly/annual pricing, store limits, and feature flags.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Tiered entitlements: Max outlets, user accounts, and monthly invoices</li>
+                                    <li>Feature flag gating locking advanced modules per subscription tier</li>
+                                    <li>Automated recurring billing cycles with grace periods and invoice generation</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">SaaS Monetization</span>
+                                    <span class="project-tech-item">Feature Flags</span>
+                                    <span class="project-tech-item">Billing Engine</span>
+                                    <span class="project-tech-item">Tier Enforcer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 20: SuperAdmin Platform Revenue & MRR Finance -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="superadmin">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="19">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>MRR / ARR TELEMETRY • 2160×2006</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/20_admin_platform_finance.png" alt="SuperAdmin Platform Revenue & MRR Finance" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">SuperAdmin Platform</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="19" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">SuperAdmin Platform Revenue & MRR Finance</h3>
+                                <p class="project-desc">
+                                    Global platform financial telemetry tracking Monthly Recurring Revenue (MRR), Annual Recurring Revenue (ARR), subscription renewals, and gateway payouts.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Real-time telemetry of active subscriptions, churn rate, and net ARR</li>
+                                    <li>Automated gateway settlement logs across Stripe, SSLCommerz & bKash</li>
+                                    <li>Tenant payment history ledger with downloadable tax receipts</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">MRR/ARR Engine</span>
+                                    <span class="project-tech-item">Financial Telemetry</span>
+                                    <span class="project-tech-item">Gateway Webhooks</span>
+                                    <span class="project-tech-item">Revenue BI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 21: SuperAdmin Security & System Audit Log Monitor -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="superadmin">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="20">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>SECOPS & AUDIT • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/21_admin_security_dashboard.png" alt="SuperAdmin Security & System Audit Log Monitor" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">SuperAdmin Platform</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="20" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">SuperAdmin Security & System Audit Log Monitor</h3>
+                                <p class="project-desc">
+                                    Real-time platform security operations center monitoring brute-force attempts, IP blocking, failed logins, sensitive action audit logs, and session management.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Automated IP blacklisting detecting rapid consecutive login failures</li>
+                                    <li>Immutable audit logging recording who performed what action when</li>
+                                    <li>Active user session inspection with one-click remote session revocation</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">SecOps Core</span>
+                                    <span class="project-tech-item">IP Geolocation</span>
+                                    <span class="project-tech-item">Immutable Audit</span>
+                                    <span class="project-tech-item">Threat Mitigation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 22: Granular RBAC Role & Permission Matrix -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="superadmin">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="21">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>RBAC MATRIX • 2160×1350</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/22_admin_roles_permissions.png" alt="Granular RBAC Role & Permission Matrix" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">SuperAdmin Platform</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="21" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Granular RBAC Role & Permission Matrix</h3>
+                                <p class="project-desc">
+                                    Enterprise permission matrix assigning fine-grained capabilities across SuperAdmin, Tenant Admin, Branch Manager, Cashier, and Accountant roles.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>60+ granular permission nodes controlling view, create, edit, delete access</li>
+                                    <li>Custom role creation with permission cloning and inheritance rules</li>
+                                    <li>Enforced via Laravel Gates, Policies, and optimized middleware caching</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Spatie RBAC</span>
+                                    <span class="project-tech-item">Middleware Gates</span>
+                                    <span class="project-tech-item">Policy Enforcement</span>
+                                    <span class="project-tech-item">Cached Permissions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SaaS View 23: Tenant Workspace Configuration & Tax Engine -->
+                        <div class="project-card tilt-card reveal-init" data-saas-card data-category="superadmin">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="inventory-pos" data-slide-index="22">
+                                <div class="project-screen-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>WORKSPACE CONFIG • 2160×1368</span>
+                                </div>
+                                <div class="project-screen-hud-right">CLICK TO ENLARGE</div>
+                                <img src="assets/images/inventory-pos/23_settings_form.png" alt="Tenant Workspace Configuration & Tax Engine" class="project-screen-img" loading="lazy">
+                                <canvas class="project-sim-canvas" data-type="saas"></canvas>
+                            </div>
+                            <div class="project-card-header">
+                                <span class="project-badge-type tilt-pop-lg">SuperAdmin Platform</span>
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="inventory-pos" data-slide-index="22" aria-label="Open Fullscreen View">
+                                    <svg class="icon-svg" viewBox="0 0 24 24">
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title tilt-pop-md">Tenant Workspace Configuration & Tax Engine</h3>
+                                <p class="project-desc">
+                                    Multi-branch business workspace setup managing tax rules (VAT/GST), currency symbols, thermal receipt layouts, email SMTP, and automated backup schedules.
+                                </p>
+                                <ul class="project-highlights">
+                                    <li>Flexible tax rules engine supporting inclusive & exclusive VAT rates</li>
+                                    <li>Thermal receipt header, footer note, and logo branding customizer</li>
+                                    <li>Automated database backup schedules to AWS S3 & Google Cloud Storage</li>
+                                </ul>
+                                <div class="project-tech-stack">
+                                    <span class="project-tech-item">Workspace Config</span>
+                                    <span class="project-tech-item">Tax Engine</span>
+                                    <span class="project-tech-item">S3 Cloud Backups</span>
+                                    <span class="project-tech-item">SMTP Mailer</span>
                                 </div>
                             </div>
                         </div>
