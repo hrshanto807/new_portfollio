@@ -14,29 +14,105 @@
 
     // Gallery Database
     const galleryData = {
-        'bnsmsoft': {
-            title: 'BNSMSoft – Enterprise Multi-Tenant SaaS ERP',
-            caption: 'Dedicated database per tenant, inventory auditing, accounts receivable/payable, and automated billing engine.',
+        'inventory-pos': {
+            title: 'BNSMSoft – Inventory & POS Management System',
+            caption: 'Enterprise SaaS architecture featuring real-time stock ledger, barcode POS terminal, multi-branch inventory, and automated billing.',
             slides: [
                 {
-                    src: 'assets/images/projects/bnsmsoft/desktop.png',
-                    device: 'Desktop 4K View (1920×1080)',
-                    desc: 'Executive analytics dashboard with real-time gross margin, cashflow metrics, and stock alerts.'
+                    src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
+                    device: 'Executive Analytics Dashboard (1920×1080)',
+                    desc: 'Real-time gross margin, cashflow metrics, capital summary, low-stock alerts, and user plan limits.'
                 },
                 {
-                    src: 'assets/images/projects/bnsmsoft/laptop.png',
-                    device: 'Laptop Resolution (1440×900)',
-                    desc: 'Compact layout with responsive data tables, stock ledger, and quick action shortcuts.'
+                    src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
+                    device: 'Desktop POS Terminal (1920×1080)',
+                    desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, discount calculation, and split payments.'
                 },
                 {
-                    src: 'assets/images/projects/bnsmsoft/tablet.png',
-                    device: 'Tablet Touch View (1024×768)',
-                    desc: 'Touch-optimized drawer navigation with collapsible cards and fast date range filtering.'
+                    src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
+                    device: 'Tablet Portable POS (1024×768)',
+                    desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup and touch checkout.'
                 },
                 {
-                    src: 'assets/images/projects/bnsmsoft/mobile.png',
-                    device: 'Mobile Phone PWA (390×844)',
-                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals and alerts.'
+                    src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
+                    device: 'Mobile Pocket Scanner (390×844)',
+                    desc: 'Camera-based barcode scanning, cart management, and mobile cashier checkout.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
+                    device: 'Mobile Phone PWA Dashboard (390×844)',
+                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/10_saas_feature_gating.png',
+                    device: 'SaaS Feature Gating & RBAC',
+                    desc: 'Tier-based subscription feature enforcement, plan upgrades, and role-based permissions.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/09_saas_hero_illustration_dark.png',
+                    device: '3D SaaS Ecosystem & Metrics',
+                    desc: '3D product visualization, profit tracking, order volume analytics, and mobile app ecosystem.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/06_brand_identity_logo.png',
+                    device: 'Official Brand Identity',
+                    desc: 'Official BNSMSoft cloud technology trademark and identity design.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/07_mobile_app_icon.png',
+                    device: 'Mobile App Icon (iOS / Android)',
+                    desc: 'Official mobile application icon for iOS and Android store listings.'
+                }
+            ]
+        },
+        'bnsmsoft': {
+            title: 'BNSMSoft – Inventory & POS Management System',
+            caption: 'Enterprise SaaS architecture featuring real-time stock ledger, barcode POS terminal, multi-branch inventory, and automated billing.',
+            slides: [
+                {
+                    src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
+                    device: 'Executive Analytics Dashboard (1920×1080)',
+                    desc: 'Real-time gross margin, cashflow metrics, capital summary, low-stock alerts, and user plan limits.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
+                    device: 'Desktop POS Terminal (1920×1080)',
+                    desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, discount calculation, and split payments.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
+                    device: 'Tablet Portable POS (1024×768)',
+                    desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup and touch checkout.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
+                    device: 'Mobile Pocket Scanner (390×844)',
+                    desc: 'Camera-based barcode scanning, cart management, and mobile cashier checkout.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
+                    device: 'Mobile Phone PWA Dashboard (390×844)',
+                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/10_saas_feature_gating.png',
+                    device: 'SaaS Feature Gating & RBAC',
+                    desc: 'Tier-based subscription feature enforcement, plan upgrades, and role-based permissions.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/09_saas_hero_illustration_dark.png',
+                    device: '3D SaaS Ecosystem & Metrics',
+                    desc: '3D product visualization, profit tracking, order volume analytics, and mobile app ecosystem.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/06_brand_identity_logo.png',
+                    device: 'Official Brand Identity',
+                    desc: 'Official BNSMSoft cloud technology trademark and identity design.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/07_mobile_app_icon.png',
+                    device: 'Mobile App Icon (iOS / Android)',
+                    desc: 'Official mobile application icon for iOS and Android store listings.'
                 }
             ]
         },
@@ -124,28 +200,28 @@
             ]
         },
         'pos': {
-            title: 'Omnichannel Retail POS & Real-Time Sync',
+            title: 'BNSMSoft – Omnichannel Retail POS & Real-Time Sync',
             caption: 'High-speed barcode scanning, thermal receipt generation, multi-payment checkout, and instant stock deduction.',
             slides: [
                 {
-                    src: 'assets/images/projects/pos/desktop.png',
+                    src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
                     device: 'Desktop POS Terminal (1920×1080)',
                     desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, and split payments.'
                 },
                 {
-                    src: 'assets/images/projects/pos/laptop.png',
-                    device: 'Laptop POS View (1440×900)',
-                    desc: 'Cashier interface featuring keyboard shortcuts, discount coupons, and instant thermal receipt printing.'
-                },
-                {
-                    src: 'assets/images/projects/pos/tablet.png',
+                    src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
                     device: 'Tablet Portable POS (1024×768)',
                     desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup.'
                 },
                 {
-                    src: 'assets/images/projects/pos/mobile.png',
+                    src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
                     device: 'Mobile Pocket Scanner (390×844)',
                     desc: 'Camera-based barcode scanning and stock taking for warehouse auditing.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
+                    device: 'Inventory & Stock Analytics (1920×1080)',
+                    desc: 'Real-time stock balance matching, low-stock notifications, and inventory ledger.'
                 }
             ]
         },
