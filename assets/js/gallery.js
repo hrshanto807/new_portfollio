@@ -190,28 +190,63 @@
             ]
         },
         'pos': {
-            title: 'BNSMSoft – Omnichannel Retail POS & Real-Time Sync',
-            caption: 'High-speed barcode scanning, thermal receipt generation, multi-payment checkout, and instant stock deduction.',
+            title: 'Asian Jewellery House – Retail POS & Inventory ERP',
+            caption: 'High-value jewelry retail POS terminal featuring real-time daily gold rate telemetry, barcode scanner integration, split-payment checkout, and thermal sale memos.',
             slides: [
                 {
-                    src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
-                    device: 'Desktop POS Terminal (1920×1080)',
-                    desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, and split payments.'
+                    src: 'assets/images/projects/pos/04_pos_cart_active.png',
+                    device: 'Active POS Terminal & Cart Ledger',
+                    desc: 'Real-time retail counter terminal with active cart, making charges calculation, dynamic tax, and instant discount adjustments.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
-                    device: 'Tablet Portable POS (1024×768)',
-                    desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup.'
+                    src: 'assets/images/projects/pos/03_pos_terminal.png',
+                    device: 'Touch POS Terminal Interface',
+                    desc: 'Fast touch-enabled product grid with category filters, rapid barcode scanning, and cashier shortcut controls.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
-                    device: 'Mobile Pocket Scanner (390×844)',
-                    desc: 'Camera-based barcode scanning and stock taking for warehouse auditing.'
+                    src: 'assets/images/projects/pos/05_pos_checkout_modal.png',
+                    device: 'Multi-Payment Checkout Modal',
+                    desc: 'Split-payment modal supporting cash, credit card, and mobile banking with automated change calculation.'
                 },
                 {
-                    src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
-                    device: 'Inventory & Stock Analytics (1920×1080)',
-                    desc: 'Real-time stock balance matching, low-stock notifications, and inventory ledger.'
+                    src: 'assets/images/projects/pos/07_pos_gold_rate_modal.png',
+                    device: 'Dynamic Gold & Silver Rate Telemetry Modal',
+                    desc: 'Real-time per-gram gold rate configurator (24K, 22K, 21K, 18K) updating product pricing instantly storewide.'
+                },
+                {
+                    src: 'assets/images/projects/pos/06_pos_customer_modal.png',
+                    device: 'Customer Registration & Credit Ledger',
+                    desc: 'Quick in-modal customer KYC capture with phone number search and historical purchase tracking.'
+                },
+                {
+                    src: 'assets/images/projects/pos/02_dashboard_overview.png',
+                    device: 'Executive POS Operations Dashboard',
+                    desc: 'Real-time sales velocity, daily cash register balance, inventory turnover metrics, and fast administrative shortcuts.'
+                },
+                {
+                    src: 'assets/images/projects/pos/08_sales_list.png',
+                    device: 'Sales Transaction Master Ledger',
+                    desc: 'Audited sales transaction pipeline with date filtering, payment status chips, customer details, and invoice downloads.'
+                },
+                {
+                    src: 'assets/images/projects/pos/09_sale_details_view.png',
+                    device: 'Sale Details & Karat Breakdown View',
+                    desc: 'Granular invoice audit view with itemized gross weight, net gold weight, stone deduction, making charge, and VAT.'
+                },
+                {
+                    src: 'assets/images/projects/pos/10_sale_invoice_memo.png',
+                    device: 'Official Printable Sale Memo Receipt',
+                    desc: 'Customer-ready sale memo and thermal invoice formatted for high-precision jewelry retail compliance.'
+                },
+                {
+                    src: 'assets/images/projects/pos/16_products_catalog_list.png',
+                    device: 'Jewellery Products Catalog & Stock Ledger',
+                    desc: 'Comprehensive inventory list with product images, barcode serials, metal karat categories, and live branch stock.'
+                },
+                {
+                    src: 'assets/images/projects/pos/19_product_barcode_labels.png',
+                    device: 'Thermal Barcode Tag Generator',
+                    desc: 'Automated jewelry tag barcode generation for thermal label printers with price, karat code, and serial number.'
                 }
             ]
         },

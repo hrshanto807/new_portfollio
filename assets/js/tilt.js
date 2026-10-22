@@ -65,4 +65,37 @@
             });
         }, { passive: true });
     });
+
+    // 3D Gyroscope Chamber Kinetic Mouse Tracking
+    const heroSection = document.querySelector('.hero');
+    const gyroChamber = document.querySelector('.gyro-chamber');
+
+    if (heroSection && gyroChamber) {
+        let targetX = 0;
+        let targetY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        heroSection.addEventListener('mousemove', (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            targetX = x * 10; // Degrees tilt
+            targetY = y * -10;
+        }, { passive: true });
+
+        heroSection.addEventListener('mouseleave', () => {
+            targetX = 0;
+            targetY = 0;
+        }, { passive: true });
+
+        function renderHero3DParallax() {
+            currentX += (targetX - currentX) * 0.08;
+            currentY += (targetY - currentY) * 0.08;
+
+            gyroChamber.style.transform = `perspective(1200px) rotateY(${currentX.toFixed(2)}deg) rotateX(${currentY.toFixed(2)}deg)`;
+            requestAnimationFrame(renderHero3DParallax);
+        }
+        requestAnimationFrame(renderHero3DParallax);
+    }
 })();
