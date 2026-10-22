@@ -189,6 +189,72 @@
                 }
             ]
         },
+        'manufacturing': {
+            title: 'Apex Apparel & Accessories – Manufacturing & Factory ERP',
+            caption: 'End-to-end industrial production software managing customer orders, multi-stage factory workflows (dyeing to sewing), inventory, and automated delivery challans.',
+            slides: [
+                {
+                    src: 'assets/images/projects/manufacturing/01_executive_dashboard.png',
+                    device: 'Executive Analytics & Factory Dashboard',
+                    desc: 'Real-time production KPIs, order volume analytics, live factory revenue, and pending delivery stage monitoring.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/02_customer_orders_table.png',
+                    device: 'Customer Orders Master Register',
+                    desc: 'Comprehensive work order ledger tracking PO numbers, buyers, delivery deadlines, export status, and factory units.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/03_create_order_form.png',
+                    device: 'Multi-Item Garment Order Creation',
+                    desc: 'Dynamic production order intake form with apparel style breakdown, color matrices, size grading, and unit pricing.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/04_order_details_costing.png',
+                    device: 'Order Costing & Specification Sheet',
+                    desc: 'Detailed production breakdown featuring dual currency conversions (USD/BDT), profit margin analysis, and bill of materials (BOM).'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/05_order_kanban_pipeline.png',
+                    device: 'Visual Manufacturing Kanban Board',
+                    desc: 'Interactive pipeline tracking orders from Quotation through Dyeing, Sewing, Quality Assurance, and Packing to Shipment.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/06_raw_materials_stock.png',
+                    device: 'Raw Material Inventory & Stock Summary',
+                    desc: 'Live warehouse inventory levels, re-order alerts, fabric/trim consumption tracking, and material availability.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/07_dyeing_factory_workflow.png',
+                    device: 'Dyeing Mill Production Floor Workflow',
+                    desc: 'Active dyeing batches, chemical recipe management, and inter-factory transfer log to the making and sewing floor.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/08_finished_goods_inventory.png',
+                    device: 'Finished Goods Inventory & Warehouse',
+                    desc: 'Finished garment reconciliation, carton packaging logs, and export container loading manifests.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/09_delivery_shipments_log.png',
+                    device: 'Delivery Shipments & Dispatch Register',
+                    desc: 'Logistics register tracking transport vehicles, drivers, gate pass authorization, and customer delivery confirmations.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/10_work_order_analytics.png',
+                    device: 'Work Order Production & Efficiency Report',
+                    desc: 'Executive analytics comparing planned vs actual production output, line efficiency metrics, and operator throughput.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/11_printable_customer_invoice.png',
+                    device: 'Official Printable Customer Order Invoice',
+                    desc: 'Print-ready corporate commercial invoice with itemized costing, export terms, banking details, and authorized sign-offs.'
+                },
+                {
+                    src: 'assets/images/projects/manufacturing/12_printable_delivery_challan.png',
+                    device: 'Official Delivery Challan & Factory Gate Pass',
+                    desc: 'Standardized factory gate pass and delivery challan for customs and transport verification.'
+                }
+            ]
+        },
         'pos': {
             title: 'Asian Jewellery House – Retail POS & Inventory ERP',
             caption: 'High-value jewelry retail POS terminal featuring real-time daily gold rate telemetry, barcode scanner integration, split-payment checkout, and thermal sale memos.',

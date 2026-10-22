@@ -667,39 +667,40 @@
 
                         <!-- Project 4: Manufacturing Workflow ERP -->
                         <div class="project-card tilt-card reveal-init">
-                            <div class="project-screen-box">
+                            <div class="project-screen-box project-screen-clickable" data-gallery-trigger="manufacturing">
                                 <div class="project-screen-badge">
                                     <span class="rec-dot"></span>
-                                    <span>LIVE PRODUCTION STREAM</span>
+                                    <span>PRODUCTION • FACTORY ERP [12 VIEWS]</span>
                                 </div>
-                                <div class="project-screen-hud-right">INVENTORY SYNC</div>
+                                <div class="project-screen-hud-right">CLICK TO EXPAND</div>
+                                <img src="assets/images/projects/manufacturing/01_executive_dashboard.png" alt="Apparel & Accessories Manufacturing ERP Executive Dashboard" class="project-screen-img" loading="lazy">
                                 <canvas class="project-sim-canvas" data-type="sync"></canvas>
                             </div>
                             <div class="project-card-header">
                                 <span class="project-badge-type tilt-pop-lg">Industrial ERP</span>
-                                <a href="https://github.com/hrshanto807" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Project Repository">
+                                <button class="project-link-btn project-gallery-btn" data-gallery-trigger="manufacturing" aria-label="Open Manufacturing ERP Gallery">
                                     <svg class="icon-svg" viewBox="0 0 24 24">
-                                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                        <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                     </svg>
-                                </a>
+                                </button>
                             </div>
                             <div class="project-body">
-                                <h3 class="project-title tilt-pop-md">Manufacturing & Factory Workflow ERP</h3>
+                                <h3 class="project-title tilt-pop-md">Apparel & Accessories Manufacturing ERP</h3>
                                 <p class="project-desc">
-                                    End-to-end production tracking software managing raw material buying, multi-stage requisitions, and inventory deductions.
+                                    End-to-end industrial production software managing customer orders, multi-stage factory workflows (dyeing to sewing), inventory, and automated delivery challans.
                                 </p>
                                 <ul class="project-highlights">
-                                    <li>Workflow engine tracking production stages, vendor accounts & material purchases</li>
-                                    <li>Automated inter-warehouse transfers, machinery maintenance & low-stock alerts</li>
-                                    <li>Executive financial dashboards analyzing production cost variance with bulk PDF/Excel</li>
+                                    <li>Interactive executive dashboard tracking real-time order volume, production stages & gross revenue</li>
+                                    <li>Multi-stage factory pipeline from raw material requisition to dyeing, sewing, and inventory reconciliation</li>
+                                    <li>Automated delivery challan generation, printable invoices, employee attendance register & trial balance</li>
                                 </ul>
                                 <div class="project-tech-stack">
                                     <span class="project-tech-item">Laravel</span>
-                                    <span class="project-tech-item">PHP</span>
                                     <span class="project-tech-item">MySQL</span>
-                                    <span class="project-tech-item">Vue.js</span>
                                     <span class="project-tech-item">Redis</span>
-                                    <span class="project-tech-item">DataTables</span>
+                                    <span class="project-tech-item">Vue.js</span>
+                                    <span class="project-tech-item">Queue Workers</span>
+                                    <span class="project-tech-item">PDF Invoice Engine</span>
                                 </div>
                             </div>
                         </div>
