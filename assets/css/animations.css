@@ -180,12 +180,12 @@
 }
 
 .scene-3d-cube {
-    width: 76px;
-    height: 76px;
+    width: 72px;
+    height: 72px;
     perspective: 700px;
     position: absolute;
-    bottom: 25px;
-    left: -48px;
+    bottom: 30px;
+    left: -42px;
     z-index: 20;
     pointer-events: none;
 }
@@ -200,8 +200,8 @@
 
 .cube-face {
     position: absolute;
-    width: 76px;
-    height: 76px;
+    width: 72px;
+    height: 72px;
     background: rgba(13, 19, 34, 0.85);
     border: 1.5px solid #22c55e;
     box-shadow: inset 0 0 15px rgba(34, 197, 94, 0.35), 0 0 15px rgba(34, 197, 94, 0.3);
@@ -217,12 +217,12 @@
     user-select: none;
 }
 
-.cube-face-front  { transform: rotateY(0deg) translateZ(38px); }
-.cube-face-back   { transform: rotateY(180deg) translateZ(38px); color: var(--secondary); border-color: var(--secondary); box-shadow: inset 0 0 15px rgba(6, 182, 212, 0.3), 0 0 12px rgba(6, 182, 212, 0.3); text-shadow: 0 0 8px rgba(6, 182, 212, 0.7); }
-.cube-face-right  { transform: rotateY(90deg) translateZ(38px); }
-.cube-face-left   { transform: rotateY(-90deg) translateZ(38px); color: var(--primary); border-color: var(--primary); box-shadow: inset 0 0 15px rgba(99, 102, 241, 0.3), 0 0 12px rgba(99, 102, 241, 0.3); text-shadow: 0 0 8px rgba(99, 102, 241, 0.7); }
-.cube-face-top    { transform: rotateX(90deg) translateZ(38px); }
-.cube-face-bottom { transform: rotateX(-90deg) translateZ(38px); }
+.cube-face-front  { transform: rotateY(0deg) translateZ(36px); }
+.cube-face-back   { transform: rotateY(180deg) translateZ(36px); color: var(--secondary); border-color: var(--secondary); box-shadow: inset 0 0 15px rgba(6, 182, 212, 0.3), 0 0 12px rgba(6, 182, 212, 0.3); text-shadow: 0 0 8px rgba(6, 182, 212, 0.7); }
+.cube-face-right  { transform: rotateY(90deg) translateZ(36px); }
+.cube-face-left   { transform: rotateY(-90deg) translateZ(36px); color: var(--primary); border-color: var(--primary); box-shadow: inset 0 0 15px rgba(99, 102, 241, 0.3), 0 0 12px rgba(99, 102, 241, 0.3); text-shadow: 0 0 8px rgba(99, 102, 241, 0.7); }
+.cube-face-top    { transform: rotateX(90deg) translateZ(36px); }
+.cube-face-bottom { transform: rotateX(-90deg) translateZ(36px); }
 
 /* 3D Multi-Layer Tilt Physics */
 .tilt-card {
@@ -356,9 +356,7 @@
     }
 
     .scene-3d-cube {
-        transform: scale(0.75);
-        left: -10px;
-        bottom: -15px;
+        transform: scale(0.9);
     }
 
     #cursor-ring, #cursor-dot {
@@ -382,10 +380,8 @@
     }
 
     .scene-3d-cube {
-        display: block !important;
-        left: 5px;
-        bottom: -20px;
-        transform: scale(0.68);
-        z-index: 25;
+        display: flex !important;
+        transform: scale(0.85);
+        z-index: 10;
     }
 }

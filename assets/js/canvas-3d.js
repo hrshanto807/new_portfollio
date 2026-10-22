@@ -213,6 +213,10 @@
         const cosPY = Math.cos(polyAngleY);
         const sinPY = Math.sin(polyAngleY);
 
+        // Shift cyber icosahedron core to the left behind the text column so it does NOT crowd the avatar
+        const coreShiftX = width > 1024 ? -(width * 0.20) : (width > 768 ? -90 : 0);
+        const coreShiftY = -30;
+
         const coreProjected = [];
         for (let i = 0; i < polyVertices.length; i++) {
             const v = polyVertices[i];
@@ -222,19 +226,19 @@
             const y2 = v.y * cosPX - z1 * sinPX;
             const z2 = v.y * sinPX + z1 * cosPX;
 
-            // Project through global camera
-            const p = project3D(x1, y2 - 40, z2 + 80, cosX, sinX, cosY, sinY);
+            // Project through global camera shifted to the text section
+            const p = project3D(x1 + coreShiftX, y2 + coreShiftY, z2 + 80, cosX, sinX, cosY, sinY);
             coreProjected.push(p);
         }
 
-        // Draw core edges
-        ctx.lineWidth = 1.2;
+        // Draw core edges with refined kinetic glow
+        ctx.lineWidth = 1.1;
         for (let i = 0; i < polyEdges.length; i++) {
             const [idx1, idx2] = polyEdges[i];
             const p1 = coreProjected[idx1];
             const p2 = coreProjected[idx2];
             if (p1 && p2) {
-                const edgeAlpha = Math.max(0.1, Math.min(0.5, (p1.scale + p2.scale) * 0.28));
+                const edgeAlpha = Math.max(0.08, Math.min(0.38, (p1.scale + p2.scale) * 0.22));
                 ctx.strokeStyle = `rgba(6, 182, 212, ${edgeAlpha})`;
                 ctx.beginPath();
                 ctx.moveTo(p1.x, p1.y);
@@ -248,10 +252,10 @@
             const p = coreProjected[i];
             if (!p) continue;
             ctx.beginPath();
-            ctx.arc(p.x, p.y, Math.max(1, 3.2 * p.scale), 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(99, 102, 241, 0.75)';
+            ctx.arc(p.x, p.y, Math.max(1, 2.6 * p.scale), 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(99, 102, 241, 0.7)';
             ctx.shadowColor = '#06b6d4';
-            ctx.shadowBlur = 10;
+            ctx.shadowBlur = 8;
             ctx.fill();
             ctx.shadowBlur = 0; // reset
         }

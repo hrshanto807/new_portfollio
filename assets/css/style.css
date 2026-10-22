@@ -368,8 +368,8 @@ h1, h2, h3, h4, h5 {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 3.5rem;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3rem;
     align-items: center;
 }
 
@@ -447,13 +447,13 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
     align-items: center;
     position: relative;
-    min-height: 520px;
+    min-height: 570px;
 }
 
 .avatar-stage-3d {
     position: relative;
-    width: 290px;
-    height: 520px;
+    width: 340px;
+    height: 580px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -466,11 +466,11 @@ h1, h2, h3, h4, h5 {
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 420px;
-    height: 420px;
+    width: 480px;
+    height: 480px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(99, 102, 241, 0.45) 0%, rgba(6, 182, 212, 0.28) 35%, rgba(7, 10, 18, 0) 70%);
-    filter: blur(32px);
+    filter: blur(36px);
     z-index: 1;
     pointer-events: none;
     animation: cosmicPulse 6s ease-in-out infinite alternate;
@@ -483,7 +483,9 @@ h1, h2, h3, h4, h5 {
     object-position: center bottom;
     position: relative;
     z-index: 10;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 35px rgba(6, 182, 212, 0.22));
+    transform: scale(1.15);
+    transform-origin: center bottom;
+    filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 35px rgba(6, 182, 212, 0.25));
     transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
     pointer-events: none;
 }
@@ -500,8 +502,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .gyro-ring-cyan {
-    width: 440px;
-    height: 440px;
+    width: 480px;
+    height: 480px;
     border: 2px solid rgba(6, 182, 212, 0.75);
     box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.2);
     animation: gyroSpinCyan 18s linear infinite;
@@ -521,8 +523,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .gyro-ring-purple {
-    width: 475px;
-    height: 475px;
+    width: 520px;
+    height: 520px;
     border: 2px solid rgba(139, 92, 246, 0.7);
     box-shadow: 0 0 25px rgba(139, 92, 246, 0.4), inset 0 0 15px rgba(139, 92, 246, 0.2);
     animation: gyroSpinPurple 24s linear infinite;
@@ -542,8 +544,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .gyro-ring-emerald {
-    width: 510px;
-    height: 510px;
+    width: 560px;
+    height: 560px;
     border: 1px dashed rgba(16, 185, 129, 0.45);
     box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
     animation: gyroSpinEmerald 30s linear infinite;
