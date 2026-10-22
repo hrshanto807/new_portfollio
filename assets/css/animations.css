@@ -324,6 +324,10 @@
     }
 
     .scene-3d-cube {
-        display: none !important;
+        display: block !important;
+        left: 5px;
+        bottom: -20px;
+        transform: scale(0.68);
+        z-index: 25;
     }
 }
