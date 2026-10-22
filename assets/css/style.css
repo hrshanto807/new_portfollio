@@ -460,6 +460,7 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
     transform-style: preserve-3d;
     z-index: 10;
+    pointer-events: none;
 }
 
 .avatar-cosmic-glow {
@@ -1016,38 +1017,6 @@ h1, h2, h3, h4, h5 {
     pointer-events: none;
 }
 
-/* Audio Waveform Equalizer in Header */
-.hud-eq-wrap {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-subtle);
-    padding: 0.35rem 0.75rem;
-    border-radius: var(--radius-full);
-}
-
-.hud-eq-label {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-}
-
-.hud-eq {
-    display: flex;
-    align-items: flex-end;
-    gap: 2.5px;
-    height: 16px;
-}
-
-.eq-bar {
-    width: 2px;
-    height: 6px;
-    background: var(--secondary);
-    border-radius: 1px;
-    box-shadow: 0 0 4px var(--secondary);
-}
 
 .project-card-header {
     padding: 1.8rem 1.8rem 0.75rem 1.8rem;
@@ -1446,10 +1415,6 @@ h1, h2, h3, h4, h5 {
 
     .navbar {
         padding: 0.75rem 0;
-    }
-
-    .hud-eq-wrap {
-        display: none !important;
     }
 
     .nav-actions {
