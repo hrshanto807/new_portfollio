@@ -45,6 +45,58 @@
 }
 
 /* 3D Gyroscope Holographic Rings */
+@keyframes orbitPulseCyan {
+    0% {
+        opacity: 0.75;
+        transform: rotateX(72deg) rotateY(-22deg) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(72deg) rotateY(-22deg) scale(1.02);
+    }
+}
+
+@keyframes orbitPulsePurple {
+    0% {
+        opacity: 0.75;
+        transform: rotateX(65deg) rotateY(26deg) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(65deg) rotateY(26deg) scale(1.02);
+    }
+}
+
+@keyframes cosmicPulse {
+    0% {
+        transform: scale(0.92);
+        opacity: 0.65;
+    }
+    100% {
+        transform: scale(1.08);
+        opacity: 0.95;
+    }
+}
+
+@keyframes floatTechIcon {
+    0%, 100% {
+        transform: translateY(0px) scale(1) translateZ(25px);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.06) translateZ(40px);
+    }
+}
+
+@keyframes spinGearSlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinGearSlowRev {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
 @keyframes gyroSpinX {
     0% {
         transform: rotateX(70deg) rotateZ(0deg);

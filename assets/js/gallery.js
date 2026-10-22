@@ -20,48 +20,43 @@
             slides: [
                 {
                     src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
-                    device: 'Executive Analytics Dashboard (1920×1080)',
+                    device: 'Executive Analytics Dashboard (1440×3452)',
                     desc: 'Real-time gross margin, cashflow metrics, capital summary, low-stock alerts, and user plan limits.'
                 },
                 {
+                    src: 'assets/images/projects/inventory-pos/dashboard_laptop.png',
+                    device: 'Laptop Resolution Dashboard (1280×3562)',
+                    desc: 'Compact laptop view featuring responsive data tables, stock ledger, and quick shortcuts.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/dashboard_tablet.png',
+                    device: 'Tablet Touch View (768×6018)',
+                    desc: 'Touch-optimized drawer navigation with collapsible cards and fast date range filtering.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
+                    device: 'Mobile Phone PWA Dashboard (390×7405)',
+                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
+                },
+                {
                     src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
-                    device: 'Desktop POS Terminal (1920×1080)',
+                    device: 'Desktop POS Terminal (1440×1722)',
                     desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, discount calculation, and split payments.'
                 },
                 {
+                    src: 'assets/images/projects/inventory-pos/pos_laptop.png',
+                    device: 'Laptop POS View (1280×1650)',
+                    desc: 'Cashier interface featuring keyboard shortcuts, discount coupons, and instant thermal receipt printing.'
+                },
+                {
                     src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
-                    device: 'Tablet Portable POS (1024×768)',
+                    device: 'Tablet Portable POS (768×2676)',
                     desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup and touch checkout.'
                 },
                 {
                     src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
-                    device: 'Mobile Pocket Scanner (390×844)',
+                    device: 'Mobile Pocket Scanner (390×3009)',
                     desc: 'Camera-based barcode scanning, cart management, and mobile cashier checkout.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
-                    device: 'Mobile Phone PWA Dashboard (390×844)',
-                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/10_saas_feature_gating.png',
-                    device: 'SaaS Feature Gating & RBAC',
-                    desc: 'Tier-based subscription feature enforcement, plan upgrades, and role-based permissions.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/09_saas_hero_illustration_dark.png',
-                    device: '3D SaaS Ecosystem & Metrics',
-                    desc: '3D product visualization, profit tracking, order volume analytics, and mobile app ecosystem.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/06_brand_identity_logo.png',
-                    device: 'Official Brand Identity',
-                    desc: 'Official BNSMSoft cloud technology trademark and identity design.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/07_mobile_app_icon.png',
-                    device: 'Mobile App Icon (iOS / Android)',
-                    desc: 'Official mobile application icon for iOS and Android store listings.'
                 }
             ]
         },
@@ -71,48 +66,43 @@
             slides: [
                 {
                     src: 'assets/images/projects/inventory-pos/01_dashboard_desktop.png',
-                    device: 'Executive Analytics Dashboard (1920×1080)',
+                    device: 'Executive Analytics Dashboard (1440×3452)',
                     desc: 'Real-time gross margin, cashflow metrics, capital summary, low-stock alerts, and user plan limits.'
                 },
                 {
+                    src: 'assets/images/projects/inventory-pos/dashboard_laptop.png',
+                    device: 'Laptop Resolution Dashboard (1280×3562)',
+                    desc: 'Compact laptop view featuring responsive data tables, stock ledger, and quick shortcuts.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/dashboard_tablet.png',
+                    device: 'Tablet Touch View (768×6018)',
+                    desc: 'Touch-optimized drawer navigation with collapsible cards and fast date range filtering.'
+                },
+                {
+                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
+                    device: 'Mobile Phone PWA Dashboard (390×7405)',
+                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
+                },
+                {
                     src: 'assets/images/projects/inventory-pos/02_pos_terminal_desktop.png',
-                    device: 'Desktop POS Terminal (1920×1080)',
+                    device: 'Desktop POS Terminal (1440×1722)',
                     desc: 'High-throughput retail counter checkout with rapid barcode lookup, customer ledger, discount calculation, and split payments.'
                 },
                 {
+                    src: 'assets/images/projects/inventory-pos/pos_laptop.png',
+                    device: 'Laptop POS View (1280×1650)',
+                    desc: 'Cashier interface featuring keyboard shortcuts, discount coupons, and instant thermal receipt printing.'
+                },
+                {
                     src: 'assets/images/projects/inventory-pos/03_pos_terminal_tablet.png',
-                    device: 'Tablet Portable POS (1024×768)',
+                    device: 'Tablet Portable POS (768×2676)',
                     desc: 'Handheld floor sales terminal for mobile retail staff with instant inventory lookup and touch checkout.'
                 },
                 {
                     src: 'assets/images/projects/inventory-pos/04_pos_terminal_mobile.png',
-                    device: 'Mobile Pocket Scanner (390×844)',
+                    device: 'Mobile Pocket Scanner (390×3009)',
                     desc: 'Camera-based barcode scanning, cart management, and mobile cashier checkout.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/05_dashboard_mobile.png',
-                    device: 'Mobile Phone PWA Dashboard (390×844)',
-                    desc: 'Finger-friendly mobile management interface for on-the-go stock approvals, revenue tracking, and business alerts.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/10_saas_feature_gating.png',
-                    device: 'SaaS Feature Gating & RBAC',
-                    desc: 'Tier-based subscription feature enforcement, plan upgrades, and role-based permissions.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/09_saas_hero_illustration_dark.png',
-                    device: '3D SaaS Ecosystem & Metrics',
-                    desc: '3D product visualization, profit tracking, order volume analytics, and mobile app ecosystem.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/06_brand_identity_logo.png',
-                    device: 'Official Brand Identity',
-                    desc: 'Official BNSMSoft cloud technology trademark and identity design.'
-                },
-                {
-                    src: 'assets/images/projects/inventory-pos/07_mobile_app_icon.png',
-                    device: 'Mobile App Icon (iOS / Android)',
-                    desc: 'Official mobile application icon for iOS and Android store listings.'
                 }
             ]
         },
@@ -248,13 +238,58 @@
             ]
         },
         'invoice': {
-            title: 'Enterprise Order Management & Automated Invoice Engine',
-            caption: 'High-concurrency order fulfillment pipeline with parallel Redis queues, automated tax/VAT calculations, and sub-100ms PDF invoice generation.',
+            title: 'Automated Invoice Generator & Billing Management System',
+            caption: 'Enterprise financial management platform with multi-step invoice wizard, real-time tax calculation, printable PDF documents, and client ledger.',
             slides: [
                 {
-                    src: 'assets/images/projects/invoice/desktop.png',
-                    device: 'Order Queue & Tax Invoice Preview (1920×1080)',
-                    desc: 'Dual-pane workspace: real-time order processing stream (18,450 orders/day) and live rendered tax invoice preview with QR code verification.'
+                    src: 'assets/images/projects/invoice/04_dashboard_overview.png',
+                    device: 'Financial & Invoice Overview Dashboard',
+                    desc: 'Real-time billing analytics, revenue flow, overdue invoice alerts, and fast navigation to billing workflows.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/05_invoices_ledger_table.png',
+                    device: 'Invoices Master Ledger & Status Pipeline',
+                    desc: 'Comprehensive invoice register with paid/pending status tags, search filters, and quick action menus.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/06_modal_invoice_detail_view.png',
+                    device: 'Detailed Invoice Breakdown Modal',
+                    desc: 'Line-item audit modal with itemized descriptions, quantity, unit pricing, discounts, and tax computation.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/08_invoice_wizard_step1_metadata.png',
+                    device: 'Creation Wizard: Step 1 (Metadata & Due Dates)',
+                    desc: 'Issue dates, due dates, currency selection, custom purchase order numbers, and invoice numbering scheme.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/09_invoice_wizard_step2_customer.png',
+                    device: 'Creation Wizard: Step 2 (Client & Billing Details)',
+                    desc: 'Typeahead customer search, auto-filled billing addresses, tax registration numbers, and client notes.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/10_invoice_wizard_step3_products_table.png',
+                    device: 'Creation Wizard: Step 3 (Products & Line Items)',
+                    desc: 'Dynamic product row additions, automatic subtotal calculations, and customizable tax rates.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/11_invoice_wizard_step4_finalize.png',
+                    device: 'Creation Wizard: Step 4 (Final Review & Discounts)',
+                    desc: 'Review summary, discount applications, shipping fees, terms and conditions, and instant publishing.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/12_printable_invoice_paper_document.png',
+                    device: 'Official Printable Paper Invoice Document',
+                    desc: 'High-fidelity formatted invoice ready for print, PDF export, and verified corporate client distribution.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/15_client_profile_360_offcanvas.png',
+                    device: 'Client 360° Profile & Transaction Drawer',
+                    desc: 'Slide-out client directory showing lifetime value, outstanding balance, and full invoice transaction history.'
+                },
+                {
+                    src: 'assets/images/projects/invoice/22_financial_tax_reports.png',
+                    device: 'Financial Tax & Revenue Reports',
+                    desc: 'Automated VAT/Tax breakdown, monthly collection reports, and exportable financial audits.'
                 }
             ]
         }
@@ -284,30 +319,31 @@
 
     let currentProjectKey = 'bnsmsoft';
     let currentSlideIdx = 0;
-    let isFitMode = false;
+    let isFitMode = true;
     let touchStartX = 0;
     let touchEndX = 0;
 
     // Auto-detect image aspect ratio for full-width responsive view
     function updateImageAspect() {
         if (!mainImg || !mainImg.naturalWidth) return;
-        const isTall = mainImg.naturalHeight > mainImg.naturalWidth * 1.15;
-        if (isTall) {
-            mainImg.classList.add('is-tall-capture');
-            mainImg.classList.remove('is-landscape');
+        // Only offer full-width scroll mode if it's an ultra-tall capture and wide enough (e.g. desktop full-page)
+        const isScrollableCapture = (mainImg.naturalHeight > mainImg.naturalWidth * 1.3) && (mainImg.naturalWidth >= 700);
+        if (isScrollableCapture) {
             if (viewmodeBtn) viewmodeBtn.style.display = 'inline-flex';
             if (isFitMode) {
                 mainImg.classList.add('is-fit-mode');
+                mainImg.classList.remove('is-scroll-mode', 'is-tall-capture');
                 if (scrollHintEl) scrollHintEl.style.display = 'none';
                 if (viewmodeLabel) viewmodeLabel.textContent = 'Full Width';
             } else {
                 mainImg.classList.remove('is-fit-mode');
+                mainImg.classList.add('is-scroll-mode');
                 if (scrollHintEl) scrollHintEl.style.display = 'inline-flex';
                 if (viewmodeLabel) viewmodeLabel.textContent = 'Fit Height';
             }
         } else {
-            mainImg.classList.remove('is-tall-capture', 'is-fit-mode');
-            mainImg.classList.add('is-landscape');
+            mainImg.classList.add('is-fit-mode');
+            mainImg.classList.remove('is-scroll-mode', 'is-tall-capture');
             if (scrollHintEl) scrollHintEl.style.display = 'none';
             if (viewmodeBtn) viewmodeBtn.style.display = 'none';
         }
@@ -347,7 +383,7 @@
         }
         currentProjectKey = projectKey;
         currentSlideIdx = 0;
-        isFitMode = false; // Reset to full width for sharpest view
+        isFitMode = true; // Always fit by default to preserve original aspect ratio and prevent clipping
 
         renderGalleryUI();
         modal.classList.add('active');
