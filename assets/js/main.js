@@ -69,28 +69,5 @@
     }
 
     window.addEventListener('scroll', updateActiveNav, { passive: true });
-
-    // SaaS Module Cards Filter
-    const filterBtns = document.querySelectorAll('.saas-filter-btn');
-    const saasCards = document.querySelectorAll('[data-saas-card]');
-    if (filterBtns.length > 0 && saasCards.length > 0) {
-        filterBtns.forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                filterBtns.forEach((b) => b.classList.remove('active'));
-                btn.classList.add('active');
-                const target = btn.getAttribute('data-filter') || 'all';
-
-                saasCards.forEach((card) => {
-                    const cardCat = card.getAttribute('data-category');
-                    if (target === 'all' || cardCat === target) {
-                        card.classList.remove('is-hidden');
-                    } else {
-                        card.classList.add('is-hidden');
-                    }
-                });
-            });
-        });
-    }
 })();
 
