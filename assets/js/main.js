@@ -32,6 +32,14 @@
                 hamburgerBtn.setAttribute('aria-expanded', 'false');
             });
         });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                navMenu.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 
     // Active Link Highlighting on Scroll

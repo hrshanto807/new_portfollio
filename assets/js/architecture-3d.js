@@ -17,7 +17,7 @@
 
     function resize() {
         width = canvas.width = canvas.parentElement.clientWidth || 900;
-        height = canvas.height = 340;
+        height = canvas.height = canvas.parentElement.clientHeight || 340;
     }
     resize();
     window.addEventListener('resize', resize, { passive: true });
@@ -58,7 +58,7 @@
     let lastMouseY = 0;
     let hoveredNode = null;
 
-    // Drag to Rotate 3D Architecture
+    // Drag / Touch to Rotate 3D Architecture
     canvas.addEventListener('mousedown', (e) => {
         isDragging = true;
         lastMouseX = e.clientX;
@@ -95,10 +95,34 @@
         }
     }, { passive: true });
 
+    // Mobile Touch Drag Support
+    canvas.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+            isDragging = true;
+            lastMouseX = e.touches[0].clientX;
+            lastMouseY = e.touches[0].clientY;
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+        isDragging = false;
+    }, { passive: true });
+
+    canvas.addEventListener('touchmove', (e) => {
+        if (isDragging && e.touches.length === 1) {
+            const dx = e.touches[0].clientX - lastMouseX;
+            const dy = e.touches[0].clientY - lastMouseY;
+            targetRotY += dx * 0.008;
+            targetRotX += dy * 0.008;
+            lastMouseX = e.touches[0].clientX;
+            lastMouseY = e.touches[0].clientY;
+        }
+    }, { passive: true });
+
     let projectedNodes = [];
 
     function project(x, y, z) {
-        // Isometric 3D Projection
+        // Isometric 3D Projection with responsive scale
         const cosY = Math.cos(rotY);
         const sinY = Math.sin(rotY);
         const cosX = Math.cos(rotX);
@@ -112,11 +136,12 @@
 
         const focal = 550;
         const scale = focal / (focal + z2);
+        const responsiveScale = Math.min(1, Math.max(0.48, (width - 40) / 640));
 
         return {
-            x: width / 2 + x1 * scale,
-            y: height / 2 + y2 * scale,
-            scale: scale,
+            x: width / 2 + x1 * scale * responsiveScale,
+            y: height / 2 + y2 * scale * responsiveScale,
+            scale: scale * responsiveScale,
             z: z2
         };
     }
