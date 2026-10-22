@@ -257,13 +257,33 @@
             ]
         },
         'webrtc': {
-            title: 'Real-Time WebRTC Video & Live Chat Platform',
-            caption: 'Ultra-low latency (0.8ms) peer-to-peer audio/video streaming, WebSocket signaling, screen sharing, and end-to-end encrypted messaging.',
+            title: 'Real-Time WebRTC Video & Live Chat Platform [5 Interactive Views]',
+            caption: 'Ultra-low latency (0.8ms) peer-to-peer audio/video streaming, custom WebSocket signaling, screen sharing, ICE network diagnostics, and end-to-end encrypted messaging.',
             slides: [
                 {
                     src: 'assets/images/projects/webrtc/desktop.png',
-                    device: 'Conference Room (1080p 60FPS)',
-                    desc: 'Active 1-on-1 and multi-party video call with real-time Opus audio telemetry, floating media controls, and instant chat sidebar.'
+                    device: '01. Active 1-on-1 Video Conference Room (1080p 60FPS)',
+                    desc: 'High-definition peer-to-peer video streaming featuring real-time Opus 48kHz audio telemetry, floating glassmorphic media dock, and encrypted WebSocket signaling.'
+                },
+                {
+                    src: 'assets/images/projects/webrtc/02_screenshare_presentation.jpg',
+                    device: '02. Collaborative Screen Sharing & Architecture Presentation Studio',
+                    desc: 'Zero-drop SFU presentation stage displaying live technical cloud topology, collaborative laser pointer annotation, floating presenter video bubbles, and real-time code snippet chat.'
+                },
+                {
+                    src: 'assets/images/projects/webrtc/03_chat_collaboration.jpg',
+                    device: '03. Real-Time Team Chat & Collaboration Workspace',
+                    desc: 'Comprehensive team communication workspace featuring threaded discussion channels, syntax-highlighted code sharing, developer presence indicators, and live WebRTC audio rooms.'
+                },
+                {
+                    src: 'assets/images/projects/webrtc/04_network_telemetry.jpg',
+                    device: '04. WebRTC Connection Diagnostics & ICE Network Telemetry HUD',
+                    desc: 'Real-time engineering observability HUD displaying round-trip latency (14ms), zero packet-loss ratio, adaptive bandwidth estimation (4.8 Mbps BWE), and active STUN/TURN ICE candidate pairs.'
+                },
+                {
+                    src: 'assets/images/projects/webrtc/05_device_settings.jpg',
+                    device: '05. Media Hardware Preferences, Audio Visualizer & E2EE Verification',
+                    desc: 'Hardware test center with live face-framing camera preview, real-time dBFS microphone VU meter, hardware acoustic echo cancellation (AEC3), and DTLS-SRTP 256-bit encryption fingerprints.'
                 }
             ]
         },
@@ -903,13 +923,33 @@
             ]
         },
         'multivendor': {
-            title: 'Enterprise Multi-Vendor E-Commerce Platform',
-            caption: 'Scalable marketplace architecture featuring vendor store management, catalog moderation, automated commission splits, and multi-currency payout ledger.',
+            title: 'Enterprise Multi-Vendor E-Commerce Platform & Marketplace [5 Interactive Views]',
+            caption: 'Scalable marketplace architecture featuring vendor store management, catalog moderation, automated 8.5% commission splits, multi-vendor split cart checkout, and multi-currency payout ledger.',
             slides: [
                 {
                     src: 'assets/images/projects/multivendor/desktop.png',
-                    device: 'Marketplace Operations Center (1920×1080)',
-                    desc: 'Real-time GMV analytics ($1.82M), vendor sales leaderboard, live customer order stream, and Stripe Connect / bKash payout ledger.'
+                    device: '01. Marketplace Operations Center & GMV Telemetry',
+                    desc: 'Executive mission control tracking platform-wide GMV ($1.82M), active merchant storefronts (412 stores), live order velocity, and platform revenue trajectory.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/02_vendor_merchant_portal.jpg',
+                    device: '02. Vendor Merchant Portal & SKU Catalog Manager',
+                    desc: 'Dedicated merchant back-office for Apex Tech Gear displaying monthly sales ($48,250), SKU inventory stock alerts, tiered pricing, and automated 8.5% platform commission calculation.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/03_split_cart_checkout.jpg',
+                    device: '03. Multi-Vendor Split Cart & Automated Logistics Checkout',
+                    desc: 'Unified customer checkout interface splitting orders across multiple vendor warehouses with separate courier logistics, automated tax calculation, and tokenized bKash / Stripe payments.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/04_commission_payout_ledger.jpg',
+                    device: '04. Automated Commission Ledger & Merchant Settlement Engine',
+                    desc: 'Audited financial disbursement ledger reconciling gross sales, automated 8.5% platform commission deductions, gateway fees, and automated bulk payouts via Stripe Connect & bKash.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/05_marketplace_storefront.jpg',
+                    device: '05. Consumer Marketplace Discovery Storefront & Flash Deals',
+                    desc: 'High-converting customer shopping portal showcasing 400+ curated independent merchant brands, search filters, verified customer reviews, and unified cart synchronization.'
                 }
             ]
         },
