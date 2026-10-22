@@ -337,51 +337,16 @@
 }
 
 /* ===================================================
-   Mobile & Tablet 3D Chamber Adaptations
+   Mobile & Tablet 3D Adaptations
 =================================================== */
 @media (max-width: 768px) {
-    .gyro-chamber .gyro-ring-1 {
-        width: 300px;
-        height: 300px;
-    }
-
-    .gyro-chamber .gyro-ring-2 {
-        width: 340px;
-        height: 340px;
-    }
-
-    .gyro-chamber .gyro-ring-3 {
-        width: 370px;
-        height: 370px;
-    }
-
-    .scene-3d-cube {
-        transform: scale(0.9);
-    }
-
     #cursor-ring, #cursor-dot {
         display: none !important;
     }
 }
 
 @media (max-width: 480px) {
-    .gyro-chamber .gyro-ring-1 {
-        width: 260px;
-        height: 260px;
-    }
-
-    .gyro-chamber .gyro-ring-2 {
-        width: 290px;
-        height: 290px;
-    }
-
-    .gyro-chamber .gyro-ring-3 {
+    #cursor-ring, #cursor-dot {
         display: none !important;
-    }
-
-    .scene-3d-cube {
-        display: flex !important;
-        transform: scale(0.85);
-        z-index: 10;
     }
 }
