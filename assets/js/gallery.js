@@ -340,7 +340,7 @@
             ]
         },
         'manufacturing': {
-            title: 'Apex Apparel & Accessories – Garment Manufacturing ERP [100 System Views]',
+            title: 'Apex Apparel & Accessories – Garment Manufacturing ERP [97 Verified Views]',
             caption: 'Complete enterprise manufacturing execution system (MES) & ERP covering customer orders, bill of materials, raw material requisitions, dyeing batches, assembly lines, finished inventory, payroll, and corporate accounting.',
             slides: [
                 {
@@ -382,11 +382,6 @@
                     src: 'assets/images/projects/manufacturing/02_Order_Management/08_Edit_Order_Form.png',
                     device: 'Edit Order Form [Order Management]',
                     desc: 'Customer order modification interface'
-                },
-                {
-                    src: 'assets/images/projects/manufacturing/02_Order_Management/09_Order_Status_Kanban_Board.png',
-                    device: 'Order Status Kanban Board [Order Management]',
-                    desc: 'Manufacturing progress pipeline tracking orders from Quotation to In-Production and Ready for Shipment'
                 },
                 {
                     src: 'assets/images/projects/manufacturing/02_Order_Management/10_Customer_Order_Payments_Ledger.png',
@@ -477,11 +472,6 @@
                     src: 'assets/images/projects/manufacturing/06_Customers_and_Vendors/27_Suppliers_Directory.png',
                     device: 'Suppliers Directory [Customers and Vendors]',
                     desc: 'Raw material and trim vendor directory with purchase ledgers and contact info'
-                },
-                {
-                    src: 'assets/images/projects/manufacturing/06_Customers_and_Vendors/28_Supplier_Payments_Table.png',
-                    device: 'Supplier Payments Table [Customers and Vendors]',
-                    desc: 'Supplier payments disbursements history and bank account reconciliations'
                 },
                 {
                     src: 'assets/images/projects/manufacturing/06_Customers_and_Vendors/29_Create_Supplier_Payment_Form.png',
@@ -577,11 +567,6 @@
                     src: 'assets/images/projects/manufacturing/08_Finance_and_Accounts/47_Operating_Expenses_Table.png',
                     device: 'Operating Expenses Table [Finance and Accounts]',
                     desc: 'Operating expenses ledger with categorization and account tracing'
-                },
-                {
-                    src: 'assets/images/projects/manufacturing/08_Finance_and_Accounts/48_Record_Expense_Voucher_Form.png',
-                    device: 'Record Expense Voucher Form [Finance and Accounts]',
-                    desc: 'Expense voucher recording interface'
                 },
                 {
                     src: 'assets/images/projects/manufacturing/08_Finance_and_Accounts/49_Expense_Categories_List.png',

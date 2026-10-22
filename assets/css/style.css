@@ -1333,7 +1333,7 @@ h1, h2, h3, h4, h5 {
 /* Cinematic Video-Reel Screen Simulator */
 .project-screen-box {
     position: relative;
-    height: 160px;
+    height: 215px;
     background: #050811;
     border-bottom: 1px solid var(--border-subtle);
     overflow: hidden;

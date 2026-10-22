@@ -24,7 +24,7 @@
         requestAnimationFrame(animateEQ);
     }
 
-    // 2. Interactive Video Simulation Canvases inside Project Cards
+    // 2. Interactive Video Simulation Canvases inside Project Cards (Optimized with Visibility Tracking)
     const projectCanvases = document.querySelectorAll('.project-sim-canvas');
 
     projectCanvases.forEach((canvas) => {
@@ -33,15 +33,40 @@
         let width = 0;
         let height = 0;
         let step = 0;
+        let isVisible = false;
+        let animId = null;
 
         function resize() {
             width = canvas.width = canvas.parentElement.clientWidth || 340;
-            height = canvas.height = 140;
+            height = canvas.height = canvas.parentElement.clientHeight || 215;
         }
         resize();
         window.addEventListener('resize', resize, { passive: true });
 
+        // Viewport intersection observer to avoid CPU/GPU throttling
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    isVisible = entry.isIntersecting;
+                    if (isVisible && !animId) {
+                        animId = requestAnimationFrame(drawSim);
+                    } else if (!isVisible && animId) {
+                        cancelAnimationFrame(animId);
+                        animId = null;
+                    }
+                });
+            }, { rootMargin: '100px' });
+            observer.observe(canvas);
+        } else {
+            isVisible = true;
+            animId = requestAnimationFrame(drawSim);
+        }
+
         function drawSim() {
+            if (!isVisible) {
+                animId = null;
+                return;
+            }
             step += 0.05;
             ctx.clearRect(0, 0, width, height);
 
@@ -116,9 +141,7 @@
                 ctx.stroke();
             }
 
-            requestAnimationFrame(drawSim);
+            animId = requestAnimationFrame(drawSim);
         }
-
-        requestAnimationFrame(drawSim);
     });
 })();
