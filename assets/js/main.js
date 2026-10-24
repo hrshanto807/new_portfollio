@@ -69,5 +69,51 @@
     }
 
     window.addEventListener('scroll', updateActiveNav, { passive: true });
-})();
 
+    // Back to Top Button Controller
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 450) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Cyber Toast Notification & 1-Click Clipboard Copy
+    const toastEl = document.getElementById('cyber-toast');
+    let toastTimeout = null;
+
+    function showToast(message) {
+        if (!toastEl) return;
+        toastEl.textContent = message;
+        toastEl.classList.add('show');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+            toastEl.classList.remove('show');
+        }, 2600);
+    }
+
+    document.querySelectorAll('[data-copy]').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const text = btn.getAttribute('data-copy');
+            if (!text) return;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(`⚡ Copied to clipboard: ${text}`);
+                }).catch(() => {
+                    showToast(`Copied: ${text}`);
+                });
+            } else {
+                showToast(`Copied: ${text}`);
+            }
+        });
+    });
+})();

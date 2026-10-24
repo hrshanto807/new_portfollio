@@ -22,14 +22,72 @@
     resize();
     window.addEventListener('resize', resize, { passive: true });
 
-    // 3D Nodes Definition
+    // 3D Nodes Metadata
     const nodes = [
-        { id: 'clients', label: 'Client / WebRTC Traffic', x: -280, y: 0, z: 0, color: '#38bdf8', metric: 'Real-time WebSocket & ICE' },
-        { id: 'nginx', label: 'Nginx Reverse Proxy', x: -140, y: -20, z: 20, color: '#06b6d4', metric: '10k+ Concurrency / SSL Termination' },
-        { id: 'laravel', label: 'Laravel Core & APIs', x: 0, y: 0, z: 0, color: '#6366f1', metric: 'Clean Architecture & Idempotency' },
-        { id: 'redis', label: 'Redis Queues & Horizon', x: 150, y: -70, z: -30, color: '#ef4444', metric: '-42% API Latency Cut / PubSub' },
-        { id: 'mysql', label: 'MySQL Enterprise DB', x: 160, y: 70, z: 30, color: '#10b981', metric: 'EXPLAIN Optimized / Zero Deadlocks' }
+        { 
+            id: 'clients', 
+            label: 'Client / WebRTC Traffic', 
+            shortLabel: 'Client Traffic', 
+            color: '#38bdf8', 
+            metric: 'Real-time WebSocket & ICE' 
+        },
+        { 
+            id: 'nginx', 
+            label: 'Nginx Reverse Proxy', 
+            shortLabel: 'Nginx Proxy', 
+            color: '#06b6d4', 
+            metric: '10k+ Concurrency / SSL' 
+        },
+        { 
+            id: 'laravel', 
+            label: 'Laravel Core & APIs', 
+            shortLabel: 'Laravel APIs', 
+            color: '#6366f1', 
+            metric: 'Clean Architecture & Idempotency' 
+        },
+        { 
+            id: 'redis', 
+            label: 'Redis Queues & Horizon', 
+            shortLabel: 'Redis Queues', 
+            color: '#ef4444', 
+            metric: '-42% Latency Cut / PubSub' 
+        },
+        { 
+            id: 'mysql', 
+            label: 'MySQL Enterprise DB', 
+            shortLabel: 'MySQL DB', 
+            color: '#10b981', 
+            metric: 'EXPLAIN Optimized / Zero Deadlocks' 
+        }
     ];
+
+    // Responsive 3D Coordinates:
+    // Desktop (width >= 600): Wide linear pipeline
+    // Mobile (width < 600): Balanced multi-tier cloud topology (no overlapping text)
+    function getNodeCoords(index) {
+        if (width < 600) {
+            // Tier 1: Client (top-left) & Nginx (top-right)
+            // Tier 2: Laravel Core (center)
+            // Tier 3: Redis Queues (bottom-left) & MySQL DB (bottom-right)
+            const mobileCoords = [
+                { x: -110, y: -75, z: 10 },
+                { x: 65,   y: -60, z: 20 },
+                { x: -25,  y: 5,   z: 0 },
+                { x: -95,  y: 75,  z: -20 },
+                { x: 85,   y: 75,  z: 20 }
+            ];
+            return mobileCoords[index];
+        } else {
+            const desktopCoords = [
+                { x: -280, y: 0,   z: 0 },
+                { x: -140, y: -20, z: 20 },
+                { x: 0,    y: 0,   z: 0 },
+                { x: 150,  y: -70, z: -30 },
+                { x: 160,  y: 70,  z: 30 }
+            ];
+            return desktopCoords[index];
+        }
+    }
 
     // 3D Links / Data Pipelines
     const links = [
@@ -49,16 +107,16 @@
         });
     }
 
-    let rotY = 0.2;
-    let rotX = 0.35;
-    let targetRotY = 0.2;
-    let targetRotX = 0.35;
+    let rotY = 0.15;
+    let rotX = 0.25;
+    let targetRotY = 0.15;
+    let targetRotX = 0.25;
     let isDragging = false;
     let lastMouseX = 0;
     let lastMouseY = 0;
     let hoveredNode = null;
 
-    // Drag / Touch to Rotate 3D Architecture
+    // Drag to Rotate
     canvas.addEventListener('mousedown', (e) => {
         isDragging = true;
         lastMouseX = e.clientX;
@@ -95,12 +153,30 @@
         }
     }, { passive: true });
 
-    // Mobile Touch Drag Support
+    // Mobile Touch Drag & Tap Support
     canvas.addEventListener('touchstart', (e) => {
         if (e.touches.length === 1) {
             isDragging = true;
             lastMouseX = e.touches[0].clientX;
             lastMouseY = e.touches[0].clientY;
+
+            // Touch tap detection
+            const rect = canvas.getBoundingClientRect();
+            const tx = e.touches[0].clientX - rect.left;
+            const ty = e.touches[0].clientY - rect.top;
+
+            let touched = null;
+            for (let i = 0; i < projectedNodes.length; i++) {
+                const p = projectedNodes[i];
+                const dist = Math.hypot(p.x - tx, p.y - ty);
+                if (dist < 32) {
+                    touched = nodes[i];
+                    break;
+                }
+            }
+            if (touched) {
+                hoveredNode = (hoveredNode === touched) ? null : touched;
+            }
         }
     }, { passive: true });
 
@@ -136,7 +212,15 @@
 
         const focal = 550;
         const scale = focal / (focal + z2);
-        const responsiveScale = Math.min(1, Math.max(0.48, (width - 40) / 640));
+        
+        let responsiveScale;
+        if (width < 480) {
+            responsiveScale = Math.min(1.0, Math.max(0.75, (width - 20) / 360));
+        } else if (width < 768) {
+            responsiveScale = Math.min(1.0, Math.max(0.70, (width - 40) / 520));
+        } else {
+            responsiveScale = Math.min(1.15, Math.max(0.75, (width - 60) / 740));
+        }
 
         return {
             x: width / 2 + x1 * scale * responsiveScale,
@@ -152,8 +236,13 @@
 
         ctx.clearRect(0, 0, width, height);
 
-        // Project all nodes
-        projectedNodes = nodes.map(n => project(n.x, n.y, n.z));
+        const isMobile = width < 600;
+
+        // Project all nodes with responsive coordinates
+        projectedNodes = nodes.map((n, idx) => {
+            const c = getNodeCoords(idx);
+            return project(c.x, c.y, c.z);
+        });
 
         // Draw 3D Connecting Pipes
         ctx.lineWidth = 2.5;
@@ -164,14 +253,14 @@
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
             ctx.stroke();
 
             // Glow line
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = 'rgba(99, 102, 241, 0.25)';
+            ctx.strokeStyle = 'rgba(99, 102, 241, 0.28)';
             ctx.lineWidth = 1;
             ctx.stroke();
         }
@@ -190,7 +279,7 @@
             const curY = p1.y + (p2.y - p1.y) * pkt.progress;
 
             ctx.beginPath();
-            ctx.arc(curX, curY, 3.5, 0, Math.PI * 2);
+            ctx.arc(curX, curY, isMobile ? 3 : 3.5, 0, Math.PI * 2);
             ctx.fillStyle = '#06b6d4';
             ctx.shadowColor = '#06b6d4';
             ctx.shadowBlur = 8;
@@ -205,12 +294,12 @@
             const isHovered = hoveredNode === n;
 
             // 3D Hexagonal/Isometric Node Box
-            const radius = isHovered ? 26 * p.scale : 20 * p.scale;
+            const radius = isHovered ? (isMobile ? 22 : 26) * p.scale : (isMobile ? 17 : 20) * p.scale;
 
             ctx.save();
             ctx.beginPath();
             ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
-            ctx.fillStyle = isHovered ? 'rgba(99, 102, 241, 0.4)' : 'rgba(13, 19, 34, 0.85)';
+            ctx.fillStyle = isHovered ? 'rgba(99, 102, 241, 0.45)' : 'rgba(13, 19, 34, 0.9)';
             ctx.fill();
             ctx.lineWidth = 2;
             ctx.strokeStyle = n.color;
@@ -219,28 +308,58 @@
             ctx.stroke();
             ctx.restore();
 
-            // Node Label
-            ctx.font = `${Math.round(11 * p.scale)}px var(--font-mono), monospace`;
+            // Node Label (Responsive string & size)
+            const labelText = isMobile ? n.shortLabel : n.label;
+            const fontSize = Math.max(9, Math.round((isMobile ? 10 : 11) * p.scale));
+            ctx.font = `${fontSize}px var(--font-mono), monospace`;
             ctx.fillStyle = '#f8fafc';
             ctx.textAlign = 'center';
-            ctx.fillText(n.label, p.x, p.y + radius + 15);
+            ctx.textBaseline = 'alphabetic';
+            ctx.fillText(labelText, p.x, p.y + radius + (isMobile ? 12 : 15));
 
+            // Hover / Tap Telemetry Badge
             if (isHovered) {
-                ctx.font = '10px var(--font-mono), monospace';
+                const metricText = `● ${n.metric}`;
+                ctx.font = `${isMobile ? 9 : 10}px var(--font-mono), monospace`;
+                const textWidth = ctx.measureText(metricText).width;
+                const pillH = isMobile ? 18 : 20;
+                const pillW = textWidth + 14;
+                const pillY = p.y + radius + (isMobile ? 24 : 28);
+
+                ctx.save();
+                ctx.fillStyle = 'rgba(6, 12, 24, 0.92)';
+                ctx.strokeStyle = n.color;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                if (ctx.roundRect) {
+                    ctx.roundRect(p.x - pillW / 2, pillY - pillH / 2, pillW, pillH, 8);
+                } else {
+                    ctx.rect(p.x - pillW / 2, pillY - pillH / 2, pillW, pillH);
+                }
+                ctx.fill();
+                ctx.stroke();
+
                 ctx.fillStyle = '#34d399';
-                ctx.fillText(`● ${n.metric}`, p.x, p.y + radius + 30);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(metricText, p.x, pillY);
+                ctx.restore();
             }
         }
 
-        // Instructions Hint
-        ctx.font = '10px var(--font-mono), monospace';
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.35)';
-        ctx.textAlign = 'left';
-        ctx.fillText('⚡ 3D Architecture Simulator: Drag to rotate 3D view | Hover nodes for metrics', 15, height - 12);
+        // Instructions Hint (Responsive layout & truncation fix)
+        ctx.font = isMobile ? '9px var(--font-mono), monospace' : '10px var(--font-mono), monospace';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.45)';
+        if (isMobile) {
+            ctx.textAlign = 'center';
+            ctx.fillText('⚡ Drag to rotate 3D view • Tap nodes for metrics', width / 2, height - 10);
+        } else {
+            ctx.textAlign = 'left';
+            ctx.fillText('⚡ 3D Architecture Simulator: Drag to rotate 3D view | Hover nodes for metrics', 15, height - 12);
+        }
 
         requestAnimationFrame(render);
     }
 
     requestAnimationFrame(render);
 })();
-

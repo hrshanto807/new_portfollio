@@ -1130,8 +1130,17 @@
         const slides = project.slides;
         const currentSlide = slides[currentSlideIdx];
 
-        titleEl.textContent = project.title;
-        deviceBadgeEl.textContent = currentSlide.device;
+        // Clean project title: remove redundant "[23 Production Views]"
+        const cleanTitle = (project.title || '').replace(/\s*\[\d+\s+[^\]]+\]/g, '').trim();
+        titleEl.textContent = cleanTitle;
+        titleEl.title = project.title;
+
+        // Clean slide device label: remove leading number "01. " and trailing raw resolution "(2160×11709)"
+        const rawDevice = currentSlide.device || '';
+        const cleanDevice = rawDevice.replace(/^\d+[\.\s\-]+/, '').replace(/\s*\(\d+×\d+\)/, '').trim();
+        deviceBadgeEl.textContent = cleanDevice;
+        deviceBadgeEl.title = rawDevice;
+
         const padNum = (n) => (n < 10 ? '0' + n : n);
         counterEl.textContent = `${padNum(currentSlideIdx + 1)} / ${padNum(slides.length)}`;
         captionEl.textContent = currentSlide.desc;
