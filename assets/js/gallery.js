@@ -1033,7 +1033,7 @@
     const captionEl = document.getElementById('gallery-caption');
     const thumbnailsWrap = document.getElementById('gallery-thumbnails');
 
-    let currentProjectKey = 'bnsmsoft';
+    let currentProjectKey = 'inventory-pos';
     let renderedProjectKey = null;
     let currentSlideIdx = 0;
     let isFitMode = true;
@@ -1050,17 +1050,20 @@
             if (isFitMode) {
                 mainImg.classList.add('is-fit-mode');
                 mainImg.classList.remove('is-scroll-mode', 'is-tall-capture');
+                if (slideWrap) slideWrap.classList.remove('has-scroll-mode');
                 if (scrollHintEl) scrollHintEl.style.display = 'none';
                 if (viewmodeLabel) viewmodeLabel.textContent = 'Full Width';
             } else {
                 mainImg.classList.remove('is-fit-mode');
                 mainImg.classList.add('is-scroll-mode');
+                if (slideWrap) slideWrap.classList.add('has-scroll-mode');
                 if (scrollHintEl) scrollHintEl.style.display = 'inline-flex';
                 if (viewmodeLabel) viewmodeLabel.textContent = 'Fit Height';
             }
         } else {
             mainImg.classList.add('is-fit-mode');
             mainImg.classList.remove('is-scroll-mode', 'is-tall-capture');
+            if (slideWrap) slideWrap.classList.remove('has-scroll-mode');
             if (scrollHintEl) scrollHintEl.style.display = 'none';
             if (viewmodeBtn) viewmodeBtn.style.display = 'none';
         }

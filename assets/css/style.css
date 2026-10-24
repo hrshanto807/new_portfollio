@@ -2565,12 +2565,16 @@ h1, h2, h3, h4, h5 {
 .cyber-gallery-modal {
     position: fixed;
     inset: 0;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
     z-index: 99999;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
+    overscroll-behavior: contain;
     transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2831,14 +2835,20 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     height: 100%;
     max-height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: rgba(6, 182, 212, 0.45) rgba(255, 255, 255, 0.03);
+}
+
+.gallery-slide-wrap.has-scroll-mode {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
 }
 
 .gallery-slide-wrap::-webkit-scrollbar {
@@ -2912,6 +2922,14 @@ h1, h2, h3, h4, h5 {
     padding: 0.25rem 0.5rem;
     justify-content: flex-start;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.gallery-thumbnails::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 @media (min-width: 1025px) {
@@ -2969,47 +2987,330 @@ h1, h2, h3, h4, h5 {
     color: var(--text-secondary);
 }
 
-/* Mobile Gallery Lightbox Adaptations */
+/* Mobile Gallery Lightbox Adaptations (High-Performance 2026 Mobile UX) */
 @media (max-width: 768px) {
+    .cyber-gallery-modal {
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+    }
+
     .gallery-container {
         width: 100vw;
         max-width: 100vw;
         height: 100vh;
-        max-height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
         border-radius: 0;
         border: none;
+        box-shadow: none;
+        overflow: hidden;
     }
+
+    /* Top Bar - Clean, Compact HUD Header */
     .gallery-topbar {
-        padding: 0.65rem 0.85rem;
+        padding: 0.5rem 0.75rem;
+        background: rgba(6, 10, 20, 0.98);
+        border-bottom: 1px solid rgba(6, 182, 212, 0.22);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex-shrink: 0;
     }
+
+    .gallery-info {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .gallery-tag {
+        font-size: 0.62rem;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.15rem;
+        line-height: 1.1;
+    }
+
     .gallery-title {
-        font-size: 0.98rem;
+        font-size: 0.92rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 0.2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
+    .gallery-badges-row {
+        margin-top: 0.15rem;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+    }
+
+    .gallery-device-badge {
+        font-size: 0.65rem;
+        padding: 0.12rem 0.45rem;
+        line-height: 1.2;
+    }
+
+    .gallery-scroll-hint {
+        font-size: 0.62rem;
+        padding: 0.12rem 0.45rem;
+    }
+
+    .gallery-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        flex-shrink: 0;
+    }
+
+    /* Redundant on mobile full-screen modal */
+    #gallery-fullscreen-btn {
+        display: none !important;
+    }
+
+    .gallery-counter {
+        font-size: 0.78rem;
+        padding: 0.2rem 0.45rem;
+        background: rgba(6, 182, 212, 0.12);
+        border: 1px solid rgba(6, 182, 212, 0.3);
+        border-radius: var(--radius-full);
+        letter-spacing: 0.04em;
+    }
+
+    .gallery-icon-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .gallery-icon-btn .icon-svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .gallery-close-btn {
+        width: 34px;
+        height: 34px;
+        background: rgba(239, 68, 68, 0.12);
+        border-color: rgba(239, 68, 68, 0.35);
+        color: #f87171;
+    }
+
+    .gallery-close-btn .icon-svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .gallery-control-btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.68rem;
+    }
+
     .gallery-control-btn span {
         display: none;
     }
-    .gallery-control-btn {
-        padding: 0.35rem 0.5rem;
-    }
+
+    /* Stage & Image Area - Maximized Viewport */
     .gallery-stage {
-        padding: 0.5rem 1.75rem;
-        min-height: 240px;
+        padding: 0;
+        flex: 1 1 0%;
+        min-height: 0;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        background: #020408;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .gallery-prev { left: 4px; width: 34px; height: 34px; }
-    .gallery-next { right: 4px; width: 34px; height: 34px; }
-    .gallery-main-img.is-tall-capture {
+
+    .gallery-slide-wrap {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        padding: 0.25rem 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        box-sizing: border-box;
+    }
+
+    .gallery-slide-wrap::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .gallery-slide-wrap.has-scroll-mode {
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .gallery-main-img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 6px;
+        border: 1px solid rgba(6, 182, 212, 0.22);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85);
+        margin: auto;
+    }
+
+    .gallery-main-img.is-scroll-mode {
         width: 100%;
         max-width: 100%;
+        height: auto;
+        object-fit: initial;
+        align-self: flex-start;
+        border-radius: 4px;
     }
+
+    /* Navigation HUD Arrows - Touch-Optimized */
+    .gallery-nav-arrow {
+        width: 36px;
+        height: 36px;
+        background: rgba(8, 12, 24, 0.82);
+        border: 1px solid rgba(6, 182, 212, 0.45);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        color: var(--secondary);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+        z-index: 25;
+    }
+
+    .gallery-nav-arrow .icon-svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .gallery-prev { left: 8px; }
+    .gallery-next { right: 8px; }
+
+    /* Bottom Bar - Sleek Strip with iOS Safe Area */
     .gallery-bottom-bar {
-        padding: 0.65rem 0.85rem;
+        padding: 0.45rem 0.65rem calc(0.45rem + env(safe-area-inset-bottom, 0px)) 0.65rem;
+        background: rgba(6, 10, 20, 0.98);
+        border-top: 1px solid rgba(6, 182, 212, 0.22);
+        gap: 0.35rem;
+        flex-shrink: 0;
     }
+
+    .gallery-thumbnails {
+        gap: 0.45rem;
+        padding: 0.15rem 0.1rem 0.3rem 0.1rem;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+    }
+
+    .gallery-thumbnails::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .gallery-thumb-btn {
+        scroll-snap-align: center;
+        padding: 2px;
+        border-radius: 6px;
+        border: 1.5px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.03);
+        gap: 2px;
+        flex-shrink: 0;
+    }
+
     .gallery-thumb-btn img {
-        width: 48px;
+        width: 50px;
+        height: 32px;
+        border-radius: 4px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gallery-thumb-btn .thumb-device-label {
+        font-size: 0.6rem;
+        padding-top: 1px;
+    }
+
+    .gallery-thumb-btn.active {
+        border-color: var(--secondary);
+        background: rgba(6, 182, 212, 0.22);
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.45);
+    }
+
+    .gallery-caption {
+        font-size: 0.74rem;
+        line-height: 1.35;
+        color: rgba(203, 213, 225, 0.88);
+        text-align: center;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+/* Extra small devices (iPhone SE, smaller Androids <= 420px) */
+@media (max-width: 420px) {
+    .gallery-topbar {
+        padding: 0.4rem 0.55rem;
+        gap: 0.35rem;
+    }
+
+    .gallery-title {
+        font-size: 0.86rem;
+    }
+
+    .gallery-tag {
+        font-size: 0.58rem;
+    }
+
+    .gallery-counter {
+        font-size: 0.72rem;
+        padding: 0.15rem 0.38rem;
+    }
+
+    .gallery-icon-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .gallery-icon-btn .icon-svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .gallery-close-btn {
+        width: 30px;
         height: 30px;
     }
-    .gallery-caption {
-        font-size: 0.78rem;
+
+    .gallery-close-btn .icon-svg {
+        width: 14px;
+        height: 14px;
     }
+
+    .gallery-thumb-btn img {
+        width: 44px;
+        height: 28px;
+    }
+
+    .gallery-nav-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .gallery-prev { left: 4px; }
+    .gallery-next { right: 4px; }
 }
 
