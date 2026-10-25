@@ -923,33 +923,78 @@
             ]
         },
         'multivendor': {
-            title: 'Enterprise Multi-Vendor E-Commerce Platform & Marketplace [5 Interactive Views]',
-            caption: 'Scalable marketplace architecture featuring vendor store management, catalog moderation, automated 8.5% commission splits, multi-vendor split cart checkout, and multi-currency payout ledger.',
+            title: 'Enterprise Multi-Vendor E-Commerce Platform & Marketplace [14 Production Views]',
+            caption: 'Scalable multi-tenant marketplace ecosystem featuring verified merchant directory, vendor branded storefronts, multi-vendor split cart, automated commission ledger, and multi-courier tracking.',
             slides: [
                 {
-                    src: 'assets/images/projects/multivendor/desktop.png',
-                    device: '01. Marketplace Operations Center & GMV Telemetry',
-                    desc: 'Executive mission control tracking platform-wide GMV ($1.82M), active merchant storefronts (412 stores), live order velocity, and platform revenue trajectory.'
+                    src: 'assets/images/projects/multivendor/01_marketplace_home.png',
+                    device: '01. Multi-Store Marketplace Ecosystem & Discovery Portal',
+                    desc: 'High-converting multi-vendor marketplace portal featuring dynamic category mega-menus, featured merchant storefronts, live flash sales ticker, and customer search discovery.'
                 },
                 {
-                    src: 'assets/images/projects/multivendor/02_vendor_merchant_portal.jpg',
-                    device: '02. Vendor Merchant Portal & SKU Catalog Manager',
-                    desc: 'Dedicated merchant back-office for Apex Tech Gear displaying monthly sales ($48,250), SKU inventory stock alerts, tiered pricing, and automated 8.5% platform commission calculation.'
+                    src: 'assets/images/projects/multivendor/02_vendor_directory.png',
+                    device: '02. Verified Merchant Directory & Seller Ratings',
+                    desc: 'Centralized vendor discovery directory showcasing verified merchant stores, customer review ratings, total active SKU counts, and direct store entry points.'
                 },
                 {
-                    src: 'assets/images/projects/multivendor/03_split_cart_checkout.jpg',
-                    device: '03. Multi-Vendor Split Cart & Automated Logistics Checkout',
-                    desc: 'Unified customer checkout interface splitting orders across multiple vendor warehouses with separate courier logistics, automated tax calculation, and tokenized bKash / Stripe payments.'
+                    src: 'assets/images/projects/multivendor/03_vendor_storefront.png',
+                    device: '03. Dedicated Merchant Storefront & Catalog',
+                    desc: 'Individual vendor branded storefront with merchant banner, store policies, verified seller badge, category filters, and merchant product showcase.'
                 },
                 {
-                    src: 'assets/images/projects/multivendor/04_commission_payout_ledger.jpg',
-                    device: '04. Automated Commission Ledger & Merchant Settlement Engine',
-                    desc: 'Audited financial disbursement ledger reconciling gross sales, automated 8.5% platform commission deductions, gateway fees, and automated bulk payouts via Stripe Connect & bKash.'
+                    src: 'assets/images/projects/multivendor/04_become_vendor.png',
+                    device: '04. Multi-Tenant Vendor Onboarding & Registration',
+                    desc: 'Enterprise merchant registration funnel capturing trade license verification, bank payout credentials, commission acceptance, and merchant dashboard provisioning.'
                 },
                 {
-                    src: 'assets/images/projects/multivendor/05_marketplace_storefront.jpg',
-                    device: '05. Consumer Marketplace Discovery Storefront & Flash Deals',
-                    desc: 'High-converting customer shopping portal showcasing 400+ curated independent merchant brands, search filters, verified customer reviews, and unified cart synchronization.'
+                    src: 'assets/images/projects/multivendor/05_shop_catalog.png',
+                    device: '05. Full-Width Marketplace Catalog & Faceted Filters',
+                    desc: 'Ultra-fast product discovery grid with faceted multi-criteria filtering by merchant, category hierarchy, price range slider, brand tags, and stock availability.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/06_category_promotions.png',
+                    device: '06. Promotional Campaigns & Mega Category Showcase',
+                    desc: 'Campaign landing catalog featuring seasonal vendor discount banners, sponsored product placements, and automated deal countdowns.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/07_product_detail.png',
+                    device: '07. SKU Specifications, Multi-Merchant Pricing & Stock',
+                    desc: 'Comprehensive product detail view displaying merchant store linkage, live stock availability, customer ratings, image zoom gallery, and one-click add to cart.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/08_product_accordion.png',
+                    device: '08. Technical Specifications & Vendor Return Policies',
+                    desc: 'Faceted technical details modal with verified merchant warranty, return policies, shipping estimations, and verified customer Q&A threads.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/09_cart.png',
+                    device: '09. Multi-Vendor Split Cart & Shipping Engine',
+                    desc: 'Smart shopping cart automatically grouping line items by vendor warehouse, calculating split courier logistics fees, voucher discounts, and order subtotals.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/10_checkout.png',
+                    device: '10. Multi-Vendor Split Checkout & Payment Gateways',
+                    desc: 'Streamlined checkout interface supporting automated 8.5% platform commission deduction, tokenized payment gateways (bKash, Nagad, Cards), and shipping address verification.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/11_track_order.png',
+                    device: '11. Multi-Courier Real-Time Logistics Tracking',
+                    desc: 'Live customer order lookup displaying multi-vendor parcel milestones, dispatch statuses, courier telemetry, and automated delivery confirmation.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/12_wishlist.png',
+                    device: '12. Customer Wishlist & Saved Products Ledger',
+                    desc: 'Personalized customer saved items portal with stock alert notifications, price drop alerts, and one-click transfer to active multi-vendor cart.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/13_compare.png',
+                    device: '13. Side-by-Side SKU Comparison Matrix',
+                    desc: 'Interactive product comparison matrix comparing technical specifications, merchant pricing, warranty terms, and availability across multiple vendors.'
+                },
+                {
+                    src: 'assets/images/projects/multivendor/14_auth_portal.png',
+                    device: '14. Multi-Tenant Customer & Vendor Authentication',
+                    desc: 'Secure dual-role authentication gateway with role-based redirection, OTP verification, session rate-limiting, and OAuth credentials.'
                 }
             ]
         },
