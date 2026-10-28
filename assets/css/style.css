@@ -133,6 +133,24 @@ h1, h2, h3, h4, h5 {
     position: relative;
 }
 
+#experience {
+    padding-bottom: 2.25rem;
+}
+
+.section-education {
+    padding-top: 1.5rem;
+    padding-bottom: 4.5rem;
+}
+
+.section-education .section-header {
+    margin-bottom: 2rem;
+}
+
+.section-education .timeline-wrap::before,
+.section-education .timeline-wrap::after {
+    display: none;
+}
+
 .section-header {
     text-align: center;
     max-width: 760px;
@@ -2317,6 +2335,19 @@ h1, h2, h3, h4, h5 {
     /* Architecture Visualizer */
     .section {
         padding: 4.5rem 0;
+    }
+
+    #experience {
+        padding-bottom: 1.5rem;
+    }
+
+    .section-education {
+        padding-top: 1rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .section-education .section-header {
+        margin-bottom: 1.5rem;
     }
 
     .section-header {

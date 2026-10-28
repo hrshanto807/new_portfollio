@@ -911,14 +911,168 @@
                 }
             ]
         },
+        'alifsuper': {
+            title: 'Alif Super Shop & Model Pharma - Retail & Healthcare Platform [29 Production Views]',
+            caption: 'Full-cycle enterprise retail grocery, healthcare pharmacy e-commerce web app and back-office ERP & POS management ecosystem built for WanIT Ltd, featuring live SKU catalog, digital Model Pharma pharmacy, barcode cashier terminal, purchase order tracking, and financial analytics.',
+            slides: [
+                // Part 1: Customer Web App & Digital Storefront (Views 01 - 09)
+                {
+                    src: 'assets/images/projects/alifsuper/01_alif_super_home.png',
+                    device: '01. Customer Web App • Storefront Portal & Hero Promotions',
+                    desc: 'Clean, modern digital retail portal featuring hero discount carousels, categorized mega-menus, featured grocery essentials, and instant search lookup.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/02_shop_catalog.png',
+                    device: '02. Customer Web App • Live Multi-Department SKU Catalog',
+                    desc: 'Comprehensive multi-department product catalog supporting real-time category filtering, brand selection, unit pricing, and instant cart additions.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/03_pharma_medicine.png',
+                    device: '03. Customer Web App • Model Pharma & Healthcare Department',
+                    desc: 'Certified digital healthcare pharmacy department showcasing prescription medications, OTC drugs, vitamins, and clinical healthcare essentials.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/04_grocery_essentials.png',
+                    device: '04. Customer Web App • Daily Grocery & Food Essentials Showcase',
+                    desc: 'Grocery department showcasing essential pantry staples, cooking oils, dairy products, beverages, and household cleaning supplies.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/05_special_offers.png',
+                    device: '05. Customer Web App • Promotional Hot Deals & Seasonal Campaigns',
+                    desc: 'Dedicated promotional deals showcase highlighting bundle discounts, seasonal promotions, brand flash sales (Kiam, Ziaja), and limited-time vouchers.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/06_product_detail.png',
+                    device: '06. Customer Web App • SKU Product Detail & Specifications',
+                    desc: 'Deep-dive product page detailing package sizes, real-time warehouse inventory availability, customer pricing, and related product recommendations.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/07_cart_drawer.png',
+                    device: '07. Customer Web App • Interactive Order Cart & Tariff Calculation',
+                    desc: 'Dynamic shopping cart drawer with quantity adjustments, automated delivery fee computation by zone, coupon code application, and subtotal checkout.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/08_checkout_portal.png',
+                    device: '08. Customer Web App • Secure Checkout & Delivery Booking',
+                    desc: 'Streamlined checkout gateway with recipient address verification, Cash-on-Delivery (COD) selection, delivery instructions, and order dispatch booking.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/09_auth_portal.png',
+                    device: '09. Customer Web App • Authentication & Account Gateway',
+                    desc: 'Secure customer authentication supporting customer profile management, recent order history tracking, and saved delivery addresses.'
+                },
+
+                // Part 2: Back-Office Admin ERP & POS System (Views 10 - 29)
+                {
+                    src: 'assets/images/projects/alifsuper/10_admin_dashboard_overview.png',
+                    device: '10. Admin Back-Office • Executive KPI Dashboard & Analytics',
+                    desc: 'Comprehensive operational overview tracking live net sales revenue, daily orders, in-store POS receipts, inventory valuation metrics, and fast-moving SKU counters.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/11_admin_pos_terminal.png',
+                    device: '11. Admin Back-Office • Retail POS Cashier Terminal & Barcode Scanner',
+                    desc: 'Ultra-fast retail Point of Sale interface with instant barcode SKU scanning, on-the-fly quantity adjustment, discount overrides, split tender payments, and thermal receipt generation.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/12_admin_products_inventory.png',
+                    device: '12. Admin Back-Office • Product Inventory Master Table & Stock Levels',
+                    desc: 'Centralized product ledger with real-time stock balances, cost price, retail price margins, alert thresholds for low stock, and bulk status updates.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/13_admin_product_create_form.png',
+                    device: '13. Admin Back-Office • Product Creation & Multi-Variant Matrix',
+                    desc: 'Intuitive product onboarding workflow supporting multi-unit conversions (pieces, kg, packs), batch expiry dates, tax rate tagging, and image uploads.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/14_admin_orders_management.png',
+                    device: '14. Admin Back-Office • E-Commerce Order Fulfillment & Delivery Pipeline',
+                    desc: 'Multi-stage order lifecycle manager handling incoming web orders, invoice dispatching, picking/packing verification, and delivery assignment.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/15_admin_pos_sales_history.png',
+                    device: '15. Admin Back-Office • In-Store POS Sales Ledger & Register Shifts',
+                    desc: 'Audited log of all counter-top POS transactions with cashier session tracking, payment method breakdowns (Cash, Card, MFS), and refund histories.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/16_admin_purchases_records.png',
+                    device: '16. Admin Back-Office • Vendor Purchase Orders & Inbound Stock Invoicing',
+                    desc: 'Procurement tracking ledger recording vendor purchase orders, warehouse receiving acknowledgments, cost fluctuations, and outstanding supplier balances.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/17_admin_categories_hierarchy.png',
+                    device: '17. Admin Back-Office • Multi-Tier Category Taxonomy Manager',
+                    desc: 'Hierarchical category management tool configuring parent-child department trees for grocery, personal care, and Model Pharma classification.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/18_admin_brands_list.png',
+                    device: '18. Admin Back-Office • Certified Brand Partners & Manufacturer Registry',
+                    desc: 'Partner brand registry linking verified manufacturers to active product SKUs, brand logos, and promotional partnerships.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/19_admin_campaigns_and_offers.png',
+                    device: '19. Admin Back-Office • Marketing Campaigns & Flash Offer Engine',
+                    desc: 'Dynamic campaign engine orchestrating festive discounts, percentage markdowns, category flash sales, and banner display priorities.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/20_admin_customers_ledger.png',
+                    device: '20. Admin Back-Office • Customer Database & Purchase History Ledger',
+                    desc: 'Customer relationship database storing contact records, lifetime purchase volumes, delivery addresses, and customer loyalty activity.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/21_admin_suppliers_directory.png',
+                    device: '21. Admin Back-Office • Supplier Directory & Accounts Payable',
+                    desc: 'Vendor management portal tracking supplier contact info, payment terms, historical supply logs, and accounts payable balances.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/22_admin_expenses_manager.png',
+                    device: '22. Admin Back-Office • Operational Expense Tracker & Ledger',
+                    desc: 'Operational expense categorization log recording utility bills, store maintenance, logistics fees, and petty cash disbursements.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/23_admin_report_profit_and_loss.png',
+                    device: '23. Admin Back-Office • Profit & Loss (P&L) Financial Statement',
+                    desc: 'Automated financial report calculating gross margin, total operating overhead, net profit ratios, and cost-of-goods-sold (COGS) analytics.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/24_admin_report_stock_valuation.png',
+                    device: '24. Admin Back-Office • Warehouse Inventory Stock Valuation Audit',
+                    desc: 'Comprehensive inventory valuation report displaying total asset value at cost, estimated retail value, and potential gross profit margin.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/25_admin_report_sales_summary.png',
+                    device: '25. Admin Back-Office • Revenue Sales Summary & Period Growth',
+                    desc: 'Time-series sales intelligence providing daily, weekly, and monthly revenue trends, average order value (AOV), and transaction volumes.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/26_admin_report_detailed_sales.png',
+                    device: '26. Admin Back-Office • Itemized SKU Sales & Margin Performance',
+                    desc: 'Granular product-by-product sales breakdown analyzing quantity sold, net revenue generated, unit discounts granted, and gross profit by SKU.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/27_admin_report_transactions.png',
+                    device: '27. Admin Back-Office • Gateway & Tender Transaction Reconciliation',
+                    desc: 'Financial ledger reconciling cash in register, credit card merchant settlements, and mobile financial services (bKash, Nagad) payment entries.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/28_admin_store_settings.png',
+                    device: '28. Admin Back-Office • Store Configuration, Taxes & Delivery Tariffs',
+                    desc: 'Global application configuration controlling business operating hours, VAT/tax rates, zone delivery rates, invoice templates, and SMS gateway credentials.'
+                },
+                {
+                    src: 'assets/images/projects/alifsuper/29_admin_sliders_banners.png',
+                    device: '29. Admin Back-Office • Storefront CMS & Hero Promotional Banners',
+                    desc: 'Content management interface for scheduling web slider graphics, promotional callouts, and seasonal hero campaign creatives on the customer storefront.'
+                }
+            ]
+        },
         'courier': {
-            title: 'Automated Courier & Logistics Dispatch Engine',
-            caption: 'High-throughput order dispatching, dynamic vehicle routing, GPS vehicle telemetry, and real-time delivery status updates.',
+            title: 'Alif Super Shop & Model Pharma - Retail & Healthcare Platform [29 Production Views]',
+            caption: 'Full-cycle enterprise retail grocery, healthcare pharmacy e-commerce web app and back-office ERP & POS management ecosystem built for WanIT Ltd, featuring live SKU catalog, digital Model Pharma pharmacy, barcode cashier terminal, purchase order tracking, and financial analytics.',
             slides: [
                 {
-                    src: 'assets/images/projects/courier/desktop.png',
-                    device: 'Dispatcher Control Room (1920×1080)',
-                    desc: 'Interactive GIS delivery map with GPS courier telemetry, fleet SLA metrics (99.4%), and automated parcel dispatch queue.'
+                    src: 'assets/images/projects/alifsuper/01_alif_super_home.png',
+                    device: '01. Customer Web App • Storefront Portal & Hero Promotions',
+                    desc: 'Clean, modern digital retail portal featuring hero discount carousels, categorized mega-menus, featured grocery essentials, and instant search lookup.'
                 }
             ]
         },
